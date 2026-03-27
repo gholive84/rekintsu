@@ -1,17 +1,7 @@
 /* ===== HERO TABLET ===== */
 @media (max-width: 960px) {
-    .hero__inner {
-        grid-template-columns: 1fr 300px;
-        gap: 32px;
-    }
-
-    .hero__orb {
-        width: 260px;
-        height: 260px;
-    }
-
-    .hero__visual {
-        height: 340px;
+    .hero__content {
+        max-width: 520px;
     }
 }
 
@@ -119,15 +109,10 @@
     }
 
     /* Hero */
-    .hero__inner {
-        grid-template-columns: 1fr;
-        padding-top: 40px;
-        padding-bottom: 48px;
-        min-height: auto;
-    }
-
-    .hero__visual {
-        display: none;
+    .hero__content {
+        padding-top: 120px;
+        padding-bottom: 60px;
+        max-width: 100%;
     }
 
     .hero__title {

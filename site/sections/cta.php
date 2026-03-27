@@ -1,4 +1,8 @@
 <section class="cta-section">
+    <div class="cta-section__bg" aria-hidden="true">
+        <img src="/site/assets/img/woman-kintsug.png" alt="" class="cta-section__bg-img" loading="lazy">
+        <div class="cta-section__bg-overlay"></div>
+    </div>
     <div class="container cta-section__inner">
         <h2 class="cta-section__title fade-up">Pronto para começar<br>sua transformação?</h2>
         <p class="cta-section__subtitle fade-up">

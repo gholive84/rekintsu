@@ -10,8 +10,8 @@
         <div class="services__grid">
 
             <div class="service-card fade-up">
-                <div class="service-card__img" style="background: linear-gradient(135deg, #D0E3CC 0%, #F7FFDD 100%);">
-                    <span class="service-card__img-emoji">🩺</span>
+                <div class="service-card__img">
+                    <img src="/site/assets/img/lombar.png" alt="Pilates para Reabilitação" loading="lazy">
                 </div>
                 <div class="service-card__body">
                     <h3 class="service-card__title">Pilates para Reabilitação</h3>
@@ -24,8 +24,8 @@
             </div>
 
             <div class="service-card fade-up">
-                <div class="service-card__img" style="background: linear-gradient(135deg, #F7FFDD 0%, #FCFDAF 100%);">
-                    <span class="service-card__img-emoji">🛡️</span>
+                <div class="service-card__img">
+                    <img src="/site/assets/img/lesao.jpeg" alt="Pilates Pós-Cirúrgico" loading="lazy">
                 </div>
                 <div class="service-card__body">
                     <h3 class="service-card__title">Pilates Pós-Cirúrgico</h3>
@@ -38,8 +38,8 @@
             </div>
 
             <div class="service-card fade-up">
-                <div class="service-card__img" style="background: linear-gradient(135deg, #FCFDAF 0%, #EFD780 100%);">
-                    <span class="service-card__img-emoji">🌸</span>
+                <div class="service-card__img">
+                    <img src="/site/assets/img/esticando.jpg" alt="Pilates na Gestação" loading="lazy">
                 </div>
                 <div class="service-card__body">
                     <h3 class="service-card__title">Pilates na Gestação</h3>
@@ -52,8 +52,8 @@
             </div>
 
             <div class="service-card fade-up">
-                <div class="service-card__img" style="background: linear-gradient(135deg, #D0E3CC 0%, #FCFDAF 100%);">
-                    <span class="service-card__img-emoji">🧘</span>
+                <div class="service-card__img">
+                    <img src="/site/assets/img/dor-costas-filho.jpeg" alt="Pilates para Idosos" loading="lazy">
                 </div>
                 <div class="service-card__body">
                     <h3 class="service-card__title">Pilates para Idosos</h3>
@@ -66,8 +66,8 @@
             </div>
 
             <div class="service-card fade-up">
-                <div class="service-card__img" style="background: linear-gradient(135deg, #EFD780 0%, #DBA159 100%);">
-                    <span class="service-card__img-emoji">💆</span>
+                <div class="service-card__img">
+                    <img src="/site/assets/img/dor-costas.jpeg" alt="Liberação Miofascial" loading="lazy">
                 </div>
                 <div class="service-card__body">
                     <h3 class="service-card__title">Liberação Miofascial</h3>
@@ -80,8 +80,8 @@
             </div>
 
             <div class="service-card fade-up">
-                <div class="service-card__img" style="background: linear-gradient(135deg, #FCFDAF 0%, #DBA159 100%);">
-                    <span class="service-card__img-emoji">🌿</span>
+                <div class="service-card__img">
+                    <img src="/site/assets/img/tenis.jpeg" alt="Massagem e Acupuntura" loading="lazy">
                 </div>
                 <div class="service-card__body">
                     <h3 class="service-card__title">Massagem &amp; Acupuntura</h3>
