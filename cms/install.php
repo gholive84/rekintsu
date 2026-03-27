@@ -1,6 +1,6 @@
 <?php
 /**
- * Inunda CMS — Instalador
+ * Rekintsu CMS — Instalador
  * Acesse /cms/install.php uma única vez para criar as tabelas e o usuário admin.
  * Apague ou proteja este arquivo após a instalação.
  */
@@ -124,40 +124,12 @@ if ($step === 1) {
             $log[] = ['ok', 'Tabela criada/verificada: ' . ($m[1] ?? '?')];
         }
 
-        // ── Seed: posts ──
-        $existing_posts = (int)$pdo->query('SELECT COUNT(*) FROM posts')->fetchColumn();
-        if ($existing_posts === 0) {
-            $posts_data = include SITE_ROOT . '/site/data/blog-posts.php';
-            $ins = $pdo->prepare(
-                'INSERT IGNORE INTO posts (title, slug, excerpt, content, image_url, category, category_slug, read_time, status)
-                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
-            );
-            foreach ($posts_data as $p) {
-                $ins->execute([
-                    $p['title'],
-                    $p['slug'],
-                    $p['excerpt'] ?? '',
-                    $p['content'] ?? '',
-                    $p['image'] ?? '',
-                    $p['category'] ?? '',
-                    $p['category_slug'] ?? '',
-                    $p['read_time'] ?? '',
-                    'published',
-                ]);
-            }
-            $log[] = ['ok', count($posts_data) . ' posts do blog importados com sucesso.'];
-        } else {
-            $log[] = ['info', "Posts já existem ($existing_posts). Seed ignorado."];
-        }
-
         // ── Seed: paginas ──
         $existing_pgs = (int)$pdo->query('SELECT COUNT(*) FROM paginas')->fetchColumn();
         if ($existing_pgs === 0) {
             $pages_seed = [
-                ['Home',                      '/',                       '/',                       SITE_ROOT . '/index.php'],
-                ['Projetos WordPress Premium', '/projetos-wordpress-premium', '/projetos-wordpress-premium', SITE_ROOT . '/site/paginas/projetos-wordpress-premium.php'],
-                ['Sites com IA',              '/sites-ia',               '/sites-ia',               SITE_ROOT . '/site/paginas/sites-ia.php'],
-                ['Suporte WordPress Premium', '/suporte-wordpress-premium', '/suporte-wordpress-premium', SITE_ROOT . '/site/paginas/suporte-wordpress-premium.php'],
+                ['Home',      '/',           '/',           SITE_ROOT . '/index.php'],
+                ['Guideline', '/guideline',  '/guideline',  SITE_ROOT . '/site/paginas/guideline.php'],
             ];
             $ins = $pdo->prepare(
                 'INSERT IGNORE INTO paginas (title, slug, url, file_path, status)
@@ -177,7 +149,7 @@ if ($step === 1) {
             'smtp_port'       => '587',
             'smtp_user'       => '',
             'smtp_pass'       => '',
-            'smtp_from_name'  => 'Inunda IA',
+            'smtp_from_name'  => 'Rekintsu Pilates Clínico',
             'smtp_from_email' => '',
             'header_codes'    => '',
         ];
@@ -245,7 +217,7 @@ if ($step === 3) {
 <div class="install-wrap">
   <div class="install-card" style="max-width:520px">
 
-    <span style="font-size:1.5rem;font-weight:800;letter-spacing:-0.02em;background:linear-gradient(135deg,#22d3ee,#67e8f9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;text-align:center;margin-bottom:6px">inunda ia</span>
+    <span style="font-size:1.5rem;font-weight:800;letter-spacing:-0.02em;background:linear-gradient(135deg,#0D9B8E,#5ECDC4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;text-align:center;margin-bottom:6px">rekintsu</span>
     <p style="text-align:center;color:#64748b;font-size:.875rem;margin-bottom:28px">Instalador do CMS</p>
 
     <?php foreach ($errors as $err): ?>
@@ -318,7 +290,7 @@ if ($step === 3) {
         Ir para o login →
       </a>
       <p style="margin-top:20px;font-size:.8rem;color:#ef4444;text-align:center">
-        ⚠ Apague ou renomeie este arquivo: <code>cms/install.php</code>
+        ⚠ Apague ou proteja este arquivo após o login: <code>cms/install.php</code>
       </p>
     </div>
     <?php endif; ?>
