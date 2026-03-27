@@ -2,8 +2,7 @@
     <div class="container footer__inner">
         <div class="footer__brand">
             <a href="/" class="logo">
-                <span class="logo__text">re<span>k</span>intsu</span>
-                <span class="logo__sub">pilates clínico</span>
+                <img src="/site/assets/img/logo_horizontal_preto.png" alt="Rekintsu Pilates Clínico" class="logo__img">
             </a>
             <p class="footer__tagline">Atendimento exclusivo e individualizado.<br>Pilates que restaura o equilíbrio e a vitalidade.</p>
             <div class="footer__social">

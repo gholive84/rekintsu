@@ -1,15 +1,16 @@
 :root {
     /* Gradient */
-    --gradient-accent: linear-gradient(135deg, #0D9B8E 0%, #5ECDC4 100%);
+    --gradient-accent: linear-gradient(135deg, #DBA159 0%, #EFD780 100%);
 
     /* Colors */
-    --color-primary: #0D9B8E;
-    --color-primary-dark: #0A7E73;
-    --color-accent: #5ECDC4;
-    --color-accent-dark: #0A7E73;
+    --color-primary: #DBA159;
+    --color-primary-dark: #C48A45;
+    --color-accent: #EFD780;
+    --color-accent-dark: #C8A84B;
+    --color-mint: #D0E3CC;
     --color-dark: #071620;
     --color-dark-2: #0D1E2B;
-    --color-light: #f8fafc;
+    --color-light: #F7FFDD;
     --color-white: #ffffff;
     --color-text: #0f172a;
     --color-muted: #64748b;

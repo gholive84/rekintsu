@@ -1,8 +1,7 @@
 <header class="header" id="header">
     <div class="container header__inner">
         <a href="/" class="logo">
-            <span class="logo__text">re<span>k</span>intsu</span>
-            <span class="logo__sub">pilates clínico</span>
+            <img src="/site/assets/img/logo_horizontal_preto.png" alt="Rekintsu Pilates Clínico" class="logo__img">
         </a>
 
         <nav class="nav" id="nav">
