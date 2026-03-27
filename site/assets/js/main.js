@@ -112,6 +112,50 @@ if (contactForm) {
     });
 }
 
+/* ===== REVIEWS CAROUSEL ===== */
+const track = document.getElementById('reviewsTrack');
+const prevBtn = document.getElementById('prevReview');
+const nextBtn = document.getElementById('nextReview');
+
+if (track && prevBtn && nextBtn) {
+    const getCardWidth = () => {
+        const card = track.querySelector('.testimonial-card');
+        if (!card) return 0;
+        const gap = parseInt(getComputedStyle(track).gap) || 20;
+        return card.offsetWidth + gap;
+    };
+
+    nextBtn.addEventListener('click', () => {
+        track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        track.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+    });
+
+    // Auto-avança a cada 5s, pausa ao hover
+    let autoplay = setInterval(() => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        if (track.scrollLeft >= maxScroll - 4) {
+            track.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+            track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+        }
+    }, 5000);
+
+    track.addEventListener('mouseenter', () => clearInterval(autoplay));
+    track.addEventListener('mouseleave', () => {
+        autoplay = setInterval(() => {
+            const maxScroll = track.scrollWidth - track.clientWidth;
+            if (track.scrollLeft >= maxScroll - 4) {
+                track.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+            }
+        }, 5000);
+    });
+}
+
 /* ===== SMOOTH SCROLL ===== */
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {

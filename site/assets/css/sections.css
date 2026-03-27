@@ -386,57 +386,105 @@
     line-height: 1.4;
 }
 
-/* ===== TESTIMONIALS ===== */
+/* ===== TESTIMONIALS / REVIEWS ===== */
 .testimonials {
     padding: var(--section-padding);
-    background: var(--color-white);
+    background: var(--color-light);
 }
 
-.testimonials__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 56px;
+/* Rating summary */
+.reviews-summary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px 0 48px;
+    flex-wrap: wrap;
+}
+
+.reviews-summary__score {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-text);
+    letter-spacing: -0.03em;
+}
+
+.reviews-summary__stars {
+    color: #F59E0B;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.reviews-summary__count {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin-top: 4px;
+}
+
+.reviews-summary__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 40px;
+    padding: 10px 20px;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.reviews-summary__link:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* Carousel */
+.reviews-carousel {
+    position: relative;
+}
+
+.reviews-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    padding-bottom: 4px;
+}
+
+.reviews-track::-webkit-scrollbar {
+    display: none;
 }
 
 .testimonial-card {
-    background: var(--color-light);
+    background: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
-    padding: 36px 32px;
+    padding: 28px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
+    scroll-snap-align: start;
+    flex: 0 0 calc(33.333% - 14px);
     transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .testimonial-card:hover {
-    border-color: rgba(219,161,89,0.25);
-    box-shadow: 0 12px 40px rgba(219,161,89,0.07);
+    border-color: rgba(219,161,89,0.3);
+    box-shadow: 0 12px 40px rgba(219,161,89,0.08);
     transform: translateY(-3px);
 }
 
-.testimonial-card__stars {
-    display: flex;
-    gap: 3px;
-    color: #F59E0B;
-    font-size: 1rem;
-}
-
-.testimonial-card__text {
-    font-size: 1rem;
-    color: var(--color-text);
-    line-height: 1.75;
-    font-style: italic;
-    flex: 1;
-}
-
-.testimonial-card__author {
+.testimonial-card__header {
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding-top: 16px;
-    border-top: 1px solid var(--color-border);
+    gap: 12px;
 }
 
 .testimonial-card__avatar {
@@ -453,16 +501,69 @@
     flex-shrink: 0;
 }
 
+.testimonial-card__meta {
+    flex: 1;
+}
+
 .testimonial-card__name {
     font-size: 0.9375rem;
     font-weight: 700;
     color: var(--color-text);
+    line-height: 1.2;
 }
 
-.testimonial-card__desc {
+.testimonial-card__stars {
+    color: #F59E0B;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    margin-top: 3px;
+}
+
+.testimonial-card__google {
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+.testimonial-card__text {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    line-height: 1.7;
+    font-style: italic;
+    flex: 1;
+}
+
+.testimonial-card__date {
     font-size: 0.8125rem;
     color: var(--color-muted);
-    margin-top: 2px;
+    opacity: 0.6;
+}
+
+/* Carousel nav */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.carousel-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.carousel-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transform: scale(1.05);
 }
 
 .testimonials__cta {

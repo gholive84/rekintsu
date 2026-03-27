@@ -37,8 +37,8 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .testimonials__grid {
-        grid-template-columns: repeat(2, 1fr);
+    .testimonial-card {
+        flex: 0 0 calc(50% - 10px);
     }
 }
 
@@ -156,9 +156,17 @@
         border-top: 1px solid rgba(255,255,255,0.07);
     }
 
-    /* Testimonials */
-    .testimonials__grid {
-        grid-template-columns: 1fr;
+    /* Testimonials / Reviews */
+    .testimonial-card {
+        flex: 0 0 calc(100% - 0px);
+    }
+
+    .reviews-summary {
+        gap: 12px;
+    }
+
+    .reviews-summary__score {
+        font-size: 2.75rem;
     }
 
     /* Footer */

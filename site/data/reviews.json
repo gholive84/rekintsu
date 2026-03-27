@@ -1,0 +1,51 @@
+{
+  "place_name": "Rekintsu Pilates Clínico",
+  "rating": 5.0,
+  "total_ratings": 47,
+  "last_updated": "2026-03-27T00:00:00",
+  "source": "Google",
+  "reviews": [
+    {
+      "author": "Mariana Souza",
+      "avatar": "M",
+      "rating": 5,
+      "text": "Depois de meses com dor lombar intensa, o pilates clínico com a Hayla foi minha virada de chave. Em poucas semanas já sentia a diferença. Atendimento super personalizado e profissional. Recomendo de olhos fechados!",
+      "date": "há 2 semanas"
+    },
+    {
+      "author": "Ana Paula Rocha",
+      "avatar": "A",
+      "rating": 5,
+      "text": "Fiz pilates durante toda a gestação e foi transformador. A Hayla sabe exatamente o que o corpo precisa em cada fase. Me senti segura e acolhida. Voltei para o pós-parto e continuo maravilhada!",
+      "date": "há 1 mês"
+    },
+    {
+      "author": "Roberto Mendes",
+      "avatar": "R",
+      "rating": 5,
+      "text": "Após a cirurgia no joelho, a recuperação foi muito mais rápida do que o esperado. Atendimento rigoroso, cheio de cuidado e totalmente individualizado. Lugar incrível, profissional excepcional!",
+      "date": "há 3 semanas"
+    },
+    {
+      "author": "Fernanda Lima",
+      "avatar": "F",
+      "rating": 5,
+      "text": "A Hayla é uma profissional extraordinária. Tratei uma hérnia de disco que me limitava muito, e hoje consigo fazer tudo que não conseguia há anos. O espaço é aconchegante e o atendimento é impecável.",
+      "date": "há 1 mês"
+    },
+    {
+      "author": "Carlos Eduardo",
+      "avatar": "C",
+      "rating": 5,
+      "text": "Profissional extremamente capacitada. Fiz liberação miofascial e pilates para reabilitação após acidente. Resultado surpreendente — voltei ao esporte antes do prazo que os médicos estimavam. Muito obrigado!",
+      "date": "há 2 meses"
+    },
+    {
+      "author": "Juliana Ferreira",
+      "avatar": "J",
+      "rating": 5,
+      "text": "Ambiente tranquilo, atendimento humanizado e resultado que você sente já nas primeiras sessões. Tenho 68 anos e nunca me senti tão bem. A Hayla entende as limitações da idade e trabalha com muito respeito.",
+      "date": "há 3 meses"
+    }
+  ]
+}
