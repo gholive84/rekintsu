@@ -3,7 +3,7 @@
     position: relative;
     overflow: hidden;
     min-height: 100vh;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     display: flex;
     align-items: center;
     background: var(--color-dark);
@@ -140,15 +140,13 @@
 
 /* ===== SPECIALTIES STRIP — overlay on hero ===== */
 .specialties {
-    padding: 40px 0;
-    background: rgba(0,0,0,0.72);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 22px 0;
+    background: var(--color-dark-2);
+    border-top: none;
     border-bottom: none;
     position: relative;
     z-index: 2;
-    margin-top: -100px;
+    margin-top: -60px;
     overflow: hidden;
 }
 
@@ -159,7 +157,7 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.35);
-    margin-bottom: 28px;
+    margin-bottom: 14px;
 }
 
 .specialties__track-wrapper {

@@ -185,13 +185,9 @@
         max-width: 100%;
     }
 
-    /* Specialties — sem overlay no mobile */
+    /* Specialties — sem overlap no mobile */
     .specialties {
         margin-top: 0;
-        background: var(--color-dark);
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        border-top: none;
     }
 
     .specialties__label {

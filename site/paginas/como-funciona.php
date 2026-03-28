@@ -148,8 +148,8 @@ include dirname(__DIR__) . '/includes/header.php';
                     <div class="infographic-card__source">Hayla Gomes — Fisioterapeuta</div>
                 </div>
                 <div class="infographic-card">
-                    <div class="infographic-card__number">1<span>:1</span></div>
-                    <div class="infographic-card__label">atendimento exclusivo — apenas você e a fisioterapeuta em cada sessão</div>
+                    <div class="infographic-card__number">2<span>:1</span></div>
+                    <div class="infographic-card__label">máximo 2 pacientes por horário — atendimento próximo e personalizado</div>
                     <div class="infographic-card__source">Atendimento Individualizado</div>
                 </div>
                 <div class="infographic-card">

@@ -16,7 +16,7 @@
             <div class="about__specs fade-up">
                 <div class="about__spec">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                    Atendimento 1:1 — exclusivo e individualizado
+                    Atendimento 2:1 — máximo 2 pacientes por horário
                 </div>
                 <div class="about__spec">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -48,8 +48,8 @@
                     <span class="big-stat__label">Anos de experiência</span>
                 </div>
                 <div class="big-stat">
-                    <span class="big-stat__number">1:1</span>
-                    <span class="big-stat__label">Atendimento exclusivo</span>
+                    <span class="big-stat__number">2:1</span>
+                    <span class="big-stat__label">Pacientes por horário</span>
                 </div>
                 <div class="big-stat">
                     <span class="big-stat__number">5★</span>
