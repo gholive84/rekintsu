@@ -932,7 +932,16 @@
 
 /* ===== PÁGINA SOBRE A CLÍNICA ===== */
 
-/* Hero clínica */
+/* Hero com vídeo */
+.page-hero__bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    inset: 0;
+}
+
 .page-hero--clinica .page-hero__bg-img {
     object-position: center 30%;
 }

@@ -7,11 +7,15 @@ include dirname(__DIR__) . '/includes/header.php';
 
 <main>
 
-    <!-- HERO -->
+    <!-- HERO com vídeo -->
     <section class="page-hero page-hero--clinica">
         <div class="page-hero__bg">
-            <img src="/site/assets/img/clinica01.jpg" alt="Clínica Rekintsu" class="page-hero__bg-img" loading="eager">
-            <div class="page-hero__bg-overlay"></div>
+            <video autoplay muted loop playsinline
+                   poster="/site/assets/img/clinica01.jpg"
+                   class="page-hero__bg-img page-hero__bg-video">
+                <source src="/site/assets/video/video3-web.mp4" type="video/mp4">
+            </video>
+            <div class="page-hero__bg-overlay page-hero__bg-overlay--strong"></div>
         </div>
         <div class="container page-hero__content">
             <span class="label">A Clínica</span>
@@ -155,37 +159,7 @@ include dirname(__DIR__) . '/includes/header.php';
         </div>
     </section>
 
-    <!-- O EDIFÍCIO -->
-    <section class="page-section">
-        <div class="container">
-            <div class="page-section__inner page-section__inner--2col fade-up">
-                <div>
-                    <span class="label">World Trade Center Curitiba</span>
-                    <h2 class="page-section__title">Uma localização<br><span class="text--accent">que facilita sua vida</span></h2>
-                    <p class="page-section__text">A Rekintsu está no World Trade Center Curitiba — Av. Cândido de Abreu, 776, sala 404 — um dos endereços mais acessíveis e completos da cidade. O edifício oferece toda a infraestrutura para que sua visita seja confortável do início ao fim.</p>
-                    <ul class="page-check-list">
-                        <li>Estacionamento próprio com vagas rotativas e mensalistas</li>
-                        <li>Próximo à estação de ônibus Cívico e linhas expressas</li>
-                        <li>Elevadores modernos e acesso total para cadeirantes</li>
-                        <li>Farmácias, restaurantes e bancos no entorno imediato</li>
-                        <li>Segurança 24h e portaria monitorada</li>
-                        <li>Fácil acesso pelas principais vias da cidade</li>
-                    </ul>
-                    <a href="https://maps.google.com/maps?q=Av.+Cândido+de+Abreu,+776,+Curitiba,+PR"
-                       target="_blank" rel="noopener"
-                       class="btn btn--gradient" style="margin-top:28px; display:inline-flex;">
-                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        Ver no Google Maps
-                    </a>
-                </div>
-                <div class="page-section__visual fade-up">
-                    <img src="/site/assets/img/predio-world.webp" alt="World Trade Center Curitiba" class="page-section__img" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LOCALIZAÇÃO (mapa/visual completo) -->
+    <!-- LOCALIZAÇÃO -->
     <?php include dirname(__DIR__) . '/sections/localizacao.php'; ?>
 
     <!-- CTA -->

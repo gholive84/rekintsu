@@ -1,7 +1,7 @@
 <header class="header" id="header">
     <div class="container header__inner">
         <a href="/" class="logo">
-            <img src="/site/assets/img/logo_horizontal_preto.png" alt="Rekintsu Pilates Clínico" class="logo__img">
+            <img src="/site/assets/img/rekintsu-logo-svg.svg" alt="Rekintsu Pilates Clínico" class="logo__img">
         </a>
 
         <nav class="nav" id="nav">

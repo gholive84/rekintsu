@@ -3,6 +3,7 @@
     position: relative;
     overflow: hidden;
     min-height: 100vh;
+    padding-bottom: 200px;
     display: flex;
     align-items: center;
     background: var(--color-dark);
@@ -210,10 +211,35 @@
     color: rgba(7,22,32,0.8);
 }
 
-/* ===== SERVICES ===== */
+/* ===== SERVICES — overlay on hero ===== */
 .services {
-    background: var(--color-white);
-    padding: var(--section-padding);
+    background: transparent;
+    padding: 0 0 80px;
+    position: relative;
+    z-index: 2;
+    margin-top: -200px;
+}
+
+.services .container {
+    background: rgba(0,0,0,0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 20px;
+    padding: 52px 48px 48px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.services .section-header .section-title {
+    color: var(--color-white);
+}
+
+.services .section-subtitle {
+    color: rgba(255,255,255,0.6);
+}
+
+.services .label {
+    color: var(--color-accent);
+    border-color: rgba(239,215,128,0.3);
 }
 
 .services__grid {
@@ -429,6 +455,7 @@
 
 .localizacao__content {
     max-width: 660px;
+    margin-right: auto;
 }
 
 .label--light {
@@ -1135,8 +1162,7 @@
 
 .footer .logo__img {
     height: 36px;
-    opacity: 0.55;
-    filter: brightness(0) invert(1);
+    opacity: 0.8;
 }
 
 /* ===== WHATSAPP BTN ===== */
