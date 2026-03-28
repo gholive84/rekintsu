@@ -1,24 +1,7 @@
 <section class="hero" id="inicio">
 
     <div class="hero__bg" aria-hidden="true">
-        <?php
-        // Usa vídeo comprimido se disponível, senão o original
-        $video_web = '/site/assets/video/hero-bg.mp4';
-        $video_orig = '/site/assets/img/video-studio.mp4';
-        $video_file_web  = $_SERVER['DOCUMENT_ROOT'] . $video_web;
-        $video_file_orig = $_SERVER['DOCUMENT_ROOT'] . $video_orig;
-        $video_src = file_exists($video_file_web) ? $video_web : (file_exists($video_file_orig) ? $video_orig : null);
-        ?>
-        <?php if ($video_src): ?>
-        <video class="hero__bg-video"
-               autoplay muted loop playsinline
-               preload="metadata"
-               poster="/site/assets/img/hero1.png">
-            <source src="<?= $video_src ?>" type="video/mp4">
-        </video>
-        <?php else: ?>
         <img src="/site/assets/img/hero1.png" alt="" class="hero__bg-img" loading="eager">
-        <?php endif; ?>
         <div class="hero__bg-overlay"></div>
     </div>
 
