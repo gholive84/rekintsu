@@ -3,7 +3,7 @@
     position: relative;
     overflow: hidden;
     min-height: 100vh;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     display: flex;
     align-items: center;
     background: var(--color-dark);
@@ -138,12 +138,17 @@
     color: rgba(255,255,255,0.55);
 }
 
-/* ===== SPECIALTIES STRIP ===== */
+/* ===== SPECIALTIES STRIP — overlay on hero ===== */
 .specialties {
-    padding: 52px 0;
-    background: var(--color-mint);
-    border-top: 1px solid rgba(0,0,0,0.04);
-    border-bottom: 1px solid rgba(0,0,0,0.04);
+    padding: 40px 0;
+    background: rgba(0,0,0,0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    border-bottom: none;
+    position: relative;
+    z-index: 2;
+    margin-top: -100px;
     overflow: hidden;
 }
 
@@ -153,8 +158,8 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(7,22,32,0.35);
-    margin-bottom: 32px;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 28px;
 }
 
 .specialties__track-wrapper {
@@ -203,43 +208,18 @@
 .specialty-item span {
     font-size: 0.9375rem;
     font-weight: 500;
-    color: rgba(7,22,32,0.45);
+    color: rgba(255,255,255,0.5);
     transition: color 0.2s ease;
 }
 
 .specialty-item:hover span {
-    color: rgba(7,22,32,0.8);
+    color: rgba(255,255,255,0.9);
 }
 
-/* ===== SERVICES — overlay on hero ===== */
+/* ===== SERVICES ===== */
 .services {
-    background: transparent;
-    padding: 0 0 80px;
-    position: relative;
-    z-index: 2;
-    margin-top: -200px;
-}
-
-.services .container {
-    background: rgba(0,0,0,0.72);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-radius: 20px;
-    padding: 52px 48px 48px;
-    border: 1px solid rgba(255,255,255,0.08);
-}
-
-.services .section-header .section-title {
-    color: var(--color-white);
-}
-
-.services .section-subtitle {
-    color: rgba(255,255,255,0.6);
-}
-
-.services .label {
-    color: var(--color-accent);
-    border-color: rgba(239,215,128,0.3);
+    background: var(--color-white);
+    padding: var(--section-padding);
 }
 
 .services__grid {
@@ -455,6 +435,7 @@
 
 .localizacao__content {
     max-width: 660px;
+    margin-left: 0;
     margin-right: auto;
 }
 

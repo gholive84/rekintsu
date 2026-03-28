@@ -185,32 +185,21 @@
         max-width: 100%;
     }
 
-    /* Services — sem overlay no mobile */
-    .services {
+    /* Specialties — sem overlay no mobile */
+    .specialties {
         margin-top: 0;
-        padding: 64px 0;
-    }
-
-    .services .container {
-        background: transparent;
+        background: var(--color-dark);
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
-        border-radius: 0;
-        padding: 0;
-        border: none;
+        border-top: none;
     }
 
-    .services .section-header .section-title {
-        color: var(--color-text);
+    .specialties__label {
+        color: rgba(255,255,255,0.35);
     }
 
-    .services .section-subtitle {
-        color: var(--color-muted);
-    }
-
-    .services .label {
-        color: var(--color-primary);
-        border-color: rgba(219,161,89,0.3);
+    .specialty-item span {
+        color: rgba(255,255,255,0.5);
     }
 
     .hero__title {
