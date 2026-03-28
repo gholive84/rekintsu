@@ -24,6 +24,29 @@
     will-change: transform;
 }
 
+.hero__bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Reduz movimento em preferência do usuário */
+@media (prefers-reduced-motion: reduce) {
+    .hero__bg-video {
+        display: none;
+    }
+    .hero__bg::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: var(--hero-poster, none);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
 .hero__bg-overlay {
     position: absolute;
     inset: 0;
