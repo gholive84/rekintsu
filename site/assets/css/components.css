@@ -191,7 +191,8 @@
 
 .nav__list {
     display: flex;
-    gap: 32px;
+    gap: 24px;
+    align-items: center;
 }
 
 .nav__link {
@@ -199,10 +200,186 @@
     font-weight: 500;
     color: var(--color-text);
     transition: var(--transition);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: var(--font-base);
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link--has-sub:hover,
+.nav__item--mega:hover .nav__link--has-sub,
+.nav__item--mega.open .nav__link--has-sub {
     color: var(--color-primary);
+}
+
+.nav__link--has-sub {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav__link--has-sub svg {
+    transition: transform 0.2s ease;
+}
+
+.nav__item--mega.open .nav__link--has-sub svg,
+.nav__item--mega:hover .nav__link--has-sub svg {
+    transform: rotate(180deg);
+}
+
+/* ===== MEGAMENU ===== */
+.nav__item--mega {
+    position: static;
+}
+
+.nav-mega {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: var(--color-white);
+    border-top: 2px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    z-index: 99;
+    pointer-events: none;
+}
+
+.nav__item--mega:hover .nav-mega,
+.nav__item--mega.open .nav-mega {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.nav-mega__grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
+    gap: 0;
+    padding: 32px 0;
+}
+
+/* Intro block */
+.nav-mega__intro {
+    padding: 8px 40px 8px 0;
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-mega__intro-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(219,161,89,0.1);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.nav-mega__intro-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.nav-mega__intro-text {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    line-height: 1.65;
+    flex: 1;
+}
+
+.nav-mega__intro-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    transition: gap 0.15s ease;
+}
+
+.nav-mega__intro-link:hover {
+    gap: 10px;
+}
+
+/* Specialty cards */
+.nav-mega__card {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    border-right: 1px solid var(--color-border);
+    gap: 10px;
+    transition: background 0.15s;
+    border-radius: 0;
+}
+
+.nav-mega__card:last-child {
+    border-right: none;
+}
+
+.nav-mega__card:hover {
+    background: rgba(219,161,89,0.04);
+}
+
+.nav-mega__card-img {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.nav-mega__card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.nav-mega__card:hover .nav-mega__card-img img {
+    transform: scale(1.05);
+}
+
+.nav-mega__card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.nav-mega__card-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.nav-mega__card-title {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-text);
+    display: block;
+    line-height: 1.3;
+}
+
+.nav-mega__card-text {
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+    line-height: 1.5;
 }
 
 /* ===== HAMBURGER ===== */

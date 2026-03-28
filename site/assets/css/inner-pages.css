@@ -431,7 +431,9 @@
 }
 
 .page-section__inner {
-    max-width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .page-section__inner--2col {

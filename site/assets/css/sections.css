@@ -415,9 +415,9 @@
     inset: 0;
     background: linear-gradient(
         to right,
-        rgba(26,26,26,0.95) 0%,
-        rgba(26,26,26,0.85) 45%,
-        rgba(26,26,26,0.4) 100%
+        rgba(26,26,26,0.97) 0%,
+        rgba(26,26,26,0.90) 50%,
+        rgba(26,26,26,0.35) 100%
     );
 }
 
@@ -428,7 +428,7 @@
 }
 
 .localizacao__content {
-    max-width: 560px;
+    max-width: 660px;
 }
 
 .label--light {
@@ -487,10 +487,15 @@
 }
 
 .localizacao__feature-icon {
-    font-size: 1.25rem;
     flex-shrink: 0;
-    width: 32px;
-    text-align: center;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    background: rgba(239,215,128,0.12);
+    border-radius: var(--radius-sm);
 }
 
 .localizacao__feature strong {
