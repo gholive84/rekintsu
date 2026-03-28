@@ -105,7 +105,7 @@ include dirname(__DIR__) . '/includes/header.php';
             <video autoplay muted loop playsinline
                    poster="/site/assets/img/clinica01.jpg"
                    class="clinica-video-section__video">
-                <source src="/site/assets/video/video3-web.mp4" type="video/mp4">
+                <source src="/site/assets/video/video2-web.mp4" type="video/mp4">
             </video>
             <div class="clinica-video-section__overlay"></div>
         </div>

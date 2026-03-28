@@ -97,6 +97,11 @@
     margin-bottom: 40px;
 }
 
+.page-hero__content > .btn {
+    align-self: flex-start;
+    width: auto;
+}
+
 .page-hero__actions {
     display: flex;
     gap: 16px;

@@ -435,6 +435,7 @@
     max-width: 660px;
     margin-left: 0;
     margin-right: auto;
+    text-align: left;
 }
 
 .label--light {
