@@ -929,3 +929,204 @@
         gap: 12px;
     }
 }
+
+/* ===== PÁGINA SOBRE A CLÍNICA ===== */
+
+/* Hero clínica */
+.page-hero--clinica .page-hero__bg-img {
+    object-position: center 30%;
+}
+
+/* Currículo */
+.clinica-curriculum {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.clinica-curriculum__item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.clinica-curriculum__icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(219,161,89,0.1);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.clinica-curriculum__item strong {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.35;
+    margin-bottom: 3px;
+}
+
+.clinica-curriculum__item span {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    line-height: 1.55;
+}
+
+/* Seção vídeo */
+.clinica-video-section {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--color-dark);
+}
+
+.clinica-video-section__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.clinica-video-section__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.clinica-video-section__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(26,26,26,0.96) 0%,
+        rgba(26,26,26,0.88) 50%,
+        rgba(26,26,26,0.3) 100%
+    );
+}
+
+.clinica-video-section__inner {
+    position: relative;
+    z-index: 1;
+    padding: 96px 0;
+}
+
+.clinica-video-section__content {
+    max-width: 580px;
+}
+
+.clinica-video-section__title {
+    font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+    color: var(--color-white);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 16px 0 20px;
+}
+
+.clinica-video-section__text {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.75;
+    margin-bottom: 28px;
+}
+
+.clinica-video-section__features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.clinica-video-section__feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9375rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.55;
+}
+
+.clinica-video-section__feature svg {
+    color: var(--color-accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Galeria */
+.clinica-gallery {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 16px;
+}
+
+.clinica-gallery__item {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+.clinica-gallery__item--large {
+    height: 480px;
+}
+
+.clinica-gallery__col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.clinica-gallery__col .clinica-gallery__item {
+    flex: 1;
+    height: 232px;
+}
+
+.clinica-gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.clinica-gallery__item:hover img {
+    transform: scale(1.03);
+}
+
+/* ===== RESPONSIVE SOBRE A CLÍNICA ===== */
+@media (max-width: 768px) {
+    .clinica-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .clinica-gallery__item--large {
+        height: 280px;
+    }
+
+    .clinica-gallery__col {
+        flex-direction: row;
+    }
+
+    .clinica-gallery__col .clinica-gallery__item {
+        height: 180px;
+        flex: 1;
+    }
+
+    .clinica-video-section__overlay {
+        background: rgba(26,26,26,0.88);
+    }
+
+    .clinica-video-section__content {
+        max-width: 100%;
+    }
+
+    .clinica-curriculum__item {
+        gap: 10px;
+    }
+}

@@ -2,50 +2,58 @@
     <div class="container about__inner">
 
         <div class="about__content">
-            <span class="label fade-up">Sobre a Especialista</span>
-            <h2 class="section-title fade-up">Hayla Gomes,<br><span class="text--gradient">Fisioterapeuta</span></h2>
+            <span class="label fade-up">Sobre a Clínica</span>
+            <h2 class="section-title fade-up">Rekintsu<br><span class="text--gradient">Pilates Clínico</span></h2>
 
             <p class="about__text fade-up">
-                Com mais de 13 anos de experiência clínica, Hayla é especialista em reabilitação da coluna vertebral, hérnias e lesões musculoesqueléticas. Formada em fisioterapia e com especializações em pilates clínico, osteopatia, ergonomia ocupacional e liberação miofascial.
+                Localizada no coração do Centro Cívico de Curitiba, a Rekintsu é uma clínica de pilates clínico e reabilitação física com atendimento exclusivamente individualizado — apenas você e a fisioterapeuta em cada sessão.
             </p>
 
             <p class="about__text fade-up">
-                Na Rekintsu, o atendimento é sempre exclusivo e individualizado — cada paciente recebe uma avaliação detalhada e um programa personalizado, elaborado com atenção às suas necessidades específicas e objetivos de saúde.
+                À frente da clínica está a fisioterapeuta <strong>Hayla Gomes</strong>, com mais de 13 anos de experiência clínica e especializações em pilates terapêutico, osteopatia, liberação miofascial e ergonomia ocupacional.
             </p>
 
             <div class="about__specs fade-up">
                 <div class="about__spec">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                    Especialização em Pilates Clínico e Reabilitação
+                    Atendimento 1:1 — exclusivo e individualizado
                 </div>
                 <div class="about__spec">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                    Especialização em Osteopatia e Terapia Manual
+                    Equipamentos de pilates profissionais e scanner postural
                 </div>
                 <div class="about__spec">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                    Ergonomia Ocupacional e Saúde no Trabalho
+                    Edifício World Trade Center — acessível e bem localizado
                 </div>
                 <div class="about__spec">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                    Liberação Miofascial e Técnicas de Relaxamento
+                    5 ★ no Google — reconhecimento de quem tratou
                 </div>
             </div>
+
+            <a href="/site/paginas/sobre-a-clinica.php" class="btn btn--gradient fade-up" style="margin-top:36px; display:inline-flex;">
+                Conheça a Clínica
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
         </div>
 
         <div class="about__visual fade-up">
+            <div class="about__photo">
+                <img src="/site/assets/img/clinica01.jpg" alt="Clínica Rekintsu — Centro Cívico Curitiba" loading="lazy">
+            </div>
             <div class="about__stats-card">
                 <div class="big-stat">
                     <span class="big-stat__number">13+</span>
-                    <span class="big-stat__label">Anos de experiência clínica</span>
+                    <span class="big-stat__label">Anos de experiência</span>
                 </div>
                 <div class="big-stat">
-                    <span class="big-stat__number">6</span>
-                    <span class="big-stat__label">Especialidades disponíveis</span>
+                    <span class="big-stat__number">1:1</span>
+                    <span class="big-stat__label">Atendimento exclusivo</span>
                 </div>
                 <div class="big-stat">
-                    <span class="big-stat__number">100%</span>
-                    <span class="big-stat__label">Atendimento individualizado</span>
+                    <span class="big-stat__number">5★</span>
+                    <span class="big-stat__label">Google Avaliações</span>
                 </div>
             </div>
         </div>

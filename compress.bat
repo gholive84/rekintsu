@@ -9,6 +9,8 @@ REM =========================================================
 set INPUT_DIR=site\assets\img
 set OUTPUT_DIR=site\assets\video
 
+if not exist "%OUTPUT_DIR%" mkdir "%OUTPUT_DIR%"
+
 echo Comprimindo videos para web...
 
 REM hero — 720p, ~2-4 MB, loop perfeito para background

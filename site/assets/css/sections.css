@@ -534,7 +534,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    align-items: center;
+    align-items: start;
 }
 
 .about .label {
@@ -578,10 +578,25 @@
     margin-top: 1px;
 }
 
+.about__photo {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.1);
+}
+
+.about__photo img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
 .about__visual {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: sticky;
+    top: 100px;
 }
 
 .about__stats-card {
