@@ -12,6 +12,8 @@ include ROOT . '/site/includes/header.php';
 include ROOT . '/site/sections/hero.php';
 include ROOT . '/site/sections/clients.php';
 include ROOT . '/site/sections/services.php';
+include ROOT . '/site/sections/como-funciona-bloco.php';
+include ROOT . '/site/sections/localizacao.php';
 include ROOT . '/site/sections/about.php';
 include ROOT . '/site/sections/blog-preview.php';
 include ROOT . '/site/sections/contact.php';

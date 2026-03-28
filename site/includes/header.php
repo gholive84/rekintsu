@@ -6,11 +6,12 @@
 
         <nav class="nav" id="nav">
             <ul class="nav__list">
-                <li><a href="#inicio" class="nav__link">Início</a></li>
-                <li><a href="#servicos" class="nav__link">Serviços</a></li>
-                <li><a href="#sobre" class="nav__link">Sobre</a></li>
-                <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
-                <li><a href="#contato" class="nav__link">Contato</a></li>
+                <li><a href="/#inicio" class="nav__link">Início</a></li>
+                <li><a href="/#servicos" class="nav__link">Serviços</a></li>
+                <li><a href="/site/paginas/como-funciona.php" class="nav__link">Como Funciona</a></li>
+                <li><a href="/#sobre" class="nav__link">Sobre</a></li>
+                <li><a href="/#depoimentos" class="nav__link">Depoimentos</a></li>
+                <li><a href="/#contato" class="nav__link">Contato</a></li>
             </ul>
         </nav>
 

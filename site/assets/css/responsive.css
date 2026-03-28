@@ -180,6 +180,39 @@
     }
 }
 
+/* ===== LOCALIZAÇÃO + COMO FUNCIONA BLOCO ===== */
+@media (max-width: 1024px) {
+    .processo-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    /* Localização — stack photos behind, simplify layout */
+    .localizacao__visual {
+        opacity: 0.35;
+    }
+
+    .localizacao__photos {
+        grid-template-columns: 1fr;
+    }
+
+    .localizacao__content {
+        max-width: 100%;
+    }
+
+    .localizacao__features {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    /* Como funciona bloco */
+    .processo-steps {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
 /* ===== MOBILE XS (375px) ===== */
 @media (max-width: 400px) {
     .hero__title {

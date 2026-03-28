@@ -7,91 +7,63 @@
             <p class="section-subtitle">Cada corpo é único. Por isso oferecemos serviços individualizados, com avaliação personalizada e acompanhamento próximo em todas as etapas.</p>
         </div>
 
-        <div class="services__grid">
+        <div class="services__grid services__grid--2col">
 
-            <div class="service-card fade-up">
+            <a href="/site/paginas/pilates-idosos.php" class="service-card service-card--link fade-up">
                 <div class="service-card__img">
-                    <img src="/site/assets/img/lombar.png" alt="Pilates para Reabilitação" loading="lazy">
-                </div>
-                <div class="service-card__body">
-                    <h3 class="service-card__title">Pilates para Reabilitação</h3>
-                    <p class="service-card__text">Exercícios terapêuticos que fortalecem, corrigem e restauram a função do corpo. Indicado para lesões, dores crônicas, hérnias e problemas posturais.</p>
-                    <a href="https://wa.me/5541991191501?text=Olá! Quero saber mais sobre Pilates para Reabilitação." class="service-card__link" target="_blank" rel="noopener">
-                        Saber mais
-                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="service-card fade-up">
-                <div class="service-card__img">
-                    <img src="/site/assets/img/lesao.jpeg" alt="Pilates Pós-Cirúrgico" loading="lazy">
-                </div>
-                <div class="service-card__body">
-                    <h3 class="service-card__title">Pilates Pós-Cirúrgico</h3>
-                    <p class="service-card__text">Recuperação segura e eficaz após procedimentos cirúrgicos. Exercícios adaptados que respeitam os limites da recuperação e aceleram o retorno às atividades.</p>
-                    <a href="https://wa.me/5541991191501?text=Olá! Quero saber mais sobre Pilates Pós-Cirúrgico." class="service-card__link" target="_blank" rel="noopener">
-                        Saber mais
-                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="service-card fade-up">
-                <div class="service-card__img">
-                    <img src="/site/assets/img/esticando.jpg" alt="Pilates na Gestação" loading="lazy">
-                </div>
-                <div class="service-card__body">
-                    <h3 class="service-card__title">Pilates na Gestação</h3>
-                    <p class="service-card__text">Exercícios adaptados às mudanças do corpo durante a gravidez. Alivia dores, melhora postura e prepara o corpo para o parto com segurança e leveza.</p>
-                    <a href="https://wa.me/5541991191501?text=Olá! Quero saber mais sobre Pilates na Gestação." class="service-card__link" target="_blank" rel="noopener">
-                        Saber mais
-                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="service-card fade-up">
-                <div class="service-card__img">
-                    <img src="/site/assets/img/dor-costas-filho.jpeg" alt="Pilates para Idosos" loading="lazy">
+                    <img src="/site/assets/img/idoso.jpeg" alt="Pilates para Idosos" loading="lazy">
                 </div>
                 <div class="service-card__body">
                     <h3 class="service-card__title">Pilates para Idosos</h3>
                     <p class="service-card__text">Melhora de mobilidade, equilíbrio, força e postura para um envelhecimento ativo e saudável. Exercícios com baixo impacto e alta efetividade.</p>
-                    <a href="https://wa.me/5541991191501?text=Olá! Quero saber mais sobre Pilates para Idosos." class="service-card__link" target="_blank" rel="noopener">
-                        Saber mais
+                    <span class="service-card__link">
+                        Saiba mais
                         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
+                    </span>
                 </div>
-            </div>
+            </a>
 
-            <div class="service-card fade-up">
+            <a href="/site/paginas/pilates-gestantes.php" class="service-card service-card--link fade-up">
                 <div class="service-card__img">
-                    <img src="/site/assets/img/dor-costas.jpeg" alt="Liberação Miofascial" loading="lazy">
+                    <img src="/site/assets/img/gravida2.jpeg" alt="Pilates para Gestantes" loading="lazy">
                 </div>
                 <div class="service-card__body">
-                    <h3 class="service-card__title">Liberação Miofascial</h3>
-                    <p class="service-card__text">Técnica manual que alivia tensões musculares profundas, melhora a amplitude de movimento e trata restrições teciduais que causam dor e desconforto.</p>
-                    <a href="https://wa.me/5541991191501?text=Olá! Quero saber mais sobre Liberação Miofascial." class="service-card__link" target="_blank" rel="noopener">
-                        Saber mais
+                    <h3 class="service-card__title">Pilates para Gestantes</h3>
+                    <p class="service-card__text">Exercícios adaptados às mudanças do corpo durante a gravidez. Alivia dores, melhora postura e prepara o corpo para o parto com segurança e leveza.</p>
+                    <span class="service-card__link">
+                        Saiba mais
                         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
+                    </span>
                 </div>
-            </div>
+            </a>
 
-            <div class="service-card fade-up">
+            <a href="/site/paginas/pilates-pos-cirurgico.php" class="service-card service-card--link fade-up">
                 <div class="service-card__img">
-                    <img src="/site/assets/img/tenis.jpeg" alt="Massagem e Acupuntura" loading="lazy">
+                    <img src="/site/assets/img/pos-cirugico2.jpeg" alt="Pilates Pós-Cirúrgico" loading="lazy">
                 </div>
                 <div class="service-card__body">
-                    <h3 class="service-card__title">Massagem &amp; Acupuntura</h3>
-                    <p class="service-card__text">Terapias complementares que potencializam os resultados do pilates. Aliviam tensões, melhoram a circulação e promovem o equilíbrio energético do corpo.</p>
-                    <a href="https://wa.me/5541991191501?text=Olá! Quero saber mais sobre Massagem e Acupuntura." class="service-card__link" target="_blank" rel="noopener">
-                        Saber mais
+                    <h3 class="service-card__title">Pilates Pós-Cirúrgico</h3>
+                    <p class="service-card__text">Recuperação segura e eficaz após procedimentos cirúrgicos. Exercícios adaptados que respeitam os limites da recuperação e aceleram o retorno às atividades.</p>
+                    <span class="service-card__link">
+                        Saiba mais
                         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
+                    </span>
                 </div>
-            </div>
+            </a>
+
+            <a href="/site/paginas/pilates-hernias-lesoes.php" class="service-card service-card--link fade-up">
+                <div class="service-card__img">
+                    <img src="/site/assets/img/hernias-e-lesoes.jpeg" alt="Pilates para Hérnias e Lesões" loading="lazy">
+                </div>
+                <div class="service-card__body">
+                    <h3 class="service-card__title">Pilates para Hérnias e Lesões</h3>
+                    <p class="service-card__text">Tratamento conservador e eficaz para hérnias de disco, dores crônicas e lesões musculoesqueléticas. Fortaleça o corpo e elimine a dor sem cirurgia.</p>
+                    <span class="service-card__link">
+                        Saiba mais
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
 
         </div>
     </div>
