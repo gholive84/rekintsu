@@ -28,23 +28,25 @@ Você está construindo o site da **Rekintsu Pilates Clínico**, uma clínica es
 
 ### Cores
 
-| Token | Hex | Uso |
+| Token CSS | Hex | Uso |
 |---|---|---|
-| `primary` | `#0D9B8E` | Botões principais, links, destaques |
-| `primary-dark` | `#0A7E73` | Hover de botões |
-| `accent` | `#5ECDC4` | Palavras em destaque nas headlines, ícones |
-| `bg-dark` | `#071620` | Fundo de seções escuras |
-| `bg-dark-2` | `#0D1E2B` | Fundo alternado escuro |
-| `bg-light` | `#F8FAFC` | Fundo de seções claras |
-| `bg-white` | `#FFFFFF` | Cards, navbar, footer |
-| `text-primary` | `#0F172A` | Texto principal |
-| `text-muted` | `#64748B` | Texto secundário |
-| `border` | `#E2E8F0` | Bordas de cards |
+| `--color-primary` | `#DBA159` | Botões principais, links, destaques |
+| `--color-primary-dark` | `#C48A45` | Hover de botões |
+| `--color-accent` | `#EFD780` | Palavras em destaque nas headlines |
+| `--color-accent-dark` | `#C8A84B` | Hover de accent |
+| `--color-mint` | `#D0E3CC` | Detalhes sutis verdes |
+| `--color-dark` | `#1A1A1A` | Fundo de seções escuras (hero, contact) |
+| `--color-dark-2` | `#2A2A2A` | Fundo alternado escuro (about, strip) |
+| `--color-light` | `#F4F4F5` | Fundo de seções claras |
+| `--color-white` | `#FFFFFF` | Cards, navbar, footer |
+| `--color-text` | `#0F172A` | Texto principal |
+| `--color-muted` | `#64748B` | Texto secundário |
+| `--color-border` | `#E2E8F0` | Bordas de cards |
 
 ### Gradiente Principal
 
 ```css
-background: linear-gradient(135deg, #0D9B8E, #5ECDC4);
+background: linear-gradient(135deg, #DBA159, #EFD780);
 ```
 
 ### Tipografia
@@ -57,8 +59,10 @@ background: linear-gradient(135deg, #0D9B8E, #5ECDC4);
 
 ### Logo
 
-- Texto "rekintsu" em minúsculo + "pilates clínico" abaixo
-- Cor branca em fundos escuros / teal em fundos claros
+- Header: `rekintsu-logo-svg.svg`
+- Rodapé: `logobranca-svg.svg`
+- Fundo claro: `logopreta-svg.svg`
+- Nunca distorcer ou alterar cores
 
 ---
 
@@ -111,7 +115,7 @@ site/
 ## Regras de Desenvolvimento
 
 1. **Mobile-first** — responsivo em 375px / 768px / 1280px
-2. **Sempre atualizar `guideline.php`** ao alterar o layout
+2. **Sempre atualizar `guideline.php`** ao alterar cores, componentes, seções ou criar páginas novas
 3. **Deletar** páginas PHP, assets, imagens não utilizados
 4. **Performance** — `loading="lazy"` em todas as imagens e comprimir imagens ao utilizar
 5. **Acessibilidade** — tags semânticas, aria-labels
