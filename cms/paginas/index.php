@@ -6,6 +6,42 @@ $page_title = 'Páginas';
 $active     = 'paginas';
 $pdo        = db();
 
+// ── Sincronizar páginas da pasta site/paginas/ ──
+$sync_result = null;
+if (isset($_POST['sync'])) {
+    $pages_dir     = SITE_ROOT . '/site/paginas';
+    $files         = glob($pages_dir . '/*.php') ?: [];
+    $skip          = ['guideline.php'];
+    $inserted      = 0;
+
+    // Páginas já registradas (por file_path)
+    $registered = $pdo->query('SELECT file_path FROM paginas')->fetchAll(PDO::FETCH_COLUMN);
+    $registered = array_map('basename', $registered);
+
+    $ins = $pdo->prepare(
+        'INSERT IGNORE INTO paginas (title, slug, url, file_path, status)
+         VALUES (?, ?, ?, ?, ?)'
+    );
+
+    foreach ($files as $file) {
+        $filename = basename($file);
+        if (in_array($filename, $skip)) continue;
+        if (in_array($filename, $registered)) continue;
+
+        // Gera título e slug a partir do nome do arquivo
+        $slug  = '/' . str_replace('.php', '', $filename);
+        $title = ucwords(str_replace(['-', '.php'], [' ', ''], $filename));
+
+        $ins->execute([$title, $slug, $slug, $file, 'active']);
+        if ($ins->rowCount() > 0) $inserted++;
+    }
+
+    $sync_result = $inserted;
+    header('Location: ' . CMS_URL . '/paginas/?synced=' . $inserted);
+    exit;
+}
+
+$synced  = isset($_GET['synced']) ? (int)$_GET['synced'] : null;
 $paginas = $pdo->query('SELECT * FROM paginas ORDER BY created_at ASC')->fetchAll();
 
 require_once dirname(__DIR__) . '/includes/head.php';
@@ -16,7 +52,21 @@ require_once dirname(__DIR__) . '/includes/head.php';
     <h1 class="page-header__title">Páginas</h1>
     <p class="page-header__sub">Referências de páginas do site</p>
   </div>
+  <form method="POST">
+    <button type="submit" name="sync" class="btn btn-primary btn-sm" style="gap:6px;display:flex;align-items:center">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+      Sincronizar Páginas
+    </button>
+  </form>
 </div>
+
+<?php if ($synced !== null): ?>
+<div class="alert alert--<?= $synced > 0 ? 'success' : 'info' ?>" style="margin-bottom:16px">
+  <?= $synced > 0
+    ? "✅ <strong>{$synced} nova(s) página(s)</strong> registrada(s) com sucesso."
+    : "Nenhuma página nova encontrada. Tudo já estava sincronizado." ?>
+</div>
+<?php endif; ?>
 
 <div class="adm-card">
   <div class="adm-card__header">
@@ -32,7 +82,7 @@ require_once dirname(__DIR__) . '/includes/head.php';
       <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
     </div>
     <p class="empty-state__title">Nenhuma página cadastrada</p>
-    <p class="empty-state__text">Execute o install.php para popular as páginas padrão.</p>
+    <p class="empty-state__text">Clique em "Sincronizar Páginas" para detectar automaticamente.</p>
   </div>
   <?php else: ?>
   <div class="adm-table-wrap">
