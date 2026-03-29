@@ -3,17 +3,16 @@ DirectoryIndex index.php index.html
 
 RewriteEngine On
 
-# CMS — acesso via /cms (pasta real, sem rewrite necessário)
-# Protege install.php de acesso externo após instalação (descomente após instalar)
+# Protege install.php de acesso externo após instalação
 # RewriteRule ^cms/install\.php$ - [F,L]
-
-# Blog
-RewriteRule ^blog/?$ blog/index.php [L]
 
 # Guideline interno (sem indexação)
 RewriteRule ^guideline/?$ site/paginas/guideline.php [L]
 
-# Páginas internas de serviços
-RewriteRule ^projetos-wordpress-premium/?$ site/paginas/projetos-wordpress-premium.php [L]
-RewriteRule ^sites-ia/?$ site/paginas/sites-ia.php [L]
-RewriteRule ^suporte-wordpress-premium/?$ site/paginas/suporte-wordpress-premium.php [L]
+# Páginas internas
+RewriteRule ^sobre-a-clinica/?$ site/paginas/sobre-a-clinica.php [L]
+RewriteRule ^como-funciona/?$ site/paginas/como-funciona.php [L]
+RewriteRule ^pilates-gestantes/?$ site/paginas/pilates-gestantes.php [L]
+RewriteRule ^pilates-hernias-lesoes/?$ site/paginas/pilates-hernias-lesoes.php [L]
+RewriteRule ^pilates-idosos/?$ site/paginas/pilates-idosos.php [L]
+RewriteRule ^pilates-pos-cirurgico/?$ site/paginas/pilates-pos-cirurgico.php [L]

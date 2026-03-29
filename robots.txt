@@ -1,0 +1,79 @@
+# =============================================
+# robots.txt — rekintsupilates.com.br
+# =============================================
+
+# --- Crawlers gerais ---
+User-agent: *
+Allow: /
+Disallow: /cms/
+Disallow: /cms/install.php
+Disallow: /uploads/
+Disallow: /site/paginas/guideline.php
+Disallow: /*.sql$
+Disallow: /*.log$
+
+# --- Google ---
+User-agent: Googlebot
+Allow: /
+Disallow: /cms/
+
+# Google para produtos de IA (AI Overviews, Gemini)
+User-agent: Google-Extended
+Allow: /
+
+# --- Bing ---
+User-agent: Bingbot
+Allow: /
+Disallow: /cms/
+
+# --- OpenAI / ChatGPT ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# --- Anthropic / Claude ---
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# --- Perplexity ---
+User-agent: PerplexityBot
+Allow: /
+
+# --- Meta AI ---
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# --- Apple ---
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Common Crawl (usado por pesquisadores e IAs) ---
+User-agent: CCBot
+Allow: /
+
+# --- Bots maliciosos conhecidos ---
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# --- Sitemap ---
+Sitemap: https://rekintsupilates.com.br/sitemap.xml

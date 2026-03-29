@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://rekintsupilates.com.br/</loc>
+        <lastmod>2026-03-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Sobre a Clínica -->
+    <url>
+        <loc>https://rekintsupilates.com.br/sobre-a-clinica</loc>
+        <lastmod>2026-03-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Como Funciona / Processo de Atendimento -->
+    <url>
+        <loc>https://rekintsupilates.com.br/como-funciona</loc>
+        <lastmod>2026-03-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Pilates para Gestantes -->
+    <url>
+        <loc>https://rekintsupilates.com.br/pilates-gestantes</loc>
+        <lastmod>2026-03-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Pilates para Hérnias e Lesões -->
+    <url>
+        <loc>https://rekintsupilates.com.br/pilates-hernias-lesoes</loc>
+        <lastmod>2026-03-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Pilates para Idosos -->
+    <url>
+        <loc>https://rekintsupilates.com.br/pilates-idosos</loc>
+        <lastmod>2026-03-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Pilates Pós-Cirúrgico -->
+    <url>
+        <loc>https://rekintsupilates.com.br/pilates-pos-cirurgico</loc>
+        <lastmod>2026-03-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+</urlset>
