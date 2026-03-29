@@ -358,7 +358,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "INSERT IGNORE INTO posts
             (title, slug, excerpt, content, image_url, category, category_slug, read_time, status, scheduled_at, created_at)
         VALUES
-            (:title, :slug, :excerpt, :content, :image_url, :category, :category_slug, :read_time, :status, :scheduled_at, :scheduled_at)";
+            (:title, :slug, :excerpt, :content, :image_url, :category, :category_slug, :read_time, :status, :scheduled_at, :created_at)";
 
 $stmt  = $pdo->prepare($sql);
 $count = 0;
@@ -376,6 +376,7 @@ foreach ($posts as $p) {
             ':read_time'     => $p['read_time'],
             ':status'        => 'scheduled',
             ':scheduled_at'  => $p['scheduled_at'],
+            ':created_at'    => $p['scheduled_at'],
         ]);
         $inserted = $stmt->rowCount() > 0;
         if ($inserted) $count++;
