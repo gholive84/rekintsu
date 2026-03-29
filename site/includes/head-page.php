@@ -26,7 +26,7 @@
     <link rel="icon" type="image/png" href="/site/assets/img/favicon.png">
     <link rel="apple-touch-icon" href="/site/assets/img/favicon.png">
 
-    <!-- Bibliotecas JS gerenciadas via CMS (CSS) -->
+    <!-- Códigos de cabeçalho + Bibliotecas JS gerenciadas via CMS -->
     <?php
     try {
         if (!function_exists('db')) {
@@ -34,6 +34,9 @@
             if (file_exists($cms_boot)) require_once $cms_boot;
         }
         if (function_exists('setting')) {
+            $hc = setting('header_codes', '');
+            if ($hc !== '') echo $hc . "\n    ";
+
             $site_libs = json_decode(setting('site_libraries', '[]'), true) ?: [];
             foreach ($site_libs as $lib) {
                 if (!empty($lib['css'])) {
