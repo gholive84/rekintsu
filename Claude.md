@@ -117,6 +117,7 @@ site/
 5. **Acessibilidade** — tags semânticas, aria-labels
 6. **Caminhos absolutos** — usar `/site/assets/css/` etc.
 7. **GitHub**: https://github.com/gholive84/rekintsu.git
+8. **Nova página**: ao criar qualquer página pública, adicionar entrada em `sitemap.xml` (URL limpa) e rota em `.htaccess`
 
 
 
