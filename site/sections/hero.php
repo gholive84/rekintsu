@@ -1,8 +1,13 @@
 <section class="hero" id="inicio">
 
     <div class="hero__bg" aria-hidden="true">
-        <img src="/site/assets/img/hero1.png" alt="" class="hero__bg-img" loading="eager">
+        <video autoplay muted loop playsinline
+               poster="/site/assets/img/hero1.png"
+               class="hero__bg-video">
+            <source src="/site/assets/video/video2-web.mp4" type="video/mp4">
+        </video>
         <div class="hero__bg-overlay"></div>
+        <div class="hero__bg-texture"></div>
     </div>
 
     <div class="container">
