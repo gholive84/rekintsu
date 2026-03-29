@@ -113,10 +113,13 @@ site/
 1. **Mobile-first** — responsivo em 375px / 768px / 1280px
 2. **Sempre atualizar `guideline.php`** ao alterar o layout
 3. **Deletar** páginas PHP, assets, imagens não utilizados
-4. **Performance** — `loading="lazy"` em todas as imagens
+4. **Performance** — `loading="lazy"` em todas as imagens e comprimir imagens ao utilizar
 5. **Acessibilidade** — tags semânticas, aria-labels
 6. **Caminhos absolutos** — usar `/site/assets/css/` etc.
 7. **GitHub**: https://github.com/gholive84/rekintsu.git
+
+
+
 
 ---
 

@@ -17,7 +17,7 @@
 
         <div class="footer__links">
             <div class="footer__col">
-                <h4>Serviços</h4>
+                <h4>Especialidades</h4>
                 <ul>
                     <li><a href="#servicos">Pilates para Reabilitação</a></li>
                     <li><a href="#servicos">Pilates Pós-Cirúrgico</a></li>

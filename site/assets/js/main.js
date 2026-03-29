@@ -26,23 +26,42 @@ nav.querySelectorAll('a.nav__link').forEach(link => {
 
 /* ===== MEGAMENU ===== */
 const megaItems = document.querySelectorAll('.nav__item--mega');
+
+function closeMega(item) {
+    item.classList.remove('open');
+    const btn = item.querySelector('.nav__link--has-sub');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+}
+
+function openMega(item) {
+    item.classList.add('open');
+    const btn = item.querySelector('.nav__link--has-sub');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+    megaItems.forEach(other => { if (other !== item) closeMega(other); });
+}
+
 megaItems.forEach(item => {
     const btn = item.querySelector('.nav__link--has-sub');
     if (!btn) return;
+    let closeTimer;
 
-    // Toggle on click (for touch/keyboard)
+    // Hover: open on enter, close with delay on leave
+    item.addEventListener('mouseenter', () => {
+        clearTimeout(closeTimer);
+        openMega(item);
+    });
+    item.addEventListener('mouseleave', () => {
+        closeTimer = setTimeout(() => closeMega(item), 150);
+    });
+
+    // Click toggle (touch/keyboard)
     btn.addEventListener('click', (e) => {
         e.stopPropagation();
-        const isOpen = item.classList.toggle('open');
-        btn.setAttribute('aria-expanded', isOpen);
-        // Close other mega items
-        megaItems.forEach(other => {
-            if (other !== item) {
-                other.classList.remove('open');
-                const otherBtn = other.querySelector('.nav__link--has-sub');
-                if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
-            }
-        });
+        if (item.classList.contains('open')) {
+            closeMega(item);
+        } else {
+            openMega(item);
+        }
     });
 });
 

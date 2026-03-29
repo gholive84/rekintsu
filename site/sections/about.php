@@ -24,7 +24,7 @@
                 </div>
                 <div class="about__spec">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                    Edifício World Trade Center — acessível e bem localizado
+                    Edifício World Business — acessível e bem localizado
                 </div>
                 <div class="about__spec">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
