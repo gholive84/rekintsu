@@ -4,7 +4,7 @@
             <img src="/site/assets/img/rekintsu-logo-svg.svg" alt="Rekintsu Pilates Clínico" class="logo__img">
         </a>
 
-        <nav class="nav" id="nav">
+        <nav class="nav" id="nav" aria-label="Menu principal">
             <ul class="nav__list">
                 <li><a href="/#inicio" class="nav__link">Início</a></li>
 
@@ -23,13 +23,13 @@
                                     </div>
                                     <h3 class="nav-mega__intro-title">Pilates Clínico Especializado</h3>
                                     <p class="nav-mega__intro-text">Abordagem terapêutica individualizada para diversas condições de saúde — com avaliação postural, plano personalizado e acompanhamento contínuo.</p>
-                                    <a href="/site/paginas/como-funciona.php" class="nav-mega__intro-link">
+                                    <a href="/como-funciona" class="nav-mega__intro-link">
                                         Como funciona o tratamento
                                         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                                     </a>
                                 </div>
 
-                                <a href="/site/paginas/pilates-idosos.php" class="nav-mega__card">
+                                <a href="/pilates-idosos" class="nav-mega__card">
                                     <div class="nav-mega__card-img">
                                         <img src="/site/assets/img/idoso.jpeg" alt="Pilates para Idosos" loading="lazy">
                                     </div>
@@ -40,7 +40,7 @@
                                     </div>
                                 </a>
 
-                                <a href="/site/paginas/pilates-gestantes.php" class="nav-mega__card">
+                                <a href="/pilates-gestantes" class="nav-mega__card">
                                     <div class="nav-mega__card-img">
                                         <img src="/site/assets/img/gravida2.jpeg" alt="Pilates para Gestantes" loading="lazy">
                                     </div>
@@ -51,7 +51,7 @@
                                     </div>
                                 </a>
 
-                                <a href="/site/paginas/pilates-pos-cirurgico.php" class="nav-mega__card">
+                                <a href="/pilates-pos-cirurgico" class="nav-mega__card">
                                     <div class="nav-mega__card-img">
                                         <img src="/site/assets/img/pos-cirugico2.jpeg" alt="Pilates Pós-Cirúrgico" loading="lazy">
                                     </div>
@@ -62,7 +62,7 @@
                                     </div>
                                 </a>
 
-                                <a href="/site/paginas/pilates-hernias-lesoes.php" class="nav-mega__card">
+                                <a href="/pilates-hernias-lesoes" class="nav-mega__card">
                                     <div class="nav-mega__card-img">
                                         <img src="/site/assets/img/hernias-e-lesoes.jpeg" alt="Hérnias e Lesões" loading="lazy">
                                     </div>
@@ -79,15 +79,15 @@
 
                     <!-- Sub-lista mobile (accordion) -->
                     <ul class="nav-sub__list">
-                        <li><a href="/site/paginas/pilates-idosos.php" class="nav-sub__link">Pilates para Idosos</a></li>
-                        <li><a href="/site/paginas/pilates-gestantes.php" class="nav-sub__link">Pilates para Gestantes</a></li>
-                        <li><a href="/site/paginas/pilates-pos-cirurgico.php" class="nav-sub__link">Pós-Cirúrgico</a></li>
-                        <li><a href="/site/paginas/pilates-hernias-lesoes.php" class="nav-sub__link">Hérnias e Lesões</a></li>
+                        <li><a href="/pilates-idosos" class="nav-sub__link">Pilates para Idosos</a></li>
+                        <li><a href="/pilates-gestantes" class="nav-sub__link">Pilates para Gestantes</a></li>
+                        <li><a href="/pilates-pos-cirurgico" class="nav-sub__link">Pós-Cirúrgico</a></li>
+                        <li><a href="/pilates-hernias-lesoes" class="nav-sub__link">Hérnias e Lesões</a></li>
                     </ul>
                 </li>
 
-                <li><a href="/site/paginas/como-funciona.php" class="nav__link">Processo de Atendimento</a></li>
-                <li><a href="/site/paginas/sobre-a-clinica.php" class="nav__link">A Clínica</a></li>
+                <li><a href="/como-funciona" class="nav__link">Processo de Atendimento</a></li>
+                <li><a href="/sobre-a-clinica" class="nav__link">A Clínica</a></li>
                 <li><a href="/blog" class="nav__link">Blog</a></li>
                 <li><a href="/#contato" class="nav__link">Contato</a></li>
             </ul>

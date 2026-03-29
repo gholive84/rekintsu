@@ -108,7 +108,7 @@ if ($pdo && $post['category_slug']) {
                     <div class="post-sidebar__card">
                         <div class="post-sidebar__avatar">H</div>
                         <strong class="post-sidebar__name">Hayla Gomes</strong>
-                        <span class="post-sidebar__role">Fisioterapeuta · CREFITO</span>
+                        <span class="post-sidebar__role">Fisioterapeuta</span>
                         <p class="post-sidebar__bio">Especialista em Pilates Clínico e Reabilitação, com mais de 13 anos de experiência em Curitiba.</p>
                         <a href="https://wa.me/5541991191501?text=Olá! Gostaria de agendar uma avaliação na Rekintsu."
                            class="btn btn--gradient" target="_blank" rel="noopener" style="width:100%;justify-content:center">
@@ -116,12 +116,24 @@ if ($pdo && $post['category_slug']) {
                         </a>
                     </div>
 
-                    <?php if ($post['category']): ?>
-                    <div class="post-sidebar__card" style="margin-top:16px">
-                        <p style="font-size:.8125rem;font-weight:600;color:#64748B;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px">Categoria</p>
-                        <a href="/blog?categoria=<?= htmlspecialchars($post['category_slug']) ?>" class="blog-filter blog-filter--active" style="display:inline-flex">
-                            <?= htmlspecialchars($post['category']) ?>
+                    <?php if (!empty($related)): ?>
+                    <div class="post-sidebar__card post-sidebar__related" style="margin-top:16px">
+                        <p class="post-sidebar__section-label">Artigos relacionados</p>
+                        <?php foreach ($related as $r): ?>
+                        <a href="/blog/<?= htmlspecialchars($r['slug']) ?>" class="post-sidebar__related-item">
+                            <?php if ($r['image_url']): ?>
+                            <div class="post-sidebar__related-img">
+                                <img src="<?= htmlspecialchars($r['image_url']) ?>" alt="<?= htmlspecialchars($r['title']) ?>" loading="lazy">
+                            </div>
+                            <?php endif; ?>
+                            <div class="post-sidebar__related-body">
+                                <?php if ($r['category']): ?>
+                                <span class="post-sidebar__related-cat"><?= htmlspecialchars($r['category']) ?></span>
+                                <?php endif; ?>
+                                <p class="post-sidebar__related-title"><?= htmlspecialchars($r['title']) ?></p>
+                            </div>
                         </a>
+                        <?php endforeach; ?>
                     </div>
                     <?php endif; ?>
                 </aside>
@@ -130,42 +142,6 @@ if ($pdo && $post['category_slug']) {
         </div>
     </section>
 
-    <!-- POSTS RELACIONADOS -->
-    <?php if (!empty($related)): ?>
-    <section class="page-section page-section--mint">
-        <div class="container">
-            <div class="section-header fade-up">
-                <span class="label">Continue Lendo</span>
-                <h2 class="section-title">Artigos <span class="text--accent">relacionados</span></h2>
-            </div>
-            <div class="blog-grid blog-grid--3 fade-up">
-                <?php foreach ($related as $r): ?>
-                <a href="/blog/<?= htmlspecialchars($r['slug']) ?>" class="blog-card">
-                    <div class="blog-card__image">
-                        <?php if ($r['image_url']): ?>
-                        <img src="<?= htmlspecialchars($r['image_url']) ?>" alt="<?= htmlspecialchars($r['title']) ?>" loading="lazy">
-                        <?php else: ?>
-                        <div class="blog-card__image-placeholder"></div>
-                        <?php endif; ?>
-                        <?php if ($r['category']): ?>
-                        <span class="blog-card__category"><?= htmlspecialchars($r['category']) ?></span>
-                        <?php endif; ?>
-                    </div>
-                    <div class="blog-card__body">
-                        <h3 class="blog-card__title"><?= htmlspecialchars($r['title']) ?></h3>
-                        <div class="blog-card__meta">
-                            <?php if ($r['read_time']): ?>
-                            <span><?= htmlspecialchars($r['read_time']) ?></span>
-                            <?php endif; ?>
-                            <span class="blog-card__readmore">Ler artigo →</span>
-                        </div>
-                    </div>
-                </a>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </section>
-    <?php endif; ?>
 
     <!-- CTA -->
     <section class="page-cta">

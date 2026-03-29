@@ -16,6 +16,7 @@ include ROOT . '/site/sections/como-funciona-bloco.php';
 include ROOT . '/site/sections/localizacao.php';
 include ROOT . '/site/sections/about.php';
 include ROOT . '/site/sections/blog-preview.php';
+include ROOT . '/site/sections/blog-posts.php';
 include ROOT . '/site/sections/contact.php';
 include ROOT . '/site/sections/cta.php';
 include ROOT . '/site/includes/footer.php';
