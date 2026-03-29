@@ -23,7 +23,8 @@
     ?>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/site/assets/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/site/assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="/site/assets/img/favicon.png">
 
     <!-- Bibliotecas JS gerenciadas via CMS (CSS) -->
     <?php
