@@ -19,12 +19,12 @@
             <div class="footer__col">
                 <h4>Especialidades</h4>
                 <ul>
-                    <li><a href="#servicos">Pilates para Reabilitação</a></li>
-                    <li><a href="#servicos">Pilates Pós-Cirúrgico</a></li>
-                    <li><a href="#servicos">Pilates na Gestação</a></li>
-                    <li><a href="#servicos">Pilates para Idosos</a></li>
-                    <li><a href="#servicos">Liberação Miofascial</a></li>
-                    <li><a href="#servicos">Massagem &amp; Acupuntura</a></li>
+                    <li><a href="/pilates-hernias-lesoes">Pilates para Reabilitação</a></li>
+                    <li><a href="/pilates-pos-cirurgico">Pilates Pós-Cirúrgico</a></li>
+                    <li><a href="/pilates-gestantes">Pilates na Gestação</a></li>
+                    <li><a href="/pilates-idosos">Pilates para Idosos</a></li>
+                    <li><a href="/sobre-a-clinica">A Clínica</a></li>
+                    <li><a href="/como-funciona">Como Funciona</a></li>
                 </ul>
             </div>
             <div class="footer__col">

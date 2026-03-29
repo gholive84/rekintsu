@@ -26,7 +26,7 @@
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
                 <a href="#servicos" class="btn btn--ghost btn--lg">
-                    Ver Serviços
+                    Ver Especialidades
                 </a>
             </div>
             <div class="hero__stats fade-up">
