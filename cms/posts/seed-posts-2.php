@@ -345,7 +345,16 @@ $posts = [
 
 ];
 
+// ── Diagnóstico: verifica se scheduled_at existe ─────────────────────────────
+$cols = $pdo->query("SHOW COLUMNS FROM posts LIKE 'scheduled_at'")->fetchAll();
+if (empty($cols)) {
+    die('<b style="color:red">❌ Coluna scheduled_at não existe.<br>Rode primeiro: <a href="migrate-scheduled.php">migrate-scheduled.php</a></b>');
+}
+echo '✅ Coluna <code>scheduled_at</code> encontrada.<br><br>';
+
 // ── Inserção ─────────────────────────────────────────────────────────────────
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 $sql = "INSERT IGNORE INTO posts
             (title, slug, excerpt, content, image_url, category, category_slug, read_time, status, scheduled_at, created_at)
         VALUES
@@ -355,22 +364,27 @@ $stmt  = $pdo->prepare($sql);
 $count = 0;
 
 foreach ($posts as $p) {
-    $stmt->execute([
-        ':title'         => $p['title'],
-        ':slug'          => $p['slug'],
-        ':excerpt'       => $p['excerpt'],
-        ':content'       => $p['content'],
-        ':image_url'     => $p['image_url'],
-        ':category'      => $p['category'],
-        ':category_slug' => $p['cat_slug'],
-        ':read_time'     => $p['read_time'],
-        ':status'        => 'scheduled',
-        ':scheduled_at'  => $p['scheduled_at'],
-    ]);
-    if ($stmt->rowCount()) $count++;
-    echo ($stmt->rowCount() ? '✅' : '⏭️') . ' ' . htmlspecialchars($p['title']) . '<br>';
+    try {
+        $stmt->execute([
+            ':title'         => $p['title'],
+            ':slug'          => $p['slug'],
+            ':excerpt'       => $p['excerpt'],
+            ':content'       => $p['content'],
+            ':image_url'     => $p['image_url'],
+            ':category'      => $p['category'],
+            ':category_slug' => $p['cat_slug'],
+            ':read_time'     => $p['read_time'],
+            ':status'        => 'scheduled',
+            ':scheduled_at'  => $p['scheduled_at'],
+        ]);
+        $inserted = $stmt->rowCount() > 0;
+        if ($inserted) $count++;
+        echo ($inserted ? '✅ Inserido' : '⏭️ Já existe') . ': ' . htmlspecialchars($p['title']) . '<br>';
+    } catch (Exception $e) {
+        echo '❌ Erro em "' . htmlspecialchars($p['title']) . '": ' . $e->getMessage() . '<br>';
+    }
 }
 
 echo "<br><strong>{$count} post(s) inserido(s) como agendados.</strong><br>";
-echo "Execute também <code>/cms/posts/publish-scheduled.php</code> diariamente via cron.<br>";
+echo "Execute <code>/cms/posts/publish-scheduled.php</code> diariamente via cron.<br>";
 echo "<br>Pode apagar este arquivo após executar.";
