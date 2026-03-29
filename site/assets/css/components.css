@@ -382,6 +382,21 @@
     line-height: 1.5;
 }
 
+/* ===== NAV OVERLAY ===== */
+.nav-overlay {
+    display: none;
+}
+
+/* ===== NAV MOBILE SUB-LISTA ===== */
+.nav-sub__list {
+    display: none;
+}
+
+/* ===== NAV MOBILE CTAs ===== */
+.nav__mobile-cta {
+    display: none;
+}
+
 /* ===== HAMBURGER ===== */
 .hamburger {
     display: none;

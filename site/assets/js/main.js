@@ -4,24 +4,42 @@ window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
-/* ===== HAMBURGER MENU ===== */
+/* ===== HAMBURGER MENU (DRAWER) ===== */
 const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('nav');
+const nav       = document.getElementById('nav');
+const overlay   = document.getElementById('navOverlay');
+
+function openDrawer() {
+    nav.classList.add('open');
+    overlay.classList.add('open');
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeDrawer() {
+    nav.classList.remove('open');
+    overlay.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+}
 
 hamburger.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    hamburger.classList.toggle('open', isOpen);
-    hamburger.setAttribute('aria-expanded', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+    nav.classList.contains('open') ? closeDrawer() : openDrawer();
 });
 
-nav.querySelectorAll('a.nav__link').forEach(link => {
-    link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-    });
+// Fecha ao clicar no overlay
+overlay.addEventListener('click', closeDrawer);
+
+// Fecha ao clicar em links do menu (exceto botão de submenu)
+nav.querySelectorAll('a.nav__link, .nav-sub__link, .nav__mobile-btn').forEach(link => {
+    link.addEventListener('click', closeDrawer);
+});
+
+// Fecha com Escape
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDrawer();
 });
 
 /* ===== MEGAMENU ===== */
@@ -76,14 +94,10 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Close on Escape
+// Escape: fecha megamenu desktop + drawer mobile (tratado no bloco hamburger)
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        megaItems.forEach(item => {
-            item.classList.remove('open');
-            const btn = item.querySelector('.nav__link--has-sub');
-            if (btn) btn.setAttribute('aria-expanded', 'false');
-        });
+        megaItems.forEach(item => closeMega(item));
     }
 });
 
