@@ -88,6 +88,7 @@
 
                 <li><a href="/site/paginas/como-funciona.php" class="nav__link">Processo de Atendimento</a></li>
                 <li><a href="/site/paginas/sobre-a-clinica.php" class="nav__link">A Clínica</a></li>
+                <li><a href="/blog" class="nav__link">Blog</a></li>
                 <li><a href="/#contato" class="nav__link">Contato</a></li>
             </ul>
 

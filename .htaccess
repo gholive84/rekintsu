@@ -9,6 +9,10 @@ RewriteEngine On
 # Guideline interno (sem indexação)
 RewriteRule ^guideline/?$ site/paginas/guideline.php [L]
 
+# Blog
+RewriteRule ^blog/?$ site/paginas/blog.php [L]
+RewriteRule ^blog/([a-zA-Z0-9_-]+)/?$ site/paginas/post.php?slug=$1 [L,QSA]
+
 # Páginas internas
 RewriteRule ^sobre-a-clinica/?$ site/paginas/sobre-a-clinica.php [L]
 RewriteRule ^como-funciona/?$ site/paginas/como-funciona.php [L]
