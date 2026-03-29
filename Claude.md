@@ -117,7 +117,14 @@ site/
 5. **Acessibilidade** — tags semânticas, aria-labels
 6. **Caminhos absolutos** — usar `/site/assets/css/` etc.
 7. **GitHub**: https://github.com/gholive84/rekintsu.git
-8. **Nova página**: ao criar qualquer página pública, adicionar entrada em `sitemap.xml` (URL limpa) e rota em `.htaccess`
+8. **Nova página**: ao criar qualquer página pública, fazer TUDO:
+   - Adicionar rota em `.htaccess`: `RewriteRule ^slug/?$ site/paginas/arquivo.php [L]`
+   - Adicionar entrada em `sitemap.xml` com a URL limpa
+   - Registrar no banco do CMS via SQL:
+     ```sql
+     INSERT INTO paginas (title, slug, url, file_path, status)
+     VALUES ('Título da Página', '/slug', '/slug', '/home/u492702861/domains/rekintsupilates.com.br/public_html/site/paginas/arquivo.php', 'active');
+     ```
 
 
 
