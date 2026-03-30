@@ -9,38 +9,40 @@ const hamburger = document.getElementById('hamburger');
 const nav       = document.getElementById('nav');
 const overlay   = document.getElementById('navOverlay');
 
-function openDrawer() {
-    nav.classList.add('open');
-    overlay.classList.add('open');
-    hamburger.classList.add('open');
-    hamburger.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
+if (hamburger && nav && overlay) {
+    function openDrawer() {
+        nav.classList.add('open');
+        overlay.classList.add('open');
+        hamburger.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+        nav.classList.remove('open');
+        overlay.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', () => {
+        nav.classList.contains('open') ? closeDrawer() : openDrawer();
+    });
+
+    // Fecha ao clicar no overlay
+    overlay.addEventListener('click', closeDrawer);
+
+    // Fecha ao clicar em links do menu (exceto botão de submenu)
+    nav.querySelectorAll('a.nav__link, .nav-sub__link, .nav__mobile-btn').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
+
+    // Fecha com Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeDrawer();
+    });
 }
-
-function closeDrawer() {
-    nav.classList.remove('open');
-    overlay.classList.remove('open');
-    hamburger.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-}
-
-hamburger.addEventListener('click', () => {
-    nav.classList.contains('open') ? closeDrawer() : openDrawer();
-});
-
-// Fecha ao clicar no overlay
-overlay.addEventListener('click', closeDrawer);
-
-// Fecha ao clicar em links do menu (exceto botão de submenu)
-nav.querySelectorAll('a.nav__link, .nav-sub__link, .nav__mobile-btn').forEach(link => {
-    link.addEventListener('click', closeDrawer);
-});
-
-// Fecha com Escape
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeDrawer();
-});
 
 /* ===== MEGAMENU ===== */
 const megaItems = document.querySelectorAll('.nav__item--mega');

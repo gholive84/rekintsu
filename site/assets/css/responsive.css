@@ -42,13 +42,8 @@
     }
 }
 
-/* ===== MOBILE (640px) ===== */
-@media (max-width: 640px) {
-    :root {
-        --section-padding: 64px 0;
-        --container-padding: 0 20px;
-    }
-
+/* ===== NAV MOBILE / DRAWER (768px) ===== */
+@media (max-width: 768px) {
     /* ── Overlay ── */
     .nav-overlay {
         display: block;
@@ -234,7 +229,7 @@
         background: #FEF9F1;
     }
 
-    /* ── Esconde CTAs mobile no desktop ── */
+    /* ── Esconde CTA de agendamento do header ── */
     .header .btn--gradient {
         display: none;
     }
@@ -260,6 +255,14 @@
 
     .hamburger.open span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+/* ===== MOBILE (640px) ===== */
+@media (max-width: 640px) {
+    :root {
+        --section-padding: 64px 0;
+        --container-padding: 0 20px;
     }
 
     /* Hero */
