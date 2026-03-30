@@ -10,21 +10,29 @@ const nav       = document.getElementById('nav');
 const overlay   = document.getElementById('navOverlay');
 
 if (hamburger && nav && overlay) {
-    function openDrawer() {
+    let _scrollY = 0;
+
+    const openDrawer = () => {
+        _scrollY = window.scrollY;
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${_scrollY}px`;
+        document.body.style.width = '100%';
         nav.classList.add('open');
         overlay.classList.add('open');
         hamburger.classList.add('open');
         hamburger.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-    }
+    };
 
-    function closeDrawer() {
+    const closeDrawer = () => {
         nav.classList.remove('open');
         overlay.classList.remove('open');
         hamburger.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-    }
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, _scrollY);
+    };
 
     hamburger.addEventListener('click', () => {
         nav.classList.contains('open') ? closeDrawer() : openDrawer();
@@ -33,9 +41,23 @@ if (hamburger && nav && overlay) {
     // Fecha ao clicar no overlay
     overlay.addEventListener('click', closeDrawer);
 
-    // Fecha ao clicar em links do menu (exceto botão de submenu)
+    // Fecha ao clicar em links do menu
     nav.querySelectorAll('a.nav__link, .nav-sub__link, .nav__mobile-btn').forEach(link => {
-        link.addEventListener('click', closeDrawer);
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            closeDrawer();
+            // Hash na mesma página: scroll suave após fechar drawer
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    setTimeout(() => {
+                        const offset = header ? header.offsetHeight + 16 : 80;
+                        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+                    }, 320);
+                }
+            }
+        });
     });
 
     // Fecha com Escape
