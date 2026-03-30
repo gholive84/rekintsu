@@ -701,6 +701,12 @@
     grid-template-columns: 1fr 360px;
     gap: 60px;
     align-items: center;
+    min-width: 0;
+}
+
+.cf-step__text,
+.cf-step__visual {
+    min-width: 0;
 }
 
 .cf-step--reverse .cf-step__content {
@@ -853,10 +859,12 @@
     /* CF Step */
     .cf-step {
         padding: 40px 0;
+        grid-template-columns: 56px 1fr;
+        gap: 20px;
     }
 
     .cf-step__number {
-        font-size: 4rem;
+        font-size: 2.5rem;
         margin-bottom: 8px;
     }
 
@@ -864,8 +872,12 @@
         font-size: 1.625rem;
     }
 
+    .cf-step__stat-card {
+        padding: 32px 20px;
+    }
+
     .cf-stat__num {
-        font-size: 3.5rem;
+        font-size: 2.75rem;
     }
 
     /* Page hero on servico/como-funciona */
@@ -1209,7 +1221,6 @@
     max-width: 720px;
     min-width: 0;
     overflow-wrap: break-word;
-    word-break: break-word;
     text-align: left;
 }
 
