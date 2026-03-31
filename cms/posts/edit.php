@@ -163,7 +163,28 @@ require_once dirname(__DIR__) . '/includes/head.php';
 
         <div class="form-group form-group--full">
           <label>Conteúdo</label>
-          <div id="quill-editor" style="min-height:380px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:6px;color:#e2e8f0"></div>
+          <div class="tiptap-wrap">
+            <div class="tiptap-toolbar">
+              <button type="button" data-action="h2"><b>H2</b></button>
+              <button type="button" data-action="h3"><b>H3</b></button>
+              <div class="sep"></div>
+              <button type="button" data-action="bold"><b>B</b></button>
+              <button type="button" data-action="italic"><i>I</i></button>
+              <button type="button" data-action="underline"><u>U</u></button>
+              <button type="button" data-action="strike"><s>S</s></button>
+              <div class="sep"></div>
+              <button type="button" data-action="ul">≡</button>
+              <button type="button" data-action="ol">1.</button>
+              <div class="sep"></div>
+              <button type="button" data-action="blockquote">"</button>
+              <button type="button" data-action="code">&lt;/&gt;</button>
+              <div class="sep"></div>
+              <button type="button" data-action="link">🔗</button>
+              <div class="sep"></div>
+              <button type="button" data-action="clear">✕</button>
+            </div>
+            <div class="tiptap-body"></div>
+          </div>
           <input type="hidden" id="content" name="content" value="<?= h($post['content'] ?? '') ?>">
         </div>
 
