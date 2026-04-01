@@ -3,6 +3,9 @@ DirectoryIndex index.php index.html
 
 RewriteEngine On
 
+# Sitemap dinâmico
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
 # Protege install.php de acesso externo após instalação
 # RewriteRule ^cms/install\.php$ - [F,L]
 
