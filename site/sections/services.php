@@ -2,9 +2,9 @@
     <div class="container">
 
         <div class="section-header fade-up">
-            <span class="label">Especialidades</span>
-            <h2 class="section-title">Cuidado especializado para<br>cada <span class="text--accent">necessidade</span></h2>
-            <p class="section-subtitle">Cada corpo é único. Por isso oferecemos serviços individualizados, com avaliação personalizada e acompanhamento próximo em todas as etapas.</p>
+            <span class="label">Por que escolher a Rekintsu</span>
+            <h2 class="section-title">Cada corpo tem uma história.<br>Cada tratamento tem um <span class="text--accent">plano</span>.</h2>
+            <p class="section-subtitle">Na Rekintsu não existe aula coletiva nem protocolo genérico. Toda sessão começa com avaliação postural e funcional — e evolui conforme o seu progresso.</p>
         </div>
 
         <div class="services__grid services__grid--2col">
