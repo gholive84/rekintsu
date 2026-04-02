@@ -24,17 +24,6 @@ include dirname(__DIR__) . '/includes/header.php';
         </div>
     </section>
 
-    <!-- INTRO -->
-    <section class="page-section">
-        <div class="container">
-            <div class="section-header fade-up" style="max-width:680px;margin:0 auto 56px;text-align:center">
-                <span class="label">Por que escolher a Rekintsu</span>
-                <h2 class="section-title">Cada corpo tem uma história.<br>Cada tratamento tem um <span class="text--accent">plano</span>.</h2>
-                <p class="section-subtitle">Na Rekintsu não existe aula coletiva nem protocolo genérico. Toda sessão começa com avaliação postural e funcional — e evolui conforme o seu progresso.</p>
-            </div>
-        </div>
-    </section>
-
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/site/sections/services.php'; ?>
 
     <!-- DIFERENCIAIS -->
