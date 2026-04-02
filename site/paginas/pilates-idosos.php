@@ -14,9 +14,9 @@ include dirname(__DIR__) . '/includes/header.php';
             <div class="page-hero__bg-overlay"></div>
         </div>
         <div class="container page-hero__content">
-            <a href="/#servicos" class="page-hero__back">
+            <a href="/especialidades" class="page-hero__back">
                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-                Voltar para serviços
+                Ver todas as especialidades
             </a>
             <span class="label">Especialidade</span>
             <h1 class="page-hero__title">Pilates para <span class="text--gradient">Idosos</span></h1>

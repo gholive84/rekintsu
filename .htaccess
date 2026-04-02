@@ -9,6 +9,22 @@ RewriteRule ^sitemap\.xml$ sitemap.php [L]
 # Protege install.php de acesso externo após instalação
 # RewriteRule ^cms/install\.php$ - [F,L]
 
+# ── 301 Redirects — URLs antigas do Search Console ───────────────────────────
+RewriteRule ^servicos/pilates-pos-cirurgico/?$ /especialidades/pilates-pos-cirurgico [R=301,L]
+RewriteRule ^servicos/pilates-na-gestacao/?$ /especialidades/pilates-gestantes [R=301,L]
+RewriteRule ^servicos/pilates-para-reabilitacao/?$ /especialidades [R=301,L]
+RewriteRule ^servicos/massagem-terapeutica-e-acupuntura/?$ /especialidades [R=301,L]
+RewriteRule ^servicos/pilates-para-idosos/?$ /especialidades/pilates-idosos [R=301,L]
+RewriteRule ^servicos/?$ /especialidades [R=301,L]
+RewriteRule ^contato/?$ / [R=301,L]
+RewriteRule ^o-studio/?$ /sobre-a-clinica [R=301,L]
+
+# ── 301 Redirects — slugs antigos de especialidades ──────────────────────────
+RewriteRule ^pilates-gestantes/?$ /especialidades/pilates-gestantes [R=301,L]
+RewriteRule ^pilates-hernias-lesoes/?$ /especialidades/pilates-hernias-lesoes [R=301,L]
+RewriteRule ^pilates-idosos/?$ /especialidades/pilates-idosos [R=301,L]
+RewriteRule ^pilates-pos-cirurgico/?$ /especialidades/pilates-pos-cirurgico [R=301,L]
+
 # Guideline interno (sem indexação)
 RewriteRule ^guideline/?$ site/paginas/guideline.php [L]
 
@@ -19,7 +35,10 @@ RewriteRule ^blog/([a-zA-Z0-9_-]+)/?$ site/paginas/post.php?slug=$1 [L,QSA]
 # Páginas internas
 RewriteRule ^sobre-a-clinica/?$ site/paginas/sobre-a-clinica.php [L]
 RewriteRule ^como-funciona/?$ site/paginas/como-funciona.php [L]
-RewriteRule ^pilates-gestantes/?$ site/paginas/pilates-gestantes.php [L]
-RewriteRule ^pilates-hernias-lesoes/?$ site/paginas/pilates-hernias-lesoes.php [L]
-RewriteRule ^pilates-idosos/?$ site/paginas/pilates-idosos.php [L]
-RewriteRule ^pilates-pos-cirurgico/?$ site/paginas/pilates-pos-cirurgico.php [L]
+
+# ── Especialidades ────────────────────────────────────────────────────────────
+RewriteRule ^especialidades/?$ site/paginas/especialidades.php [L]
+RewriteRule ^especialidades/pilates-gestantes/?$ site/paginas/pilates-gestantes.php [L]
+RewriteRule ^especialidades/pilates-hernias-lesoes/?$ site/paginas/pilates-hernias-lesoes.php [L]
+RewriteRule ^especialidades/pilates-idosos/?$ site/paginas/pilates-idosos.php [L]
+RewriteRule ^especialidades/pilates-pos-cirurgico/?$ site/paginas/pilates-pos-cirurgico.php [L]

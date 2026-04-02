@@ -17,14 +17,15 @@ try {
 
 // Páginas estáticas
 $static_pages = [
-    ['loc' => '/',                      'priority' => '1.0', 'changefreq' => 'weekly'],
-    ['loc' => '/blog',                  'priority' => '0.8', 'changefreq' => 'weekly'],
-    ['loc' => '/sobre-a-clinica',       'priority' => '0.8', 'changefreq' => 'monthly'],
-    ['loc' => '/como-funciona',         'priority' => '0.8', 'changefreq' => 'monthly'],
-    ['loc' => '/pilates-gestantes',     'priority' => '0.7', 'changefreq' => 'monthly'],
-    ['loc' => '/pilates-hernias-lesoes','priority' => '0.7', 'changefreq' => 'monthly'],
-    ['loc' => '/pilates-idosos',        'priority' => '0.7', 'changefreq' => 'monthly'],
-    ['loc' => '/pilates-pos-cirurgico', 'priority' => '0.7', 'changefreq' => 'monthly'],
+    ['loc' => '/',                                      'priority' => '1.0', 'changefreq' => 'weekly'],
+    ['loc' => '/blog',                                  'priority' => '0.8', 'changefreq' => 'weekly'],
+    ['loc' => '/especialidades',                        'priority' => '0.9', 'changefreq' => 'monthly'],
+    ['loc' => '/especialidades/pilates-gestantes',      'priority' => '0.8', 'changefreq' => 'monthly'],
+    ['loc' => '/especialidades/pilates-idosos',         'priority' => '0.8', 'changefreq' => 'monthly'],
+    ['loc' => '/especialidades/pilates-pos-cirurgico',  'priority' => '0.8', 'changefreq' => 'monthly'],
+    ['loc' => '/especialidades/pilates-hernias-lesoes', 'priority' => '0.8', 'changefreq' => 'monthly'],
+    ['loc' => '/sobre-a-clinica',                       'priority' => '0.7', 'changefreq' => 'monthly'],
+    ['loc' => '/como-funciona',                         'priority' => '0.7', 'changefreq' => 'monthly'],
 ];
 
 // Posts publicados do banco

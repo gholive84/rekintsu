@@ -9,7 +9,7 @@
 
         <div class="services__grid services__grid--2col">
 
-            <a href="/site/paginas/pilates-idosos.php" class="service-card service-card--link fade-up">
+            <a href="/especialidades/pilates-idosos" class="service-card service-card--link fade-up">
                 <div class="service-card__img">
                     <img src="/site/assets/img/idoso.jpeg" alt="Pilates para Idosos" loading="lazy">
                 </div>
@@ -23,7 +23,7 @@
                 </div>
             </a>
 
-            <a href="/site/paginas/pilates-gestantes.php" class="service-card service-card--link fade-up">
+            <a href="/especialidades/pilates-gestantes" class="service-card service-card--link fade-up">
                 <div class="service-card__img">
                     <img src="/site/assets/img/gravida2.jpeg" alt="Pilates para Gestantes" loading="lazy">
                 </div>
@@ -37,7 +37,7 @@
                 </div>
             </a>
 
-            <a href="/site/paginas/pilates-pos-cirurgico.php" class="service-card service-card--link fade-up">
+            <a href="/especialidades/pilates-pos-cirurgico" class="service-card service-card--link fade-up">
                 <div class="service-card__img">
                     <img src="/site/assets/img/pos-cirugico2.jpeg" alt="Pilates Pós-Cirúrgico" loading="lazy">
                 </div>
@@ -51,7 +51,7 @@
                 </div>
             </a>
 
-            <a href="/site/paginas/pilates-hernias-lesoes.php" class="service-card service-card--link fade-up">
+            <a href="/especialidades/pilates-hernias-lesoes" class="service-card service-card--link fade-up">
                 <div class="service-card__img">
                     <img src="/site/assets/img/hernias-e-lesoes.jpeg" alt="Pilates para Hérnias e Lesões" loading="lazy">
                 </div>
