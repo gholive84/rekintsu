@@ -6,8 +6,6 @@
 
         <nav class="nav" id="nav" aria-label="Menu principal">
             <ul class="nav__list">
-                <li><a href="/#inicio" class="nav__link">Início</a></li>
-
                 <li class="nav__item--mega">
                     <button class="nav__link nav__link--has-sub" aria-expanded="false" aria-haspopup="true">
                         Especialidades
@@ -29,7 +27,7 @@
                                     </a>
                                 </div>
 
-                                <a href="/pilates-idosos" class="nav-mega__card">
+                                <a href="/especialidades/pilates-idosos" class="nav-mega__card">
                                     <div class="nav-mega__card-img">
                                         <img src="/site/assets/img/idoso.jpeg" alt="Pilates para Idosos" loading="lazy">
                                     </div>
@@ -40,7 +38,7 @@
                                     </div>
                                 </a>
 
-                                <a href="/pilates-gestantes" class="nav-mega__card">
+                                <a href="/especialidades/pilates-gestantes" class="nav-mega__card">
                                     <div class="nav-mega__card-img">
                                         <img src="/site/assets/img/gravida2.jpeg" alt="Pilates para Gestantes" loading="lazy">
                                     </div>
@@ -51,7 +49,7 @@
                                     </div>
                                 </a>
 
-                                <a href="/pilates-pos-cirurgico" class="nav-mega__card">
+                                <a href="/especialidades/pilates-pos-cirurgico" class="nav-mega__card">
                                     <div class="nav-mega__card-img">
                                         <img src="/site/assets/img/pos-cirugico2.jpeg" alt="Pilates Pós-Cirúrgico" loading="lazy">
                                     </div>
@@ -62,7 +60,7 @@
                                     </div>
                                 </a>
 
-                                <a href="/pilates-hernias-lesoes" class="nav-mega__card">
+                                <a href="/especialidades/pilates-hernias-lesoes" class="nav-mega__card">
                                     <div class="nav-mega__card-img">
                                         <img src="/site/assets/img/hernias-e-lesoes.jpeg" alt="Hérnias e Lesões" loading="lazy">
                                     </div>
@@ -79,10 +77,10 @@
 
                     <!-- Sub-lista mobile (accordion) -->
                     <ul class="nav-sub__list">
-                        <li><a href="/pilates-idosos" class="nav-sub__link">Pilates para Idosos</a></li>
-                        <li><a href="/pilates-gestantes" class="nav-sub__link">Pilates para Gestantes</a></li>
-                        <li><a href="/pilates-pos-cirurgico" class="nav-sub__link">Pós-Cirúrgico</a></li>
-                        <li><a href="/pilates-hernias-lesoes" class="nav-sub__link">Hérnias e Lesões</a></li>
+                        <li><a href="/especialidades/pilates-idosos" class="nav-sub__link">Pilates para Idosos</a></li>
+                        <li><a href="/especialidades/pilates-gestantes" class="nav-sub__link">Pilates para Gestantes</a></li>
+                        <li><a href="/especialidades/pilates-pos-cirurgico" class="nav-sub__link">Pós-Cirúrgico</a></li>
+                        <li><a href="/especialidades/pilates-hernias-lesoes" class="nav-sub__link">Hérnias e Lesões</a></li>
                     </ul>
                 </li>
 

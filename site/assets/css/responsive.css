@@ -14,6 +14,7 @@
 
     .about__visual {
         order: -1;
+        position: static;
     }
 
     .about__stats-card {

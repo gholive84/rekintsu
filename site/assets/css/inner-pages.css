@@ -477,29 +477,6 @@
     display: block;
 }
 
-/* Check list */
-.page-check-list {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.page-check-list li {
-    font-size: 0.9375rem;
-    color: var(--color-text);
-    padding-left: 26px;
-    position: relative;
-    line-height: 1.5;
-}
-
-.page-check-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--color-primary);
-    font-weight: 700;
-}
 
 /* Infographics */
 .infographic-grid {
