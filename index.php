@@ -14,6 +14,7 @@ include ROOT . '/site/sections/clients.php';
 include ROOT . '/site/sections/services.php';
 include ROOT . '/site/sections/como-funciona-bloco.php';
 include ROOT . '/site/sections/localizacao.php';
+include ROOT . '/site/sections/instagram-feed.php';
 include ROOT . '/site/sections/about.php';
 include ROOT . '/site/sections/blog-preview.php';
 include ROOT . '/site/sections/blog-posts.php';

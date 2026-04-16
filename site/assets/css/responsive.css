@@ -417,3 +417,36 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== INSTAGRAM FEED RESPONSIVO ===== */
+@media (max-width: 900px) {
+    .insta-feed__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+    }
+}
+
+@media (max-width: 640px) {
+    .insta-feed__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+    }
+
+    .insta-feed__overlay {
+        opacity: 1;
+        background: linear-gradient(
+            to top,
+            rgba(26,26,26,0.70) 0%,
+            rgba(26,26,26,0.0)  60%
+        );
+    }
+
+    .insta-feed__caption {
+        display: none;
+    }
+
+    .insta-feed__view {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+}
