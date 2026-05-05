@@ -146,6 +146,20 @@ $wa_vagas = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Gostaria d
                     <h3>Horários noturnos</h3>
                     <p>Segunda a quinta, 18h e 19h. Pensado para quem trabalha no centro e quer encerrar o dia com qualidade.</p>
                 </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+                    </div>
+                    <h3>Sem contrato de fidelidade</h3>
+                    <p>Cancele quando quiser, sem multa e sem aviso prévio. Você paga apenas o mês que usar.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <h3>Evolução acompanhada</h3>
+                    <p>Mesmo em grupo, a Hayla monitora o progresso de cada aluno e adapta a intensidade conforme a evolução individual.</p>
+                </div>
                 <div class="feature-card feature-card--accent">
                     <div class="feature-card__icon">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
