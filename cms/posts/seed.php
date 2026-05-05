@@ -514,11 +514,17 @@ $posts = [
 ];
 
 $stmt = $pdo->prepare(
-    'INSERT IGNORE INTO posts (title, slug, excerpt, content, image_url, category, category_slug, read_time, status, created_at)
-     VALUES (:title, :slug, :excerpt, :content, :image_url, :category, :category_slug, :read_time, :status, :created_at)'
+    'INSERT IGNORE INTO posts (title, slug, excerpt, content, image_url, category, category_slug, read_time, status, scheduled_at, created_at)
+     VALUES (:title, :slug, :excerpt, :content, :image_url, :category, :category_slug, :read_time, :status, :scheduled_at, :created_at)'
 );
 
+$now = date('Y-m-d H:i:s');
+
 foreach ($posts as $p) {
+    $is_future  = $p['created_at'] > $now;
+    $status     = $is_future ? 'scheduled' : 'published';
+    $scheduled  = $is_future ? $p['created_at'] : null;
+
     try {
         $stmt->execute([
             ':title'         => $p['title'],
@@ -529,10 +535,12 @@ foreach ($posts as $p) {
             ':category'      => $p['category'],
             ':category_slug' => $p['category_slug'],
             ':read_time'     => $p['read_time'],
-            ':status'        => 'published',
+            ':status'        => $status,
+            ':scheduled_at'  => $scheduled,
             ':created_at'    => $p['created_at'],
         ]);
-        $log[] = ['ok', 'Post inserido: ' . $p['title']];
+        $label = $is_future ? "agendado ({$p['created_at']})" : 'publicado';
+        $log[] = ['ok', "Post {$label}: " . $p['title']];
     } catch (Exception $e) {
         $log[] = ['err', 'Erro em "' . $p['title'] . '": ' . $e->getMessage()];
     }
