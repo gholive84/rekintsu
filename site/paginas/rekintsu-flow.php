@@ -8,6 +8,14 @@ $wa_geral = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Tenho inte
 $wa_1x    = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Tenho interesse no Rekintsu Flow 1x por semana.');
 $wa_2x    = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Tenho interesse no Rekintsu Flow 2x por semana.');
 $wa_vagas = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Gostaria de verificar as vagas disponíveis no Rekintsu Flow.');
+
+// ── Vagas por turma — atualizar conforme necessário ──────────────────────────
+$turmas = [
+    ['dias' => 'Segunda e Quarta', 'hora' => '18h', 'vagas' => 3, 'total' => 6],
+    ['dias' => 'Segunda e Quarta', 'hora' => '19h', 'vagas' => 2, 'total' => 6],
+    ['dias' => 'Terça e Quinta',   'hora' => '18h', 'vagas' => 4, 'total' => 6],
+    ['dias' => 'Terça e Quinta',   'hora' => '19h', 'vagas' => 1, 'total' => 6],
+];
 ?>
 
 <main>
@@ -27,7 +35,7 @@ $wa_vagas = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Gostaria d
         <div class="container flow-hero__content">
             <span class="label">Horário Nobre · Turmas Exclusivas</span>
             <h1 class="flow-hero__title">Pilates solo com olhar clínico<br><span class="text--gradient">No seu ritmo. Do jeito Rekintsu</span></h1>
-            <p class="flow-hero__subtitle">Turmas de até 8 pessoas, conduzidas por fisioterapeuta.<br>Segunda a quinta, às 18h e 19h. Só 8 vagas por horário.</p>
+            <p class="flow-hero__subtitle">Turmas de até 6 pessoas, conduzidas por fisioterapeuta.<br>Segunda a quinta, às 18h e 19h. Só 6 vagas por horário.</p>
             <div class="flow-hero__actions">
                 <a href="<?= $wa_geral ?>" class="btn btn--gradient btn--lg" target="_blank" rel="noopener">
                     Garantir minha vaga
@@ -272,29 +280,37 @@ $wa_vagas = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Gostaria d
         <div class="container">
             <div class="flow-urgency__inner fade-up">
                 <span class="label flow-urgency__label">Disponibilidade</span>
-                <h2 class="flow-urgency__title">8 vagas por turma.<br>Horários limitados.</h2>
-                <p class="flow-urgency__text">Não é promessa de marketing — é a estrutura do método. Com no máximo 8 pessoas, a Hayla consegue corrigir cada movimento individualmente. Quando a turma fecha, fecha.</p>
+                <h2 class="flow-urgency__title">6 vagas por turma.<br>Horários limitados.</h2>
+                <p class="flow-urgency__text">Não é promessa de marketing — é a estrutura do método. Com apenas 6 pessoas por turma, o espaço e a atenção são reais. Quando a turma fecha, fecha.</p>
                 <div class="flow-schedules">
-                    <div class="flow-schedule-item">
-                        <span class="flow-schedule-item__days">Segunda e Quarta</span>
-                        <span class="flow-schedule-item__time">18h</span>
-                        <span class="flow-schedule-item__status">✦ poucas vagas</span>
+                    <?php foreach ($turmas as $t):
+                        $livres   = max(0, (int)$t['vagas']);
+                        $ocupadas = $t['total'] - $livres;
+                        if ($livres === 0) {
+                            $status_class = 'flow-vagas-label--fechada';
+                            $status_txt   = 'turma fechada';
+                        } elseif ($livres === 1) {
+                            $status_class = 'flow-vagas-label--ultima';
+                            $status_txt   = 'última vaga';
+                        } elseif ($livres <= 2) {
+                            $status_class = 'flow-vagas-label--poucas';
+                            $status_txt   = $livres . ' vagas';
+                        } else {
+                            $status_class = 'flow-vagas-label--ok';
+                            $status_txt   = $livres . ' vagas';
+                        }
+                    ?>
+                    <div class="flow-schedule-item<?= $livres === 0 ? ' flow-schedule-item--fechada' : '' ?>">
+                        <span class="flow-schedule-item__days"><?= htmlspecialchars($t['dias']) ?></span>
+                        <span class="flow-schedule-item__time"><?= htmlspecialchars($t['hora']) ?></span>
+                        <div class="flow-vagas-dots">
+                            <?php for ($i = 0; $i < $t['total']; $i++): ?>
+                            <span class="flow-vaga-dot <?= $i < $ocupadas ? 'flow-vaga-dot--ocupada' : 'flow-vaga-dot--livre' ?>"></span>
+                            <?php endfor; ?>
+                        </div>
+                        <span class="flow-vagas-label <?= $status_class ?>"><?= $status_txt ?></span>
                     </div>
-                    <div class="flow-schedule-item">
-                        <span class="flow-schedule-item__days">Segunda e Quarta</span>
-                        <span class="flow-schedule-item__time">19h</span>
-                        <span class="flow-schedule-item__status">✦ poucas vagas</span>
-                    </div>
-                    <div class="flow-schedule-item">
-                        <span class="flow-schedule-item__days">Terça e Quinta</span>
-                        <span class="flow-schedule-item__time">18h</span>
-                        <span class="flow-schedule-item__status">✦ poucas vagas</span>
-                    </div>
-                    <div class="flow-schedule-item">
-                        <span class="flow-schedule-item__days">Terça e Quinta</span>
-                        <span class="flow-schedule-item__time">19h</span>
-                        <span class="flow-schedule-item__status">✦ poucas vagas</span>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
                 <a href="<?= $wa_vagas ?>" class="btn flow-urgency__btn btn--lg" target="_blank" rel="noopener">
                     Verificar vagas disponíveis

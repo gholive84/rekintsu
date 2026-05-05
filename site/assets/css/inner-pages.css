@@ -2143,6 +2143,44 @@
     letter-spacing: 0.04em;
 }
 
+.flow-schedule-item--fechada {
+    opacity: 0.5;
+}
+
+.flow-vagas-dots {
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.flow-vaga-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.flow-vaga-dot--ocupada {
+    background: rgba(26,26,26,0.18);
+}
+
+.flow-vaga-dot--livre {
+    background: var(--color-primary);
+}
+
+.flow-vagas-label {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.flow-vagas-label--ok     { color: #16a34a; }
+.flow-vagas-label--poucas { color: #d97706; }
+.flow-vagas-label--ultima { color: #dc2626; }
+.flow-vagas-label--fechada { color: rgba(26,26,26,0.4); text-decoration: line-through; }
+
 .flow-urgency__btn {
     background: var(--color-dark);
     color: var(--color-white);
