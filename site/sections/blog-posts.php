@@ -9,7 +9,7 @@ try {
     if (function_exists('db')) {
         $stmt = db()->query(
             "SELECT title, slug, excerpt, image_url, category, read_time, created_at
-             FROM posts WHERE status='published' ORDER BY created_at DESC LIMIT 3"
+             FROM posts WHERE status='published' AND created_at <= NOW() ORDER BY created_at DESC LIMIT 3"
         );
         $_blog_posts = $stmt->fetchAll();
     }

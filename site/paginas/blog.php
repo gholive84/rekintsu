@@ -20,14 +20,14 @@ $categories = [];
 
 if ($pdo) {
     $categories = $pdo->query(
-        "SELECT DISTINCT category, category_slug FROM posts WHERE status='published' AND category IS NOT NULL ORDER BY category"
+        "SELECT DISTINCT category, category_slug FROM posts WHERE status='published' AND created_at <= NOW() AND category IS NOT NULL ORDER BY category"
     )->fetchAll();
 
     if ($categoria_slug) {
-        $stmt = $pdo->prepare("SELECT * FROM posts WHERE status='published' AND category_slug=? ORDER BY created_at DESC");
+        $stmt = $pdo->prepare("SELECT * FROM posts WHERE status='published' AND created_at <= NOW() AND category_slug=? ORDER BY created_at DESC");
         $stmt->execute([$categoria_slug]);
     } else {
-        $stmt = $pdo->query("SELECT * FROM posts WHERE status='published' ORDER BY created_at DESC");
+        $stmt = $pdo->query("SELECT * FROM posts WHERE status='published' AND created_at <= NOW() ORDER BY created_at DESC");
     }
     $posts = $stmt->fetchAll();
 }

@@ -13,7 +13,7 @@ $slug = trim($_GET['slug'] ?? '');
 $post = null;
 
 if ($pdo && $slug) {
-    $stmt = $pdo->prepare("SELECT * FROM posts WHERE slug=? AND status='published' LIMIT 1");
+    $stmt = $pdo->prepare("SELECT * FROM posts WHERE slug=? AND status='published' AND created_at <= NOW() LIMIT 1");
     $stmt->execute([$slug]);
     $post = $stmt->fetch();
 }
@@ -46,7 +46,7 @@ $related = [];
 if ($pdo && $post['category_slug']) {
     $stmt = $pdo->prepare(
         "SELECT id, title, slug, image_url, category, read_time, created_at
-         FROM posts WHERE status='published' AND category_slug=? AND id != ? ORDER BY created_at DESC LIMIT 3"
+         FROM posts WHERE status='published' AND created_at <= NOW() AND category_slug=? AND id != ? ORDER BY created_at DESC LIMIT 3"
     );
     $stmt->execute([$post['category_slug'], $post['id']]);
     $related = $stmt->fetchAll();
