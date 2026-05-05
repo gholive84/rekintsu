@@ -19,12 +19,7 @@ $wa_vagas = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Gostaria d
     <section class="flow-hero">
         <div class="flow-hero__bg">
             <div class="flow-hero__yt-wrap">
-                <iframe class="flow-hero__yt"
-                        src="https://www.youtube-nocookie.com/embed/QmWBDCmGADE?autoplay=1&mute=1&loop=1&playlist=QmWBDCmGADE&controls=0&rel=0&playsinline=1&modestbranding=1&showinfo=0&iv_load_policy=3"
-                        frameborder="0"
-                        allow="autoplay; encrypted-media; fullscreen"
-                        loading="eager"
-                        title="Rekintsu Flow — Pilates Solo"></iframe>
+                <div id="flow-yt-player"></div>
             </div>
             <div class="flow-hero__overlay"></div>
             <div class="hero__bg-texture"></div>
@@ -429,5 +424,55 @@ $wa_vagas = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Gostaria d
     </section>
 
 </main>
+
+<script>
+(function () {
+    var START = 5, END = 22, player, watchdog;
+
+    function createPlayer() {
+        player = new YT.Player('flow-yt-player', {
+            videoId: 'ZiqnpZGTP4Q',
+            playerVars: {
+                autoplay: 1,
+                mute: 1,
+                controls: 0,
+                rel: 0,
+                playsinline: 1,
+                modestbranding: 1,
+                showinfo: 0,
+                iv_load_policy: 3,
+                start: START,
+                end: END
+            },
+            events: {
+                onReady: function (e) {
+                    e.target.playVideo();
+                    watchdog = setInterval(function () {
+                        if (player.getCurrentTime && player.getCurrentTime() >= END) {
+                            player.seekTo(START, true);
+                            player.playVideo();
+                        }
+                    }, 300);
+                },
+                onStateChange: function (e) {
+                    if (e.data === YT.PlayerState.ENDED || e.data === YT.PlayerState.PAUSED) {
+                        player.seekTo(START, true);
+                        player.playVideo();
+                    }
+                }
+            }
+        });
+    }
+
+    if (typeof YT !== 'undefined' && YT.Player) {
+        createPlayer();
+    } else {
+        window.onYouTubeIframeAPIReady = createPlayer;
+        var tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        document.head.appendChild(tag);
+    }
+})();
+</script>
 
 <?php include dirname(__DIR__) . '/includes/footer.php'; ?>
