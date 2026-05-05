@@ -1638,3 +1638,657 @@
     color: var(--color-text);
     line-height: 1.35;
 }
+
+
+/* ================================================================
+   REKINTSU FLOW — Pilates Solo em Grupo
+   ================================================================ */
+
+/* ── Hero com vídeo YouTube ───────────────────────────────────── */
+.flow-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--color-dark);
+    overflow: hidden;
+}
+
+.flow-hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.flow-hero__yt-wrap {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.flow-hero__yt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 56.25vw;   /* aspect 16:9 */
+    min-height: 100vh;
+    min-width: 177.78vh;
+    border: 0;
+    pointer-events: none;
+}
+
+.flow-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(15,15,15,0.50) 0%,
+        rgba(15,15,15,0.65) 50%,
+        rgba(15,15,15,0.82) 100%
+    );
+    z-index: 1;
+}
+
+.flow-hero__content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flow-hero__title {
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: var(--color-white);
+    margin: 20px 0 24px;
+    max-width: 800px;
+}
+
+.flow-hero__subtitle {
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.75;
+    max-width: 580px;
+    margin-bottom: 40px;
+}
+
+.flow-hero__actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ── Conceito Prime Hour ──────────────────────────────────────── */
+.flow-concept {
+    background: var(--color-dark);
+    padding: var(--section-padding);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.flow-concept__inner {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.flow-concept__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--color-white);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 20px 0 32px;
+}
+
+.flow-concept__text {
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.85;
+}
+
+/* ── Para Quem É ──────────────────────────────────────────────── */
+.flow-para-quem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.flow-para-quem-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 36px 28px;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.flow-para-quem-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(219,161,89,0.12);
+    border-color: rgba(219,161,89,0.3);
+}
+
+.flow-para-quem-card__icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, rgba(219,161,89,0.1), rgba(239,215,128,0.08));
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.flow-para-quem-card h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.flow-para-quem-card p {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    line-height: 1.65;
+}
+
+.flow-para-quem-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    line-height: 1.65;
+    background: rgba(219,161,89,0.06);
+    border: 1px solid rgba(219,161,89,0.15);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.flow-para-quem-note svg {
+    flex-shrink: 0;
+    color: var(--color-primary);
+    margin-top: 1px;
+}
+
+/* ── Diferenciais ─────────────────────────────────────────────── */
+.flow-diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-card--accent {
+    border-color: rgba(219,161,89,0.25);
+    background: rgba(219,161,89,0.04);
+}
+
+.feature-card--accent .feature-card__icon {
+    background: rgba(219,161,89,0.15);
+}
+
+/* ── Pricing Section ──────────────────────────────────────────── */
+.flow-pricing-section {
+    background: var(--color-dark-2);
+    padding: var(--section-padding);
+}
+
+.flow-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 780px;
+    margin: 0 auto 32px;
+}
+
+.flow-plan-freq {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-white);
+    letter-spacing: -0.01em;
+}
+
+.flow-price {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.flow-price__original {
+    font-size: 0.9375rem;
+    color: rgba(255,255,255,0.3);
+    text-decoration: line-through;
+}
+
+.flow-price__main {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.flow-price__amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-white);
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.flow-price__period {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.45);
+    font-weight: 500;
+}
+
+.flow-price__economy {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: rgba(239,215,128,0.1);
+    border-radius: 4px;
+    padding: 3px 10px;
+    display: inline-block;
+}
+
+.flow-price__per-class {
+    font-size: 0.8125rem;
+    color: rgba(255,255,255,0.35);
+}
+
+.flow-plan-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flow-plan-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9375rem;
+    color: rgba(255,255,255,0.6);
+}
+
+.flow-plan-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.flow-plan-list li strong {
+    color: var(--color-accent);
+}
+
+.flow-plan-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.flow-pricing-note {
+    text-align: center;
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.3);
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* ── Comparativo ──────────────────────────────────────────────── */
+.flow-comparison-wrap {
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    margin-bottom: 28px;
+}
+
+.flow-comparison {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+}
+
+.flow-comparison thead tr {
+    background: var(--color-light);
+}
+
+.flow-comparison th {
+    padding: 20px 24px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-text);
+    border-bottom: 2px solid var(--color-border);
+    vertical-align: top;
+    line-height: 1.4;
+}
+
+.flow-comparison th small {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-muted);
+    margin-top: 4px;
+}
+
+.flow-comparison__th-empty {
+    width: 22%;
+}
+
+.flow-comparison__th-highlight {
+    background: rgba(219,161,89,0.06);
+    border-left: 2px solid rgba(219,161,89,0.3);
+    position: relative;
+}
+
+.flow-comparison__badge {
+    display: inline-block;
+    background: var(--gradient-accent);
+    color: var(--color-dark);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+}
+
+.flow-comparison td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-muted);
+    line-height: 1.55;
+    vertical-align: middle;
+}
+
+.flow-comparison tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.flow-comparison tbody tr:nth-child(even) {
+    background: rgba(244,244,245,0.5);
+}
+
+.flow-comparison tbody td:nth-child(2) {
+    background: rgba(219,161,89,0.03);
+    border-left: 2px solid rgba(219,161,89,0.2);
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.flow-comparison__label {
+    font-weight: 700;
+    color: var(--color-text) !important;
+    font-size: 0.875rem;
+}
+
+.flow-comparison-note {
+    text-align: center;
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ── Urgência / Vagas ─────────────────────────────────────────── */
+.flow-urgency {
+    background: var(--gradient-accent);
+    padding: var(--section-padding);
+}
+
+.flow-urgency__inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.flow-urgency__label {
+    color: rgba(26,26,26,0.6) !important;
+}
+
+.flow-urgency__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--color-dark);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 16px 0 20px;
+}
+
+.flow-urgency__text {
+    font-size: 1.0625rem;
+    color: rgba(26,26,26,0.65);
+    line-height: 1.75;
+    margin-bottom: 40px;
+}
+
+.flow-schedules {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.flow-schedule-item {
+    background: rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left;
+}
+
+.flow-schedule-item__days {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.flow-schedule-item__time {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-dark);
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.flow-schedule-item__status {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(26,26,26,0.55);
+    letter-spacing: 0.04em;
+}
+
+.flow-urgency__btn {
+    background: var(--color-dark);
+    color: var(--color-white);
+    border: none;
+    transition: var(--transition);
+}
+
+.flow-urgency__btn:hover {
+    background: #2A2A2A;
+    transform: translateY(-2px);
+}
+
+/* ── Sobre Hayla ──────────────────────────────────────────────── */
+.flow-hayla-quote {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(219,161,89,0.07);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 18px 20px;
+    margin: 24px 0;
+}
+
+.flow-hayla-quote svg {
+    flex-shrink: 0;
+    color: var(--color-primary);
+    margin-top: 2px;
+}
+
+.flow-hayla-quote p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ── FAQ ──────────────────────────────────────────────────────── */
+.flow-faq {
+    max-width: 740px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.flow-faq-item {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.flow-faq-item[open] {
+    border-color: rgba(219,161,89,0.3);
+    box-shadow: 0 4px 20px rgba(219,161,89,0.08);
+}
+
+.flow-faq-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: var(--transition);
+}
+
+.flow-faq-summary::-webkit-details-marker { display: none; }
+
+.flow-faq-summary:hover {
+    color: var(--color-primary);
+}
+
+.flow-faq-icon {
+    flex-shrink: 0;
+    color: var(--color-primary);
+    transition: transform 0.25s ease;
+}
+
+.flow-faq-item[open] .flow-faq-icon {
+    transform: rotate(180deg);
+}
+
+.flow-faq-answer {
+    padding: 0 24px 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+.flow-faq-answer p {
+    padding-top: 16px;
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .flow-diferenciais-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flow-para-quem-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .flow-hero__yt-wrap {
+        display: none; /* YouTube iframe não autoplay confiável em mobile */
+    }
+
+    .flow-hero {
+        background-image: url('/site/assets/img/esticando.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .flow-hero__overlay {
+        background: linear-gradient(
+            to bottom,
+            rgba(15,15,15,0.65) 0%,
+            rgba(15,15,15,0.78) 50%,
+            rgba(15,15,15,0.90) 100%
+        );
+    }
+
+    .flow-para-quem-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-diferenciais-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-schedules {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .flow-hero__title {
+        font-size: 2.25rem;
+    }
+
+    .flow-concept__title {
+        font-size: 1.875rem;
+    }
+
+    .flow-urgency__title {
+        font-size: 1.875rem;
+    }
+
+    .flow-comparison th,
+    .flow-comparison td {
+        padding: 12px 14px;
+        font-size: 0.875rem;
+    }
+}

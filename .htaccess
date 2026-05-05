@@ -35,6 +35,7 @@ RewriteRule ^blog/([a-zA-Z0-9_-]+)/?$ site/paginas/post.php?slug=$1 [L,QSA]
 # Páginas internas
 RewriteRule ^sobre-a-clinica/?$ site/paginas/sobre-a-clinica.php [L]
 RewriteRule ^como-funciona/?$ site/paginas/como-funciona.php [L]
+RewriteRule ^rekintsu-flow/?$ site/paginas/rekintsu-flow.php [L]
 
 # ── Especialidades ────────────────────────────────────────────────────────────
 RewriteRule ^especialidades/?$ site/paginas/especialidades.php [L]

@@ -73,6 +73,7 @@ function regenerate_sitemap(PDO $pdo): string
         ['loc' => '/pilates-idosos',      'changefreq' => 'monthly', 'priority' => '0.7'],
         ['loc' => '/pilates-pos-cirurgico', 'changefreq' => 'monthly', 'priority' => '0.7'],
         ['loc' => '/blog',                'changefreq' => 'weekly',  'priority' => '0.8'],
+        ['loc' => '/rekintsu-flow',       'changefreq' => 'monthly', 'priority' => '0.9'],
     ];
 
     // Posts publicados do banco
