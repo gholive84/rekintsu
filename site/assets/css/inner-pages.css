@@ -1667,24 +1667,39 @@
     pointer-events: none;
 }
 
-.flow-hero__yt,
-#flow-yt-player iframe {
+/* Iframe estático (fallback) */
+.flow-hero__yt {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100vw;
-    height: 56.25vw;   /* aspect 16:9 */
+    height: 56.25vw;
     min-height: 100vh;
     min-width: 177.78vh;
     border: 0;
     pointer-events: none;
 }
 
+/* Contêiner YT API — ele próprio é o elemento oversized e centralizado */
 #flow-yt-player {
     position: absolute;
-    inset: 0;
-    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;   /* aspect 16:9 */
+    min-height: 100vh;
+    min-width: 177.78vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Iframe criado pela API preenche o contêiner */
+#flow-yt-player iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+    display: block;
     pointer-events: none;
 }
 

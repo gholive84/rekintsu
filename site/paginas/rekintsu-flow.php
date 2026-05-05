@@ -26,7 +26,7 @@ $wa_vagas = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Gostaria d
         </div>
         <div class="container flow-hero__content">
             <span class="label">Horário Nobre · Turmas Exclusivas</span>
-            <h1 class="flow-hero__title">Pilates Solo com olhar clínico.<br>No seu ritmo. <span class="text--gradient">Do jeito Rekintsu.</span></h1>
+            <h1 class="flow-hero__title">Pilates solo com olhar clínico.<br>No seu ritmo. <span class="text--gradient">Do jeito Rekintsu.</span></h1>
             <p class="flow-hero__subtitle">Turmas de até 8 pessoas, conduzidas por fisioterapeuta.<br>Segunda a quinta, às 18h e 19h. Só 8 vagas por horário.</p>
             <div class="flow-hero__actions">
                 <a href="<?= $wa_geral ?>" class="btn btn--gradient btn--lg" target="_blank" rel="noopener">
