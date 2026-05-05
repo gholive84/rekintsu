@@ -2260,14 +2260,8 @@
 }
 
 @media (max-width: 768px) {
-    .flow-hero__yt-wrap {
-        display: none; /* YouTube iframe não autoplay confiável em mobile */
-    }
-
     .flow-hero {
-        background-image: url('/site/assets/img/esticando.jpg');
-        background-size: cover;
-        background-position: center;
+        background-image: none;
     }
 
     .flow-hero__overlay {
