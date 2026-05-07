@@ -11,10 +11,10 @@ $wa_2x    = $wa_base . rawurlencode('Olá! Tenho interesse no Rekintsu Flow 2x p
 
 // ── Vagas por turma — atualizar conforme necessário ──────────────────────────
 $turmas = [
-    ['dias' => 'Segunda e Quarta', 'dias_curto' => 'Seg & Qua', 'hora' => '18h', 'vagas' => 3, 'total' => 6],
-    ['dias' => 'Segunda e Quarta', 'dias_curto' => 'Seg & Qua', 'hora' => '19h', 'vagas' => 2, 'total' => 6],
-    ['dias' => 'Terça e Quinta',   'dias_curto' => 'Ter & Qui', 'hora' => '18h', 'vagas' => 4, 'total' => 6],
-    ['dias' => 'Terça e Quinta',   'dias_curto' => 'Ter & Qui', 'hora' => '19h', 'vagas' => 1, 'total' => 6],
+    ['dias' => 'Segunda e Quarta', 'dias_curto' => 'Seg & Qua', 'hora' => '18h', 'vagas' => 2, 'total' => 5],
+    ['dias' => 'Segunda e Quarta', 'dias_curto' => 'Seg & Qua', 'hora' => '19h', 'vagas' => 1, 'total' => 5],
+    ['dias' => 'Terça e Quinta',   'dias_curto' => 'Ter & Qui', 'hora' => '18h', 'vagas' => 3, 'total' => 4],
+    ['dias' => 'Terça e Quinta',   'dias_curto' => 'Ter & Qui', 'hora' => '19h', 'vagas' => 2, 'total' => 4],
 ];
 ?>
 
@@ -57,7 +57,7 @@ $turmas = [
                 </div>
                 <div class="flow-stat__divider"></div>
                 <div class="flow-stat">
-                    <span class="flow-stat__num">até 6</span>
+                    <span class="flow-stat__num">até 5</span>
                     <span class="flow-stat__label">Pessoas por turma</span>
                 </div>
                 <div class="flow-stat__divider"></div>
@@ -97,7 +97,7 @@ $turmas = [
                 </div>
                 <div class="flow-info-block">
                     <span class="flow-info-block__label">Formato</span>
-                    <h3 class="flow-info-block__title">Turmas reduzidas (máx. 6)</h3>
+                    <h3 class="flow-info-block__title">Turmas reduzidas (máx. 5)</h3>
                     <p>para garantir que sua performance seja lapidada no detalhe.</p>
                 </div>
                 <div class="flow-info-block">
@@ -150,8 +150,8 @@ $turmas = [
                 </div>
                 <div class="flow-feature">
                     <span class="flow-feature__num">04</span>
-                    <h3>Só 6 alunos por turma</h3>
-                    <p>Você não é número — é paciente. Com apenas 6 pessoas, a atenção é real e o espaço é de verdade.</p>
+                    <h3>Só 4–5 alunos por turma</h3>
+                    <p>Você não é número — é paciente. Com 4 a 5 pessoas no máximo, a atenção é real e o espaço é de verdade.</p>
                 </div>
                 <div class="flow-feature">
                     <span class="flow-feature__num">05</span>
@@ -181,13 +181,13 @@ $turmas = [
                     <div class="flow-plan__tag">Plano Essencial</div>
                     <div class="flow-plan__freq">1× por semana</div>
                     <div class="flow-plan__price">
-                        <span class="flow-plan__amount">R$ 290</span>
+                        <span class="flow-plan__amount">R$ 490</span>
                         <span class="flow-plan__period">/mês</span>
                     </div>
-                    <div class="flow-plan__per-class">≈ R$ 72,50 por aula</div>
+                    <div class="flow-plan__per-class">≈ R$ 122,50 por aula</div>
                     <ul class="flow-plan__list">
                         <li>4 aulas por mês</li>
-                        <li>Turmas de até 6 pessoas</li>
+                        <li>Turmas de até 5 pessoas</li>
                         <li>Conduzido por fisioterapeuta</li>
                         <li>Seg–Qui, 18h ou 19h</li>
                     </ul>
@@ -198,17 +198,17 @@ $turmas = [
                     <div class="flow-plan__tag">Plano Flow</div>
                     <div class="flow-plan__freq">2× por semana</div>
                     <div class="flow-plan__price">
-                        <span class="flow-plan__original">R$ 480</span>
+                        <span class="flow-plan__original">R$ 980</span>
                         <div class="flow-plan__price-main">
-                            <span class="flow-plan__amount">R$ 397</span>
+                            <span class="flow-plan__amount">R$ 790</span>
                             <span class="flow-plan__period">/mês</span>
                         </div>
                     </div>
-                    <div class="flow-plan__economy">Economia de R$ 83 por mês</div>
-                    <div class="flow-plan__per-class">≈ R$ 49,62 por aula</div>
+                    <div class="flow-plan__economy">Economia de R$ 190 por mês</div>
+                    <div class="flow-plan__per-class">≈ R$ 98,75 por aula</div>
                     <ul class="flow-plan__list">
                         <li>8 aulas por mês</li>
-                        <li>Turmas de até 6 pessoas</li>
+                        <li>Turmas de até 5 pessoas</li>
                         <li>Conduzido por fisioterapeuta</li>
                         <li>Seg–Qui, 18h ou 19h</li>
                         <li><strong>Prioridade na lista clínica</strong></li>
@@ -285,7 +285,7 @@ $turmas = [
         <div class="container">
             <div class="flow-vagas__header fade-up">
                 <span class="flow-eyebrow">Disponibilidade</span>
-                <h2 class="flow-vagas__title">Só <em>6 vagas</em><br>por turma.<br>Quando fecha, fecha.</h2>
+                <h2 class="flow-vagas__title">Só <em>4 ou 5<br>vagas</em><br>por turma.<br>Quando fecha, fecha.</h2>
                 <p class="flow-vagas__sub">Toque no horário desejado e fale direto com a Hayla pelo WhatsApp.</p>
             </div>
 
@@ -295,13 +295,10 @@ $turmas = [
                     $fechada = $livres === 0;
                     $msg     = $fechada
                         ? 'Olá! A turma de ' . $t['dias'] . ' às ' . $t['hora'] . ' do Rekintsu Flow está fechada. Gostaria de entrar na lista de espera.'
-                        : 'Olá! Quero garantir minha vaga no Rekintsu Flow — turma de ' . $t['dias'] . ' às ' . $t['hora'] . '.';
+                        : 'Olá! Quero esse horário no Rekintsu Flow — turma de ' . $t['dias'] . ' às ' . $t['hora'] . '.';
                     $wa_turma = $wa_base . rawurlencode($msg);
                 ?>
-                <a href="<?= $wa_turma ?>"
-                   class="flow-vagas-row<?= $fechada ? ' flow-vagas-row--fechada' : '' ?><?= ($livres === 1) ? ' flow-vagas-row--ultima' : '' ?>"
-                   target="_blank" rel="noopener"
-                   aria-label="<?= $livres === 0 ? 'Lista de espera' : 'Garantir vaga' ?> — <?= htmlspecialchars($t['dias']) ?> às <?= htmlspecialchars($t['hora']) ?>">
+                <div class="flow-vagas-row<?= $fechada ? ' flow-vagas-row--fechada' : '' ?><?= ($livres === 1) ? ' flow-vagas-row--ultima' : '' ?>">
                     <div class="flow-vagas-row__turma">
                         <span class="flow-vagas-row__dias"><?= htmlspecialchars($t['dias_curto']) ?></span>
                         <span class="flow-vagas-row__sub">Turma · 50min</span>
@@ -325,10 +322,16 @@ $turmas = [
                             <span class="flow-vagas-row__num-label">vagas</span>
                         <?php endif; ?>
                     </div>
-                    <div class="flow-vagas-row__arrow" aria-hidden="true">
-                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </div>
-                </a>
+                    <a href="<?= $wa_turma ?>"
+                       class="flow-vagas-row__btn-wa<?= $fechada ? ' flow-vagas-row__btn-wa--espera' : '' ?>"
+                       target="_blank" rel="noopener"
+                       aria-label="<?= $fechada ? 'Lista de espera' : 'Quero esse horário' ?> — <?= htmlspecialchars($t['dias']) ?> às <?= htmlspecialchars($t['hora']) ?>">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <?= $fechada ? 'Lista de espera' : 'Quero esse horário' ?>
+                    </a>
+                </div>
                 <?php endforeach; ?>
             </div>
 
@@ -431,7 +434,13 @@ $turmas = [
                 <h2 class="flow-final-cta__title">Pronto para fechar o dia do jeito certo?</h2>
                 <p class="flow-final-cta__sub">Vagas limitadas. Entre em contato e garanta o seu horário.</p>
             </div>
-            <a href="<?= $wa_geral ?>" class="flow-btn-copper" target="_blank" rel="noopener">Falar com a Hayla</a>
+            <a href="<?= $wa_geral ?>" class="flow-btn-copper flow-btn-copper--wa" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="#25D366" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Falar com a Hayla
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
         </div>
     </section>
 
