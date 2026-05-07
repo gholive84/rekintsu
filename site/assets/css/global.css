@@ -5,84 +5,48 @@
     padding: var(--container-padding);
 }
 
-/* ─────────────────────────────────────────────────────────
-   Tipografia editorial — Cormorant Garamond para títulos,
-   Inter Tight para corpo. O acento vem do italic + cobre.
-   ───────────────────────────────────────────────────────── */
-h1, h2, h3,
-.section-title,
-.page-section__title,
-.flow-hero__title,
-.flow-concept__title,
-.flow-urgency__title,
-.page-cta__title,
-.page-hero__title {
-    font-family: var(--font-display);
-    font-weight: 500;
-    letter-spacing: -0.015em;
-}
-
-/* Labels de seção — eyebrow tracking alto, cobre */
+/* Labels de seção */
 .label {
     display: inline-block;
-    font-family: var(--font-base);
     font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.22em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--copper);
-    margin-bottom: 18px;
+    color: var(--color-primary);
+    margin-bottom: 16px;
 }
 
 /* Títulos de seção */
 .section-header {
     text-align: center;
-    max-width: 680px;
+    max-width: 640px;
     margin: 0 auto 64px;
 }
 
 .section-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 500;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin-bottom: 18px;
-    color: var(--ink);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: var(--color-text);
 }
 
 .section-subtitle {
-    font-family: var(--font-base);
-    font-size: 1.0625rem;
-    color: var(--ink-soft);
-    line-height: 1.75;
+    font-size: 1.125rem;
+    color: var(--color-muted);
+    line-height: 1.7;
 }
 
-/* ─────────────────────────────────────────────────────────
-   Destaque de texto — italic + cobre (kintsugi)
-   ───────────────────────────────────────────────────────── */
+/* Destaque de texto */
 .text--accent {
-    font-style: italic;
-    color: var(--copper);
-    font-weight: 400;
-}
-
-/* O antigo .text--gradient agora também usa italic + cobre,
-   mas mantemos o nome para não quebrar markup existente */
-.text--gradient {
-    font-style: italic;
-    color: var(--copper);
-    font-weight: 400;
-    background: none;
-    -webkit-text-fill-color: currentColor;
-    -webkit-background-clip: initial;
-            background-clip: initial;
+    color: var(--color-primary);
 }
 
 /* Animações de entrada */
 .fade-up {
     opacity: 0;
     transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .fade-up.visible {
     opacity: 1;
