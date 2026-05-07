@@ -20,44 +20,49 @@
 }
 
 .btn--primary {
-    background: var(--gradient-accent);
-    color: var(--color-dark);
-    font-weight: 700;
+    background: var(--copper);
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 0.02em;
 }
 .btn--primary:hover {
-    background: var(--color-primary-dark);
+    background: var(--copper-deep);
     transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(219,161,89,0.3);
+    box-shadow: 0 6px 20px rgba(178, 106, 72, 0.28);
 }
 
 .btn--gradient {
-    background: var(--gradient-accent);
-    color: var(--color-dark);
-    font-weight: 700;
+    background: var(--copper);
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 0.02em;
 }
 .btn--gradient:hover {
+    background: var(--copper-deep);
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(219,161,89,0.35);
-    filter: brightness(1.05);
+    box-shadow: 0 8px 24px rgba(178, 106, 72, 0.32);
 }
 
 .btn--ghost {
     background: transparent;
-    color: var(--color-white);
-    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--cream);
+    border: 1px solid rgba(242, 237, 228, 0.35);
 }
 .btn--ghost:hover {
-    background: rgba(255,255,255,0.08);
-    border-color: rgba(255,255,255,0.5);
+    background: rgba(242, 237, 228, 0.08);
+    border-color: var(--copper);
+    color: var(--cream);
 }
 
 .btn--accent {
     background: transparent;
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
+    color: var(--copper);
+    border: 1px solid var(--copper);
 }
 .btn--accent:hover {
-    background: rgba(219,161,89,0.08);
+    background: rgba(178, 106, 72, 0.08);
+    color: var(--copper-deep);
+    border-color: var(--copper-deep);
 }
 
 /* ===== CHECK LIST ===== */

@@ -26,36 +26,39 @@ Você está construindo o site da **Rekintsu Pilates Clínico**, uma clínica es
 
 ## Identidade Visual
 
+Sistema **Rekintsu Flow** — pedra + ouro + porcelana. Inspirado em kintsugi: a quebra reparada com ouro vira o destaque.
+
 ### Cores
 
 | Token CSS | Hex | Uso |
 |---|---|---|
-| `--color-primary` | `#DBA159` | Botões principais, links, destaques |
-| `--color-primary-dark` | `#C48A45` | Hover de botões |
-| `--color-accent` | `#EFD780` | Palavras em destaque nas headlines |
-| `--color-accent-dark` | `#C8A84B` | Hover de accent |
-| `--color-mint` | `#D0E3CC` | Detalhes sutis verdes |
-| `--color-dark` | `#1A1A1A` | Fundo de seções escuras (hero, contact) |
-| `--color-dark-2` | `#2A2A2A` | Fundo alternado escuro (about, strip) |
-| `--color-light` | `#F4F4F5` | Fundo de seções claras |
-| `--color-white` | `#FFFFFF` | Cards, navbar, footer |
-| `--color-text` | `#0F172A` | Texto principal |
-| `--color-muted` | `#64748B` | Texto secundário |
-| `--color-border` | `#E2E8F0` | Bordas de cards |
+| `--cream` | `#F2EDE4` | Fundo padrão (porcelana). Body, seções claras |
+| `--cream-deep` | `#E8E0D2` | Cards e blocos de destaque sobre cream |
+| `--ink` | `#16140F` | Tinta. Texto principal, fundo de seções dark |
+| `--ink-soft` | `#3A352B` | Texto secundário, subtítulos |
+| `--copper` | `#B26A48` | O ouro do kintsugi. Acento, italic, CTAs |
+| `--copper-deep` | `#8C4F33` | Hover, ênfase profunda |
+| `--sage` | `#7A8674` | Neutro frio. Gráficos, ícones, estados calmos |
+| `--line` | `rgba(22,20,15,0.18)` | Bordas, divisores |
 
-### Gradiente Principal
-
-```css
-background: linear-gradient(135deg, #DBA159, #EFD780);
-```
+Aliases legados (`--color-primary`, `--color-dark`, `--color-light` etc.) continuam funcionando, mapeados para os novos tokens.
 
 ### Tipografia
 
-- **Fonte**: Inter (via Google Fonts)
-- **Headline grande**: `clamp(2.75rem, 5vw, 4.25rem)`, `font-weight: 800`
-- **Headline médio**: `2rem–2.5rem`, `font-weight: 700`
-- **Corpo**: `1rem–1.0625rem`, `line-height: 1.7`
-- **Labels**: `0.75rem`, `font-weight: 600`, `letter-spacing: 0.1em`, uppercase, cor `primary`
+- **Display** (`--font-display`): **Cormorant Garamond** — italic + cobre para palavras-chave editoriais
+- **Corpo** (`--font-base`): **Inter Tight** — 400/500/600/700
+- **Headline grande**: `clamp(2.75rem, 5vw, 4.25rem)`, `font-weight: 500`, `letter-spacing: -0.02em`
+- **Headline médio**: `clamp(2rem, 4vw, 3rem)`, `font-weight: 500`
+- **Corpo**: `1rem–1.0625rem`, `line-height: 1.75`
+- **Labels (eyebrow)**: `0.75rem`, `font-weight: 500`, `letter-spacing: 0.22em`, uppercase, cor `copper`
+
+### Padrão de destaque (kintsugi)
+
+Headlines usam Cormorant Garamond em peso normal. A palavra-chave vai em **italic + cobre** via `.text--accent` ou `.text--gradient`:
+
+```html
+<h2>Conduzido por <span class="text--accent">fisioterapeuta.</span></h2>
+```
 
 ### Logo
 
