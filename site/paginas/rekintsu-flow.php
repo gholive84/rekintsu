@@ -11,10 +11,10 @@ $wa_2x    = $wa_base . rawurlencode('Olá! Tenho interesse no Rekintsu Flow 2x p
 
 // ── Vagas por turma — atualizar conforme necessário ──────────────────────────
 $turmas = [
-    ['dias' => 'Segunda e Quarta', 'dias_curto' => 'Seg & Qua', 'hora' => '18h', 'vagas' => 2, 'total' => 5],
-    ['dias' => 'Segunda e Quarta', 'dias_curto' => 'Seg & Qua', 'hora' => '19h', 'vagas' => 1, 'total' => 5],
-    ['dias' => 'Terça e Quinta',   'dias_curto' => 'Ter & Qui', 'hora' => '18h', 'vagas' => 3, 'total' => 4],
-    ['dias' => 'Terça e Quinta',   'dias_curto' => 'Ter & Qui', 'hora' => '19h', 'vagas' => 2, 'total' => 4],
+    ['dias' => 'Segunda e Quarta', 'dias_curto' => 'Seg & Qua', 'hora' => '18h', 'vagas' => 4, 'total' => 6],
+    ['dias' => 'Segunda e Quarta', 'dias_curto' => 'Seg & Qua', 'hora' => '19h', 'vagas' => 5, 'total' => 6],
+    ['dias' => 'Terça e Quinta',   'dias_curto' => 'Ter & Qui', 'hora' => '18h', 'vagas' => 4, 'total' => 6],
+    ['dias' => 'Terça e Quinta',   'dias_curto' => 'Ter & Qui', 'hora' => '19h', 'vagas' => 5, 'total' => 6],
 ];
 ?>
 
@@ -57,7 +57,7 @@ $turmas = [
                 </div>
                 <div class="flow-stat__divider"></div>
                 <div class="flow-stat">
-                    <span class="flow-stat__num">até 5</span>
+                    <span class="flow-stat__num">até 6</span>
                     <span class="flow-stat__label">Pessoas por turma</span>
                 </div>
                 <div class="flow-stat__divider"></div>
@@ -97,7 +97,7 @@ $turmas = [
                 </div>
                 <div class="flow-info-block">
                     <span class="flow-info-block__label">Formato</span>
-                    <h3 class="flow-info-block__title">Turmas reduzidas (máx. 5)</h3>
+                    <h3 class="flow-info-block__title">Turmas reduzidas (máx. 6)</h3>
                     <p>para garantir que sua performance seja lapidada no detalhe.</p>
                 </div>
                 <div class="flow-info-block">
@@ -150,8 +150,8 @@ $turmas = [
                 </div>
                 <div class="flow-feature">
                     <span class="flow-feature__num">04</span>
-                    <h3>Só 4–5 alunos por turma</h3>
-                    <p>Você não é número — é paciente. Com 4 a 5 pessoas no máximo, a atenção é real e o espaço é de verdade.</p>
+                    <h3>Só 6 alunos por turma</h3>
+                    <p>Você não é número — é paciente. Com apenas 6 pessoas, a atenção é real e o espaço é de verdade.</p>
                 </div>
                 <div class="flow-feature">
                     <span class="flow-feature__num">05</span>
@@ -187,7 +187,7 @@ $turmas = [
                     <div class="flow-plan__per-class">≈ R$ 72,50 por aula</div>
                     <ul class="flow-plan__list">
                         <li>4 aulas por mês</li>
-                        <li>Turmas de até 5 pessoas</li>
+                        <li>Turmas de até 6 pessoas</li>
                         <li>Conduzido por fisioterapeuta</li>
                         <li>Seg–Qui, 18h ou 19h</li>
                     </ul>
@@ -208,7 +208,7 @@ $turmas = [
                     <div class="flow-plan__per-class">≈ R$ 49,62 por aula</div>
                     <ul class="flow-plan__list">
                         <li>8 aulas por mês</li>
-                        <li>Turmas de até 5 pessoas</li>
+                        <li>Turmas de até 6 pessoas</li>
                         <li>Conduzido por fisioterapeuta</li>
                         <li>Seg–Qui, 18h ou 19h</li>
                         <li><strong>Prioridade na lista clínica</strong></li>
@@ -285,7 +285,7 @@ $turmas = [
         <div class="container">
             <div class="flow-vagas__header fade-up">
                 <span class="flow-eyebrow">Disponibilidade</span>
-                <h2 class="flow-vagas__title">Só <em>4 ou 5<br>vagas</em><br>por turma.<br>Quando fecha, fecha.</h2>
+                <h2 class="flow-vagas__title">Só <em>6 vagas</em><br>por turma.<br>Quando fecha, fecha.</h2>
                 <p class="flow-vagas__sub">Toque no horário desejado e fale direto com a Hayla pelo WhatsApp.</p>
             </div>
 
