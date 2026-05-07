@@ -181,10 +181,10 @@ $turmas = [
                     <div class="flow-plan__tag">Plano Essencial</div>
                     <div class="flow-plan__freq">1× por semana</div>
                     <div class="flow-plan__price">
-                        <span class="flow-plan__amount">R$ 490</span>
+                        <span class="flow-plan__amount">R$ 290</span>
                         <span class="flow-plan__period">/mês</span>
                     </div>
-                    <div class="flow-plan__per-class">≈ R$ 122,50 por aula</div>
+                    <div class="flow-plan__per-class">≈ R$ 72,50 por aula</div>
                     <ul class="flow-plan__list">
                         <li>4 aulas por mês</li>
                         <li>Turmas de até 5 pessoas</li>
@@ -198,14 +198,14 @@ $turmas = [
                     <div class="flow-plan__tag">Plano Flow</div>
                     <div class="flow-plan__freq">2× por semana</div>
                     <div class="flow-plan__price">
-                        <span class="flow-plan__original">R$ 980</span>
+                        <span class="flow-plan__original">R$ 480</span>
                         <div class="flow-plan__price-main">
-                            <span class="flow-plan__amount">R$ 790</span>
+                            <span class="flow-plan__amount">R$ 397</span>
                             <span class="flow-plan__period">/mês</span>
                         </div>
                     </div>
-                    <div class="flow-plan__economy">Economia de R$ 190 por mês</div>
-                    <div class="flow-plan__per-class">≈ R$ 98,75 por aula</div>
+                    <div class="flow-plan__economy">Economia de R$ 83 por mês</div>
+                    <div class="flow-plan__per-class">≈ R$ 49,62 por aula</div>
                     <ul class="flow-plan__list">
                         <li>8 aulas por mês</li>
                         <li>Turmas de até 5 pessoas</li>

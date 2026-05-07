@@ -2143,9 +2143,11 @@
 }
 
 .flow-plan__per-class {
-    font-size: 0.8125rem;
-    color: rgba(242,237,228,0.25);
-    font-family: 'Inter Tight', sans-serif;
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgba(242,237,228,0.45);
+    letter-spacing: -0.01em;
 }
 
 .flow-plan__list {
