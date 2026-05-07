@@ -1,203 +1,327 @@
 <?php
 $page_title = 'Guideline — Rekintsu Pilates Clínico';
-$page_description = 'Guia visual e de componentes do site Rekintsu Pilates Clínico.';
+$page_description = 'Guia visual e de componentes do site Rekintsu — sistema Rekintsu Flow.';
 include dirname(__DIR__) . '/includes/head-page.php';
 include dirname(__DIR__) . '/includes/header.php';
 ?>
 
-<main style="padding-top: 100px; padding-bottom: 80px; background: #F4F4F5; min-height: 100vh;">
-<div class="container" style="max-width: 960px;">
+<style>
+    .gl-main { padding: 120px 0 80px; background: var(--cream); min-height: 100vh; }
+    .gl-wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
 
-    <h1 style="font-size: 2.5rem; font-weight: 800; color: #0F172A; margin-bottom: 8px;">Guia Visual</h1>
-    <p style="color: #64748B; margin-bottom: 64px; font-size: 1.125rem;">Rekintsu Pilates Clínico — Design System</p>
+    .gl-eyebrow { font-family: var(--font-base); font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--copper); font-weight: 500; margin-bottom: 18px; }
+    .gl-h1 { font-family: var(--font-display); font-size: clamp(3rem, 6vw, 5rem); font-weight: 400; line-height: 0.96; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 12px; }
+    .gl-h1 em { font-style: italic; color: var(--copper); }
+    .gl-lede { font-family: var(--font-base); color: var(--ink-soft); font-size: 1.0625rem; max-width: 580px; line-height: 1.75; margin-bottom: 64px; }
 
-    <!-- CORES -->
-    <section style="margin-bottom: 64px;">
-        <h2 style="font-size: 1.25rem; font-weight: 700; color: #0F172A; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid #E2E8F0;">Paleta de Cores</h2>
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
-            <div>
-                <div style="height: 80px; background: #DBA159; border-radius: 12px; margin-bottom: 10px;"></div>
-                <p style="font-weight: 700; font-size: 0.875rem; color: #0F172A;">Primary</p>
-                <p style="font-size: 0.8125rem; color: #64748B;">#DBA159</p>
-                <p style="font-size: 0.75rem; color: #94A3B8;">--color-primary</p>
-            </div>
-            <div>
-                <div style="height: 80px; background: #C48A45; border-radius: 12px; margin-bottom: 10px;"></div>
-                <p style="font-weight: 700; font-size: 0.875rem; color: #0F172A;">Primary Dark</p>
-                <p style="font-size: 0.8125rem; color: #64748B;">#C48A45</p>
-                <p style="font-size: 0.75rem; color: #94A3B8;">--color-primary-dark</p>
-            </div>
-            <div>
-                <div style="height: 80px; background: #EFD780; border-radius: 12px; margin-bottom: 10px;"></div>
-                <p style="font-weight: 700; font-size: 0.875rem; color: #0F172A;">Accent</p>
-                <p style="font-size: 0.8125rem; color: #64748B;">#EFD780</p>
-                <p style="font-size: 0.75rem; color: #94A3B8;">--color-accent</p>
-            </div>
-            <div>
-                <div style="height: 80px; background: #D0E3CC; border-radius: 12px; margin-bottom: 10px;"></div>
-                <p style="font-weight: 700; font-size: 0.875rem; color: #0F172A;">Mint</p>
-                <p style="font-size: 0.8125rem; color: #64748B;">#D0E3CC</p>
-                <p style="font-size: 0.75rem; color: #94A3B8;">--color-mint</p>
-            </div>
-            <div>
-                <div style="height: 80px; background: linear-gradient(135deg, #DBA159, #EFD780); border-radius: 12px; margin-bottom: 10px;"></div>
-                <p style="font-weight: 700; font-size: 0.875rem; color: #0F172A;">Gradient</p>
-                <p style="font-size: 0.8125rem; color: #64748B;">DBA159 → EFD780</p>
-                <p style="font-size: 0.75rem; color: #94A3B8;">--gradient-accent</p>
-            </div>
-            <div>
-                <div style="height: 80px; background: #1A1A1A; border-radius: 12px; margin-bottom: 10px;"></div>
-                <p style="font-weight: 700; font-size: 0.875rem; color: #0F172A;">Dark</p>
-                <p style="font-size: 0.8125rem; color: #64748B;">#1A1A1A</p>
-                <p style="font-size: 0.75rem; color: #94A3B8;">--color-dark</p>
-            </div>
-            <div>
-                <div style="height: 80px; background: #2A2A2A; border-radius: 12px; margin-bottom: 10px;"></div>
-                <p style="font-weight: 700; font-size: 0.875rem; color: #0F172A;">Dark 2</p>
-                <p style="font-size: 0.8125rem; color: #64748B;">#2A2A2A</p>
-                <p style="font-size: 0.75rem; color: #94A3B8;">--color-dark-2</p>
-            </div>
-            <div>
-                <div style="height: 80px; background: #F4F4F5; border-radius: 12px; margin-bottom: 10px; border: 1px solid #E2E8F0;"></div>
-                <p style="font-weight: 700; font-size: 0.875rem; color: #0F172A;">Light</p>
-                <p style="font-size: 0.8125rem; color: #64748B;">#F4F4F5</p>
-                <p style="font-size: 0.75rem; color: #94A3B8;">--color-light</p>
-            </div>
-            <div>
-                <div style="height: 80px; background: #0F172A; border-radius: 12px; margin-bottom: 10px;"></div>
-                <p style="font-weight: 700; font-size: 0.875rem; color: #0F172A;">Text</p>
-                <p style="font-size: 0.8125rem; color: #64748B;">#0F172A</p>
-                <p style="font-size: 0.75rem; color: #94A3B8;">--color-text</p>
-            </div>
-            <div>
-                <div style="height: 80px; background: #64748B; border-radius: 12px; margin-bottom: 10px;"></div>
-                <p style="font-weight: 700; font-size: 0.875rem; color: #0F172A;">Muted</p>
-                <p style="font-size: 0.8125rem; color: #64748B;">#64748B</p>
-                <p style="font-size: 0.75rem; color: #94A3B8;">--color-muted</p>
-            </div>
-            <div>
-                <div style="height: 80px; background: #E2E8F0; border-radius: 12px; margin-bottom: 10px;"></div>
-                <p style="font-weight: 700; font-size: 0.875rem; color: #0F172A;">Border</p>
-                <p style="font-size: 0.8125rem; color: #64748B;">#E2E8F0</p>
-                <p style="font-size: 0.75rem; color: #94A3B8;">--color-border</p>
-            </div>
-            <div>
-                <div style="height: 80px; background: #ffffff; border-radius: 12px; margin-bottom: 10px; border: 1px solid #E2E8F0;"></div>
-                <p style="font-weight: 700; font-size: 0.875rem; color: #0F172A;">White</p>
-                <p style="font-size: 0.8125rem; color: #64748B;">#FFFFFF</p>
-                <p style="font-size: 0.75rem; color: #94A3B8;">--color-white</p>
-            </div>
-        </div>
-    </section>
+    .gl-section { margin-bottom: 72px; }
+    .gl-section-sub { font-family: var(--font-base); font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--copper); font-weight: 500; margin-bottom: 16px; }
+    .gl-section-title { font-family: var(--font-display); font-size: 2rem; font-weight: 500; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 32px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
 
-    <!-- BOTÕES -->
-    <section style="margin-bottom: 64px;">
-        <h2 style="font-size: 1.25rem; font-weight: 700; color: #0F172A; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid #E2E8F0;">Botões</h2>
-        <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
-            <a href="#" class="btn btn--gradient">Primário (Gradient)</a>
-            <a href="#" class="btn btn--gradient btn--lg">Primário Grande</a>
-            <a href="#" class="btn btn--accent">Accent (Outline)</a>
-            <span style="background: #1A1A1A; padding: 12px 16px; border-radius: 8px; display: inline-flex; gap: 12px;">
-                <a href="#" class="btn btn--ghost">Ghost (escuro)</a>
-                <a href="#" class="btn btn--dark">Dark</a>
-            </span>
-        </div>
-    </section>
+    /* Paleta */
+    .gl-primary { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 18px; margin-bottom: 24px; }
+    .gl-secondary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .gl-swatch { padding: 32px 28px; min-height: 280px; display: flex; flex-direction: column; justify-content: space-between; border-radius: var(--radius-md); position: relative; overflow: hidden; }
+    .gl-swatch.lg { min-height: 340px; padding: 38px 32px; }
+    .gl-swatch .label { font-family: var(--font-base); font-size: 0.6875rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; opacity: 0.7; }
+    .gl-swatch .name { font-family: var(--font-display); font-size: 2.25rem; font-weight: 400; letter-spacing: -0.02em; line-height: 1; margin-top: 8px; }
+    .gl-swatch .hex { font-family: var(--font-base); font-size: 0.875rem; letter-spacing: 0.04em; font-weight: 500; }
+    .gl-swatch .token { font-family: var(--font-base); font-size: 0.6875rem; letter-spacing: 0.06em; opacity: 0.6; margin-top: 4px; }
+    .gl-swatch .desc { font-family: var(--font-display); font-style: italic; font-size: 1rem; line-height: 1.45; margin-top: 12px; opacity: 0.85; }
 
-    <!-- TIPOGRAFIA -->
-    <section style="margin-bottom: 64px;">
-        <h2 style="font-size: 1.25rem; font-weight: 700; color: #0F172A; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid #E2E8F0;">Tipografia</h2>
-        <div style="display: flex; flex-direction: column; gap: 24px;">
-            <div>
-                <p style="font-size: 0.75rem; color: #64748B; margin-bottom: 4px;">Headline / H1 — clamp(2.75rem, 5vw, 4.25rem) 800</p>
-                <p style="font-size: 3rem; font-weight: 800; color: #0F172A; line-height: 1.1; letter-spacing: -0.02em;">Pilates que <span style="background: linear-gradient(135deg,#DBA159,#EFD780); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">restaura</span></p>
-            </div>
-            <div>
-                <p style="font-size: 0.75rem; color: #64748B; margin-bottom: 4px;">Section Title — 2.5rem 700</p>
-                <p style="font-size: 2.5rem; font-weight: 700; color: #0F172A; line-height: 1.15;">Cuidado individualizado</p>
-            </div>
-            <div>
-                <p style="font-size: 0.75rem; color: #64748B; margin-bottom: 4px;">Section Subtitle — 1.125rem 400</p>
-                <p style="font-size: 1.125rem; color: #64748B; line-height: 1.7;">Texto de apoio às seções, descrevendo com clareza o serviço ou proposta de valor.</p>
-            </div>
-            <div>
-                <p style="font-size: 0.75rem; color: #64748B; margin-bottom: 4px;">Label — 0.75rem 600 uppercase</p>
-                <span class="label">Especialidades</span>
-            </div>
-            <div>
-                <p style="font-size: 0.75rem; color: #64748B; margin-bottom: 4px;">Corpo — 1rem 400</p>
-                <p style="font-size: 1rem; color: #0F172A; line-height: 1.7;">Texto de corpo padrão, usado em parágrafos de seções, cards e descrições de serviço.</p>
-            </div>
-            <div>
-                <p style="font-size: 0.75rem; color: #64748B; margin-bottom: 4px;">Text Accent — palavra em destaque</p>
-                <p style="font-size: 1.5rem; font-weight: 700; color: #0F172A;">Reabilitação <span class="text--accent">especializada</span></p>
-            </div>
-        </div>
-    </section>
+    /* Tipografia */
+    .gl-type-row { display: grid; grid-template-columns: 180px 1fr; gap: 32px; padding: 28px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+    .gl-type-row:last-child { border-bottom: none; }
+    .gl-type-meta { font-family: var(--font-base); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); font-weight: 500; }
 
-    <!-- LOGO -->
-    <section style="margin-bottom: 64px;">
-        <h2 style="font-size: 1.25rem; font-weight: 700; color: #0F172A; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid #E2E8F0;">Logo</h2>
-        <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: center;">
-            <div style="background: #1A1A1A; padding: 24px 32px; border-radius: 12px; display: flex; align-items: center; gap: 12px;">
-                <img src="/site/assets/img/rekintsu-logo-svg.svg" alt="Rekintsu" style="height: 36px;">
-            </div>
-            <div style="background: #F4F4F5; padding: 24px 32px; border-radius: 12px; border: 1px solid #E2E8F0; display: flex; align-items: center; gap: 12px;">
-                <img src="/site/assets/img/logopreta-svg.svg" alt="Rekintsu" style="height: 36px;">
-            </div>
-        </div>
-        <p style="margin-top: 16px; font-size: 0.875rem; color: #64748B;">Logo clara: <code>rekintsu-logo-svg.svg</code> (header) · Logo escura: <code>logopreta-svg.svg</code> · Logo rodapé: <code>logobranca-svg.svg</code></p>
-    </section>
+    /* Combos */
+    .gl-combos { border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; }
+    .gl-combo { display: grid; grid-template-columns: 200px 1fr; align-items: center; border-bottom: 1px solid var(--line); }
+    .gl-combo:last-child { border-bottom: none; }
+    .gl-combo .lbl { padding: 24px 24px; font-family: var(--font-base); font-size: 0.6875rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; }
+    .gl-combo .demo { padding: 24px 28px; font-family: var(--font-display); font-size: 1.625rem; letter-spacing: -0.01em; }
+    .gl-combo .demo em { font-style: italic; }
 
-    <!-- CARDS DE SERVIÇO -->
-    <section style="margin-bottom: 64px;">
-        <h2 style="font-size: 1.25rem; font-weight: 700; color: #0F172A; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid #E2E8F0;">Service Card</h2>
-        <div style="max-width: 340px;">
-            <div class="service-card">
-                <div class="service-card__icon">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+    /* Lista de seções/páginas */
+    .gl-list { display: flex; flex-direction: column; gap: 10px; }
+    .gl-list-item { background: var(--color-white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 16px 22px; display: flex; gap: 18px; align-items: center; justify-content: space-between; }
+    .gl-list-item code { font-family: 'SF Mono', Menlo, monospace; font-size: 0.8125rem; background: var(--cream-deep); padding: 5px 10px; border-radius: 4px; color: var(--copper-deep); white-space: nowrap; }
+    .gl-list-item .meta { font-family: var(--font-base); font-size: 0.8125rem; color: var(--ink-soft); }
+    .gl-list-item .ttl { font-family: var(--font-base); font-weight: 600; font-size: 0.9375rem; color: var(--ink); }
+    .gl-list-item a { font-family: var(--font-base); font-size: 0.8125rem; color: var(--copper); }
+
+    /* Logo */
+    .gl-logos { display: flex; gap: 18px; flex-wrap: wrap; }
+    .gl-logo-card { padding: 28px 36px; border-radius: var(--radius-md); display: flex; align-items: center; }
+    .gl-logo-card img { height: 38px; }
+
+    @media (max-width: 768px) {
+        .gl-primary, .gl-secondary { grid-template-columns: 1fr; }
+        .gl-type-row { grid-template-columns: 1fr; gap: 8px; }
+        .gl-combo { grid-template-columns: 1fr; }
+        .gl-combo .lbl { padding-bottom: 0; }
+    }
+</style>
+
+<main class="gl-main">
+<div class="gl-wrap">
+
+    <header style="margin-bottom: 80px;">
+        <div class="gl-eyebrow">Sistema Rekintsu Flow · Design system</div>
+        <h1 class="gl-h1">Guia <em>visual.</em></h1>
+        <p class="gl-lede">Pedra, ouro e porcelana. Inspirado no kintsugi: a quebra reparada com ouro vira o destaque. Headlines em Cormorant Garamond, italic + cobre para a palavra-chave. Corpo em Inter Tight.</p>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════
+         PALETA — primárias
+         ═══════════════════════════════════════════════════ -->
+    <section class="gl-section">
+        <div class="gl-section-sub">Cores principais</div>
+        <h2 class="gl-section-title">A base — pedra + ouro + porcelana</h2>
+
+        <div class="gl-primary">
+            <div class="gl-swatch lg" style="background: var(--cream); color: var(--ink); border: 1px solid var(--line);">
+                <div>
+                    <div class="label">Primária / Fundo</div>
+                    <div class="name">Cream</div>
+                    <div class="desc">A porcelana antes da quebra. Fundo padrão do site.</div>
                 </div>
-                <h3 class="service-card__title">Pilates para Reabilitação</h3>
-                <p class="service-card__text">Exercícios terapêuticos que fortalecem, corrigem e restauram a função do corpo.</p>
-                <a href="#" class="service-card__link">Saber mais <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <div>
+                    <div class="hex">#F2EDE4</div>
+                    <div class="token">--cream</div>
+                </div>
+            </div>
+            <div class="gl-swatch lg" style="background: var(--ink); color: var(--cream);">
+                <div>
+                    <div class="label">Tinta / Texto</div>
+                    <div class="name">Ink</div>
+                    <div class="desc">Profundidade. Tipografia em fundo claro, fundo em variações dark.</div>
+                </div>
+                <div>
+                    <div class="hex">#16140F</div>
+                    <div class="token">--ink</div>
+                </div>
+            </div>
+            <div class="gl-swatch lg" style="background: var(--copper); color: #FFF;">
+                <div>
+                    <div class="label">Acento</div>
+                    <div class="name">Copper</div>
+                    <div class="desc">O ouro do kintsugi. Italic, eyebrows, CTAs.</div>
+                </div>
+                <div>
+                    <div class="hex">#B26A48</div>
+                    <div class="token">--copper</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ESTRUTURA DE SEÇÕES -->
-    <section style="margin-bottom: 64px;">
-        <h2 style="font-size: 1.25rem; font-weight: 700; color: #0F172A; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid #E2E8F0;">Estrutura de Seções — Homepage</h2>
-        <div style="display: flex; flex-direction: column; gap: 12px;">
+    <!-- ═══════════════════════════════════════════════════
+         PALETA — apoio
+         ═══════════════════════════════════════════════════ -->
+    <section class="gl-section">
+        <div class="gl-section-sub">Cores de apoio</div>
+        <h2 class="gl-section-title">Tons intermediários</h2>
+
+        <div class="gl-secondary">
+            <div class="gl-swatch" style="background: var(--cream-deep); color: var(--ink); border: 1px solid var(--line);">
+                <div class="label">Apoio</div>
+                <div>
+                    <div class="name">Cream Deep</div>
+                    <div class="hex" style="margin-top: 12px;">#E8E0D2</div>
+                    <div class="token">--cream-deep</div>
+                </div>
+            </div>
+            <div class="gl-swatch" style="background: var(--cream); color: var(--ink-soft); border: 1px solid var(--line);">
+                <div class="label">Texto secundário</div>
+                <div>
+                    <div class="name">Ink Soft</div>
+                    <div class="hex" style="margin-top: 12px;">#3A352B</div>
+                    <div class="token">--ink-soft</div>
+                </div>
+            </div>
+            <div class="gl-swatch" style="background: var(--copper-deep); color: var(--cream);">
+                <div class="label">Acento profundo</div>
+                <div>
+                    <div class="name">Copper Deep</div>
+                    <div class="hex" style="margin-top: 12px;">#8C4F33</div>
+                    <div class="token">--copper-deep</div>
+                </div>
+            </div>
+            <div class="gl-swatch" style="background: var(--sage); color: var(--cream);">
+                <div class="label">Neutro frio</div>
+                <div>
+                    <div class="name">Sage</div>
+                    <div class="hex" style="margin-top: 12px;">#7A8674</div>
+                    <div class="token">--sage</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         TIPOGRAFIA
+         ═══════════════════════════════════════════════════ -->
+    <section class="gl-section">
+        <div class="gl-section-sub">Tipografia</div>
+        <h2 class="gl-section-title">Cormorant Garamond · Inter Tight</h2>
+
+        <div class="gl-type-row">
+            <div class="gl-type-meta">Display H1<br>clamp(2.75–4.25rem) · 500</div>
+            <div style="font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 500; line-height: 0.98; letter-spacing: -0.02em; color: var(--ink);">
+                Pilates solo<br>com olhar <em style="font-style: italic; color: var(--copper);">clínico.</em>
+            </div>
+        </div>
+
+        <div class="gl-type-row">
+            <div class="gl-type-meta">Display H2<br>2–3rem · 500</div>
+            <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 500; line-height: 1.05; letter-spacing: -0.015em; color: var(--ink);">
+                Conduzido por <em style="font-style: italic; color: var(--copper);">fisioterapeuta.</em>
+            </div>
+        </div>
+
+        <div class="gl-type-row">
+            <div class="gl-type-meta">Subtítulo<br>1.0625rem · 400</div>
+            <div style="font-family: var(--font-base); font-size: 1.0625rem; color: var(--ink-soft); line-height: 1.75; max-width: 560px;">
+                Texto de apoio às seções, descrevendo com clareza o serviço, a proposta de valor ou a consequência prática para o paciente.
+            </div>
+        </div>
+
+        <div class="gl-type-row">
+            <div class="gl-type-meta">Eyebrow / Label<br>0.75rem · 500 · tracking 0.22em</div>
+            <div><span class="label">Horário Nobre · Turmas Exclusivas</span></div>
+        </div>
+
+        <div class="gl-type-row">
+            <div class="gl-type-meta">Corpo<br>1rem · 400 · line-height 1.75</div>
+            <div style="font-family: var(--font-base); font-size: 1rem; color: var(--ink); line-height: 1.75; max-width: 560px;">
+                Texto de corpo padrão, usado em parágrafos de seções, cards e descrições de serviço. Inter Tight em peso regular sobre cream.
+            </div>
+        </div>
+
+        <div class="gl-type-row">
+            <div class="gl-type-meta">Padrão Kintsugi<br>italic + cobre</div>
+            <div style="font-family: var(--font-display); font-size: 2rem; font-weight: 500; color: var(--ink);">
+                Reabilitação <span class="text--accent">especializada.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         COMBINAÇÕES
+         ═══════════════════════════════════════════════════ -->
+    <section class="gl-section">
+        <div class="gl-section-sub">Hierarquia em combinação</div>
+        <h2 class="gl-section-title">Texto · acento · fundo</h2>
+
+        <div class="gl-combos">
+            <div class="gl-combo" style="background: var(--cream);">
+                <div class="lbl" style="color: var(--ink-soft);">Editorial · Light</div>
+                <div class="demo" style="color: var(--ink);">No seu ritmo. <em style="color: var(--copper);">Do jeito Rekintsu.</em></div>
+            </div>
+            <div class="gl-combo" style="background: var(--cream-deep);">
+                <div class="lbl" style="color: var(--ink-soft);">Card de destaque</div>
+                <div class="demo" style="color: var(--ink);">Conduzido por <em style="color: var(--copper-deep);">fisioterapeuta.</em></div>
+            </div>
+            <div class="gl-combo" style="background: var(--ink);">
+                <div class="lbl" style="color: rgba(242,237,228,0.55);">Premium · Dark</div>
+                <div class="demo" style="color: var(--cream);">Só 6 vagas <em style="color: var(--copper);">por turma.</em></div>
+            </div>
+            <div class="gl-combo" style="background: var(--copper);">
+                <div class="lbl" style="color: rgba(255,255,255,0.7);">CTA · Acento</div>
+                <div class="demo" style="color: #FFF; font-family: var(--font-base); font-size: 1.0625rem; font-weight: 600; letter-spacing: 0.02em;">Garantir minha vaga →</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         BOTÕES
+         ═══════════════════════════════════════════════════ -->
+    <section class="gl-section">
+        <div class="gl-section-sub">Componentes</div>
+        <h2 class="gl-section-title">Botões</h2>
+
+        <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 18px;">
+            <a href="#" class="btn btn--gradient">Primário</a>
+            <a href="#" class="btn btn--gradient btn--lg">Primário Grande</a>
+            <a href="#" class="btn btn--accent">Outline (Acento)</a>
+        </div>
+        <div style="background: var(--ink); padding: 24px 28px; border-radius: var(--radius-md); display: inline-flex; gap: 14px; align-items: center;">
+            <a href="#" class="btn btn--ghost">Ghost (sobre dark)</a>
+            <a href="#" class="btn btn--gradient">Primário (sobre dark)</a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         LOGO
+         ═══════════════════════════════════════════════════ -->
+    <section class="gl-section">
+        <div class="gl-section-sub">Marca</div>
+        <h2 class="gl-section-title">Logo</h2>
+
+        <div class="gl-logos">
+            <div class="gl-logo-card" style="background: var(--ink);">
+                <img src="/site/assets/img/rekintsu-logo-svg.svg" alt="Rekintsu">
+            </div>
+            <div class="gl-logo-card" style="background: var(--cream); border: 1px solid var(--line);">
+                <img src="/site/assets/img/logopreta-svg.svg" alt="Rekintsu">
+            </div>
+            <div class="gl-logo-card" style="background: var(--copper);">
+                <img src="/site/assets/img/logobranca-svg.svg" alt="Rekintsu">
+            </div>
+        </div>
+        <p style="margin-top: 18px; font-family: var(--font-base); font-size: 0.875rem; color: var(--ink-soft);">
+            Header: <code style="font-family: monospace; background: var(--cream-deep); padding: 3px 8px; border-radius: 4px;">rekintsu-logo-svg.svg</code> ·
+            Fundo claro: <code style="font-family: monospace; background: var(--cream-deep); padding: 3px 8px; border-radius: 4px;">logopreta-svg.svg</code> ·
+            Rodapé / fundo cobre: <code style="font-family: monospace; background: var(--cream-deep); padding: 3px 8px; border-radius: 4px;">logobranca-svg.svg</code>
+        </p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         ESTRUTURA DE SEÇÕES
+         ═══════════════════════════════════════════════════ -->
+    <section class="gl-section">
+        <div class="gl-section-sub">Arquitetura</div>
+        <h2 class="gl-section-title">Seções da homepage</h2>
+
+        <div class="gl-list">
             <?php
             $sections = [
-                ['hero.php',            'Hero',                    'Dark (#1A1A1A)',    'Vídeo de fundo, título, CTAs, stats'],
-                ['clients.php',         'Specialties Strip',       'Dark 2 (#2A2A2A)', 'Strip de condições tratadas, sobrepõe o hero'],
-                ['services.php',        'Especialidades',          'White (#FFFFFF)',   'Grid 3 colunas com 6 cards de serviço'],
-                ['como-funciona-bloco.php', 'Como Funciona',       'Light (#F4F4F5)',   'Processo de atendimento em 4 passos'],
-                ['localizacao.php',     'Localização',             'Dark (#1A1A1A)',    'Mapa visual, endereço e features'],
-                ['about.php',           'Sobre a Clínica',         'Dark 2 (#2A2A2A)', 'Foto da clínica, bio da Hayla, stats, CTA'],
-                ['blog-preview.php',    'Depoimentos',             'White (#FFFFFF)',   'Carrossel de avaliações Google'],
-                ['contact.php',         'Contato',                 'Dark (#1A1A1A)',    'Formulário + informações de contato'],
-                ['cta.php',             'CTA Final',               'Gradient (dourado)','Chamada final para agendamento'],
+                ['hero.php',               'Hero',              'Ink (#16140F)',     'Vídeo de fundo, título display, CTAs, stats'],
+                ['clients.php',            'Specialties Strip', 'Ink Soft (#3A352B)','Strip de condições tratadas, sobrepõe o hero'],
+                ['services.php',           'Especialidades',    'Cream (#F2EDE4)',   'Grid 3 colunas com 6 cards de serviço'],
+                ['como-funciona-bloco.php','Como Funciona',     'Cream Deep',        'Processo de atendimento em 4 passos'],
+                ['localizacao.php',        'Localização',       'Ink',               'Mapa visual, endereço e features'],
+                ['about.php',              'Sobre a Clínica',   'Ink Soft',          'Foto da clínica, bio da Hayla, stats, CTA'],
+                ['blog-preview.php',       'Depoimentos',       'Cream',             'Carrossel de avaliações Google'],
+                ['contact.php',            'Contato',           'Ink',               'Formulário + informações de contato'],
+                ['cta.php',                'CTA Final',         'Copper (cobre)',    'Chamada final para agendamento'],
             ];
             foreach ($sections as $s): ?>
-            <div style="background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: 16px 20px; display: flex; gap: 16px; align-items: center;">
-                <code style="font-family: monospace; font-size: 0.8125rem; background: #F1F5F9; padding: 4px 10px; border-radius: 6px; color: #DBA159; white-space: nowrap;"><?= $s[0] ?></code>
-                <div>
-                    <p style="font-weight: 700; font-size: 0.9375rem; color: #0F172A;"><?= $s[1] ?></p>
-                    <p style="font-size: 0.8125rem; color: #64748B;"><?= $s[2] ?> · <?= $s[3] ?></p>
+            <div class="gl-list-item">
+                <div style="display:flex; gap: 18px; align-items: center;">
+                    <code><?= $s[0] ?></code>
+                    <div>
+                        <div class="ttl"><?= $s[1] ?></div>
+                        <div class="meta"><?= $s[2] ?> · <?= $s[3] ?></div>
+                    </div>
                 </div>
             </div>
             <?php endforeach; ?>
         </div>
     </section>
 
-    <!-- PÁGINAS INTERNAS -->
-    <section style="margin-bottom: 64px;">
-        <h2 style="font-size: 1.25rem; font-weight: 700; color: #0F172A; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid #E2E8F0;">Páginas Internas</h2>
-        <div style="display: flex; flex-direction: column; gap: 12px;">
+    <!-- ═══════════════════════════════════════════════════
+         PÁGINAS INTERNAS
+         ═══════════════════════════════════════════════════ -->
+    <section class="gl-section">
+        <div class="gl-section-sub">Roteamento</div>
+        <h2 class="gl-section-title">Páginas internas</h2>
+
+        <div class="gl-list">
             <?php
             $paginas = [
+                ['rekintsu-flow.php',         'Rekintsu Flow',          '/rekintsu-flow'],
                 ['sobre-a-clinica.php',       'Sobre a Clínica',        '/sobre-a-clinica'],
                 ['como-funciona.php',         'Como Funciona',          '/como-funciona'],
                 ['pilates-gestantes.php',     'Pilates para Gestantes', '/pilates-gestantes'],
@@ -206,12 +330,12 @@ include dirname(__DIR__) . '/includes/header.php';
                 ['pilates-pos-cirurgico.php', 'Pilates Pós-Cirúrgico',  '/pilates-pos-cirurgico'],
             ];
             foreach ($paginas as $p): ?>
-            <div style="background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: 16px 20px; display: flex; gap: 16px; align-items: center; justify-content: space-between;">
-                <div style="display:flex; gap: 16px; align-items: center;">
-                    <code style="font-family: monospace; font-size: 0.8125rem; background: #F1F5F9; padding: 4px 10px; border-radius: 6px; color: #DBA159; white-space: nowrap;"><?= $p[0] ?></code>
-                    <p style="font-weight: 700; font-size: 0.9375rem; color: #0F172A;"><?= $p[1] ?></p>
+            <div class="gl-list-item">
+                <div style="display:flex; gap: 18px; align-items: center;">
+                    <code><?= $p[0] ?></code>
+                    <div class="ttl"><?= $p[1] ?></div>
                 </div>
-                <a href="<?= $p[2] ?>" target="_blank" style="font-size: 0.8125rem; color: #DBA159;"><?= $p[2] ?> ↗</a>
+                <a href="<?= $p[2] ?>" target="_blank"><?= $p[2] ?> ↗</a>
             </div>
             <?php endforeach; ?>
         </div>
