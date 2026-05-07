@@ -308,6 +308,14 @@ $turmas = [
                     </div>
                     <div class="flow-vagas-row__hora"><?= htmlspecialchars($t['hora']) ?></div>
                     <div class="flow-vagas-row__status">
+                        <div class="flow-vagas-dots" aria-label="<?= $livres ?> vagas livres de <?= $t['total'] ?>">
+                            <?php
+                            $ocupadas = $t['total'] - $livres;
+                            for ($i = 0; $i < $t['total']; $i++):
+                            ?>
+                            <span class="flow-vaga-dot <?= $i < $ocupadas ? 'flow-vaga-dot--ocupada' : 'flow-vaga-dot--livre' ?>"></span>
+                            <?php endfor; ?>
+                        </div>
                         <?php if ($fechada): ?>
                             <span class="flow-badge flow-badge--fechada">Turma fechada</span>
                         <?php elseif ($livres === 1): ?>
