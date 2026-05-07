@@ -4,10 +4,10 @@ $page_description = 'Turmas exclusivas de Pilates Solo conduzidas por fisioterap
 include dirname(__DIR__) . '/includes/head-page.php';
 include dirname(__DIR__) . '/includes/header.php';
 
-$wa_geral = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Tenho interesse no Rekintsu Flow. Gostaria de saber sobre as vagas disponíveis.');
-$wa_1x    = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Tenho interesse no Rekintsu Flow 1x por semana.');
-$wa_2x    = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Tenho interesse no Rekintsu Flow 2x por semana.');
-$wa_vagas = 'https://wa.me/5541991191501?text=' . rawurlencode('Olá! Gostaria de verificar as vagas disponíveis no Rekintsu Flow.');
+$wa_base  = 'https://wa.me/5541991191501?text=';
+$wa_geral = $wa_base . rawurlencode('Olá! Tenho interesse no Rekintsu Flow. Gostaria de saber sobre as vagas disponíveis.');
+$wa_1x    = $wa_base . rawurlencode('Olá! Tenho interesse no Rekintsu Flow 1x por semana.');
+$wa_2x    = $wa_base . rawurlencode('Olá! Tenho interesse no Rekintsu Flow 2x por semana.');
 
 // ── Vagas por turma — atualizar conforme necessário ──────────────────────────
 $turmas = [
@@ -37,9 +37,9 @@ $turmas = [
             <h1 class="flow-hero__title">Pilates solo com olhar clínico<br><span class="text--gradient">No seu ritmo. Do jeito Rekintsu</span></h1>
             <p class="flow-hero__subtitle">Turmas de até 6 pessoas, conduzidas por fisioterapeuta.<br>Segunda a quinta, às 18h e 19h. Só 6 vagas por horário.</p>
             <div class="flow-hero__actions">
-                <a href="<?= $wa_geral ?>" class="btn btn--gradient btn--lg" target="_blank" rel="noopener">
-                    Garantir minha vaga
-                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <a href="#vagas" class="btn btn--gradient btn--lg">
+                    Ver horários e vagas
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
                 </a>
             </div>
         </div>
@@ -87,7 +87,7 @@ $turmas = [
                         <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
                     <h3>Valoriza exclusividade</h3>
-                    <p>Turmas de até 8 pessoas. Você não é mais um no mat — cada movimento é corrigido sob olhar clínico.</p>
+                    <p>Turmas de até 6 pessoas. Você não é mais um no mat — cada movimento é corrigido sob olhar clínico.</p>
                 </div>
             </div>
             <p class="flow-para-quem-note fade-up">
@@ -174,7 +174,7 @@ $turmas = [
                     <div class="flow-price__per-class">≈ R$ 72,50 por aula</div>
                     <ul class="flow-plan-list">
                         <li>4 aulas por mês</li>
-                        <li>Turmas de até 8 pessoas</li>
+                        <li>Turmas de até 6 pessoas</li>
                         <li>Conduzido por fisioterapeuta</li>
                         <li>Seg–Qui, 18h ou 19h</li>
                     </ul>
@@ -198,7 +198,7 @@ $turmas = [
                     <div class="flow-price__per-class">≈ R$ 49,62 por aula</div>
                     <ul class="flow-plan-list">
                         <li>8 aulas por mês</li>
-                        <li>Turmas de até 8 pessoas</li>
+                        <li>Turmas de até 6 pessoas</li>
                         <li>Conduzido por fisioterapeuta</li>
                         <li>Seg–Qui, 18h ou 19h</li>
                         <li><strong>Prioridade na lista clínica</strong></li>
@@ -256,7 +256,7 @@ $turmas = [
                         </tr>
                         <tr>
                             <td class="flow-comparison__label">Supervisão</td>
-                            <td>Fisioterapeuta (grupo até 8)</td>
+                            <td>Fisioterapeuta (grupo até 6)</td>
                             <td>Fisioterapeuta (individual ou dupla)</td>
                         </tr>
                         <tr>
@@ -276,47 +276,74 @@ $turmas = [
     <!-- ════════════════════════════════════════════════
          SEÇÃO 7 — URGÊNCIA / VAGAS
          ════════════════════════════════════════════════ -->
-    <section class="flow-urgency">
+    <section class="flow-urgency" id="vagas">
         <div class="container">
             <div class="flow-urgency__inner fade-up">
-                <span class="label flow-urgency__label">Disponibilidade</span>
-                <h2 class="flow-urgency__title">6 vagas por turma.<br>Horários limitados.</h2>
-                <p class="flow-urgency__text">Não é promessa de marketing — é a estrutura do método. Com apenas 6 pessoas por turma, o espaço e a atenção são reais. Quando a turma fecha, fecha.</p>
-                <div class="flow-schedules">
-                    <?php foreach ($turmas as $t):
-                        $livres   = max(0, (int)$t['vagas']);
-                        $ocupadas = $t['total'] - $livres;
-                        if ($livres === 0) {
-                            $status_class = 'flow-vagas-label--fechada';
-                            $status_txt   = 'turma fechada';
-                        } elseif ($livres === 1) {
+                <span class="label flow-urgency__label">Disponibilidade em tempo real</span>
+                <h2 class="flow-urgency__title">Escolha seu horário<br>e garanta sua vaga.</h2>
+                <p class="flow-urgency__text">Apenas 6 pessoas por turma. Quando a turma fecha, fecha. Toque no horário desejado e fale direto com a Hayla pelo WhatsApp.</p>
+            </div>
+
+            <div class="flow-schedules fade-up">
+                <?php foreach ($turmas as $t):
+                    $livres   = max(0, (int)$t['vagas']);
+                    $ocupadas = $t['total'] - $livres;
+                    $fechada  = $livres === 0;
+
+                    if ($fechada) {
+                        $status_class = 'flow-vagas-label--fechada';
+                        $status_txt   = 'Turma fechada';
+                        $cta_label    = 'Entrar na lista de espera';
+                        $msg          = 'Olá! A turma de ' . $t['dias'] . ' às ' . $t['hora'] . ' do Rekintsu Flow está fechada. Gostaria de entrar na lista de espera.';
+                    } else {
+                        if ($livres === 1) {
                             $status_class = 'flow-vagas-label--ultima';
-                            $status_txt   = 'última vaga';
+                            $status_txt   = 'Última vaga';
                         } elseif ($livres <= 2) {
                             $status_class = 'flow-vagas-label--poucas';
-                            $status_txt   = $livres . ' vagas';
+                            $status_txt   = $livres . ' vagas restantes';
                         } else {
                             $status_class = 'flow-vagas-label--ok';
-                            $status_txt   = $livres . ' vagas';
+                            $status_txt   = $livres . ' vagas disponíveis';
                         }
-                    ?>
-                    <div class="flow-schedule-item<?= $livres === 0 ? ' flow-schedule-item--fechada' : '' ?>">
-                        <span class="flow-schedule-item__days"><?= htmlspecialchars($t['dias']) ?></span>
-                        <span class="flow-schedule-item__time"><?= htmlspecialchars($t['hora']) ?></span>
-                        <div class="flow-vagas-dots">
+                        $cta_label = 'Quero esta vaga';
+                        $msg = 'Olá! Quero garantir minha vaga no Rekintsu Flow — turma de ' . $t['dias'] . ' às ' . $t['hora'] . '.';
+                    }
+
+                    $wa_turma = $wa_base . rawurlencode($msg);
+                ?>
+                <article class="flow-schedule-card<?= $fechada ? ' flow-schedule-card--fechada' : '' ?><?= $livres === 1 ? ' flow-schedule-card--ultima' : '' ?>">
+                    <div class="flow-schedule-card__header">
+                        <span class="flow-schedule-card__days"><?= htmlspecialchars($t['dias']) ?></span>
+                        <span class="flow-vagas-label <?= $status_class ?>"><?= $status_txt ?></span>
+                    </div>
+                    <div class="flow-schedule-card__time-row">
+                        <span class="flow-schedule-card__time"><?= htmlspecialchars($t['hora']) ?></span>
+                        <span class="flow-schedule-card__duration">Sessão de 50min</span>
+                    </div>
+                    <div class="flow-schedule-card__vagas">
+                        <div class="flow-vagas-dots" aria-label="<?= $livres ?> vagas livres de <?= $t['total'] ?>">
                             <?php for ($i = 0; $i < $t['total']; $i++): ?>
                             <span class="flow-vaga-dot <?= $i < $ocupadas ? 'flow-vaga-dot--ocupada' : 'flow-vaga-dot--livre' ?>"></span>
                             <?php endfor; ?>
                         </div>
-                        <span class="flow-vagas-label <?= $status_class ?>"><?= $status_txt ?></span>
+                        <span class="flow-schedule-card__vagas-text"><?= $livres ?>/<?= $t['total'] ?> vagas</span>
                     </div>
-                    <?php endforeach; ?>
-                </div>
-                <a href="<?= $wa_vagas ?>" class="btn flow-urgency__btn btn--lg" target="_blank" rel="noopener">
-                    Verificar vagas disponíveis
-                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                    <a href="<?= $wa_turma ?>"
+                       class="btn flow-schedule-card__cta <?= $fechada ? 'btn--ghost' : 'btn--gradient' ?>"
+                       target="_blank" rel="noopener"
+                       aria-label="<?= $cta_label ?> — <?= htmlspecialchars($t['dias']) ?> às <?= htmlspecialchars($t['hora']) ?>">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        <?= $cta_label ?>
+                    </a>
+                </article>
+                <?php endforeach; ?>
             </div>
+
+            <p class="flow-schedules-note fade-up">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                Vagas confirmadas por ordem de contato. As bolinhas representam alunos já confirmados na turma.
+            </p>
         </div>
     </section>
 

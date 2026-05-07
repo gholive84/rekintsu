@@ -2076,6 +2076,7 @@
 .flow-urgency {
     background: var(--gradient-accent);
     padding: var(--section-padding);
+    scroll-margin-top: 80px;
 }
 
 .flow-urgency__inner {
@@ -2107,56 +2108,120 @@
 .flow-schedules {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-bottom: 40px;
+    gap: 18px;
+    margin: 8px auto 28px;
+    max-width: 880px;
+    scroll-margin-top: 80px;
 }
 
-.flow-schedule-item {
-    background: rgba(255,255,255,0.5);
-    border: 1px solid rgba(255,255,255,0.6);
-    border-radius: var(--radius-md);
-    padding: 16px 20px;
+.flow-schedule-card {
+    position: relative;
+    background: var(--color-white);
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: var(--radius-lg, 18px);
+    padding: 22px 22px 20px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 14px;
     text-align: left;
+    box-shadow: 0 10px 32px rgba(26,26,26,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
 }
 
-.flow-schedule-item__days {
-    font-size: 0.9375rem;
+.flow-schedule-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    opacity: 0.85;
+}
+
+.flow-schedule-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 44px rgba(26,26,26,0.14);
+}
+
+.flow-schedule-card--ultima::before {
+    background: linear-gradient(90deg, #dc2626, #f59e0b);
+}
+
+.flow-schedule-card--fechada {
+    opacity: 0.65;
+    background: rgba(255,255,255,0.6);
+    box-shadow: none;
+}
+
+.flow-schedule-card--fechada::before {
+    background: rgba(26,26,26,0.2);
+}
+
+.flow-schedule-card--fechada:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.flow-schedule-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.flow-schedule-card__days {
+    font-size: 0.8125rem;
     font-weight: 700;
-    color: var(--color-dark);
+    color: var(--color-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
-.flow-schedule-item__time {
-    font-size: 1.5rem;
+.flow-schedule-card__time-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.flow-schedule-card__time {
+    font-size: 2.5rem;
     font-weight: 800;
     color: var(--color-dark);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     line-height: 1;
+    background: linear-gradient(135deg, var(--color-dark), #4a4a4a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.flow-schedule-item__status {
+.flow-schedule-card__duration {
     font-size: 0.75rem;
     font-weight: 600;
-    color: rgba(26,26,26,0.55);
+    color: var(--color-muted);
     letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
-.flow-schedule-item--fechada {
-    opacity: 0.5;
+.flow-schedule-card__vagas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    background: rgba(244,244,245,0.7);
+    border-radius: var(--radius-sm);
 }
 
 .flow-vagas-dots {
     display: flex;
     gap: 5px;
-    margin-top: 8px;
-    margin-bottom: 4px;
 }
 
 .flow-vaga-dot {
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
     flex-shrink: 0;
 }
@@ -2167,6 +2232,14 @@
 
 .flow-vaga-dot--livre {
     background: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(219,161,89,0.18);
+}
+
+.flow-schedule-card__vagas-text {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: 0.02em;
 }
 
 .flow-vagas-label {
@@ -2174,23 +2247,42 @@
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
 }
 
-.flow-vagas-label--ok     { color: #16a34a; }
-.flow-vagas-label--poucas { color: #d97706; }
-.flow-vagas-label--ultima { color: #dc2626; }
-.flow-vagas-label--fechada { color: rgba(26,26,26,0.4); text-decoration: line-through; }
+.flow-vagas-label--ok       { color: #15803d; background: rgba(22,163,74,0.12); }
+.flow-vagas-label--poucas   { color: #b45309; background: rgba(217,119,6,0.14); }
+.flow-vagas-label--ultima   { color: #b91c1c; background: rgba(220,38,38,0.14); }
+.flow-vagas-label--fechada  { color: rgba(26,26,26,0.55); background: rgba(26,26,26,0.08); }
 
-.flow-urgency__btn {
-    background: var(--color-dark);
-    color: var(--color-white);
-    border: none;
-    transition: var(--transition);
+.flow-schedule-card__cta {
+    margin-top: 4px;
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 0.9375rem;
 }
 
-.flow-urgency__btn:hover {
-    background: #2A2A2A;
-    transform: translateY(-2px);
+.flow-schedule-card__cta svg {
+    flex-shrink: 0;
+}
+
+.flow-schedules-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: rgba(26,26,26,0.65);
+    text-align: center;
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.flow-schedules-note svg {
+    flex-shrink: 0;
+    color: rgba(26,26,26,0.5);
 }
 
 /* ── Sobre Hayla ──────────────────────────────────────────────── */
