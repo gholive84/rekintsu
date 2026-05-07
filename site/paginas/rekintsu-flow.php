@@ -304,7 +304,7 @@ $turmas = [
                    aria-label="<?= $livres === 0 ? 'Lista de espera' : 'Garantir vaga' ?> — <?= htmlspecialchars($t['dias']) ?> às <?= htmlspecialchars($t['hora']) ?>">
                     <div class="flow-vagas-row__turma">
                         <span class="flow-vagas-row__dias"><?= htmlspecialchars($t['dias_curto']) ?></span>
-                        <span class="flow-vagas-row__sub">Turma · 60min</span>
+                        <span class="flow-vagas-row__sub">Turma · 50min</span>
                     </div>
                     <div class="flow-vagas-row__hora"><?= htmlspecialchars($t['hora']) ?></div>
                     <div class="flow-vagas-row__status">
