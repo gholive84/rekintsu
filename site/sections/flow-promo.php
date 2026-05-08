@@ -52,7 +52,7 @@
                 <div class="flow-promo__video-frame">
                     <video
                         class="flow-promo__video-el"
-                        src="/site/assets/video/video-flow.mp4"
+                        src="/site/assets/video/video-flow-web.mp4"
                         poster="/site/assets/img/homem-kintsugi.jpg"
                         autoplay
                         muted
