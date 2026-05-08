@@ -30,7 +30,7 @@
                         <span class="flow-promo__stat-label">Pessoas por turma</span>
                     </li>
                     <li>
-                        <span class="flow-promo__stat-num">18h–19h</span>
+                        <span class="flow-promo__stat-num">18h e 19h</span>
                         <span class="flow-promo__stat-label">Segunda a quinta</span>
                     </li>
                     <li>
