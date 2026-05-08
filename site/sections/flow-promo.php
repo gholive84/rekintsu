@@ -50,7 +50,16 @@
 
             <div class="flow-promo__video fade-up" aria-hidden="true">
                 <div class="flow-promo__video-frame">
-                    <div id="flow-promo-yt-player"></div>
+                    <video
+                        class="flow-promo__video-el"
+                        src="/site/assets/video/video2-web.mp4"
+                        poster="/site/assets/img/homem-kintsugi.jpg"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        aria-hidden="true"></video>
                 </div>
                 <div class="flow-promo__video-glow" aria-hidden="true"></div>
             </div>
@@ -58,53 +67,3 @@
         </div>
     </div>
 </section>
-
-<script>
-(function () {
-    var START = 5, END = 22, player, watchdog;
-
-    function createPlayer() {
-        if (!document.getElementById('flow-promo-yt-player')) return;
-        player = new YT.Player('flow-promo-yt-player', {
-            videoId: 'ZiqnpZGTP4Q',
-            playerVars: {
-                autoplay: 1, mute: 1, controls: 0, rel: 0,
-                playsinline: 1, modestbranding: 1, showinfo: 0,
-                iv_load_policy: 3, start: START, end: END
-            },
-            events: {
-                onReady: function (e) {
-                    e.target.playVideo();
-                    watchdog = setInterval(function () {
-                        if (player.getCurrentTime && player.getCurrentTime() >= END) {
-                            player.seekTo(START, true);
-                            player.playVideo();
-                        }
-                    }, 300);
-                },
-                onStateChange: function (e) {
-                    if (e.data === YT.PlayerState.ENDED || e.data === YT.PlayerState.PAUSED) {
-                        player.seekTo(START, true);
-                        player.playVideo();
-                    }
-                }
-            }
-        });
-    }
-
-    if (window.YT && window.YT.Player) {
-        createPlayer();
-    } else {
-        var prev = window.onYouTubeIframeAPIReady;
-        window.onYouTubeIframeAPIReady = function () {
-            if (typeof prev === 'function') prev();
-            createPlayer();
-        };
-        if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
-            var tag = document.createElement('script');
-            tag.src = 'https://www.youtube.com/iframe_api';
-            document.head.appendChild(tag);
-        }
-    }
-})();
-</script>

@@ -25,7 +25,16 @@ $turmas = [
          ════════════════════════════════════════════════ -->
     <section class="flow-hero">
         <div class="flow-hero__video-wrap">
-            <div id="flow-yt-player"></div>
+            <video
+                class="flow-hero__video-el"
+                src="/site/assets/video/video2-web.mp4"
+                poster="/site/assets/img/homem-kintsugi.jpg"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-hidden="true"></video>
         </div>
         <div class="flow-hero__overlay"></div>
         <img src="/site/assets/img/perna-mulher.jpeg"
@@ -445,55 +454,5 @@ $turmas = [
     </section>
 
 </main>
-
-<script>
-(function () {
-    var START = 5, END = 22, player, watchdog;
-
-    function createPlayer() {
-        player = new YT.Player('flow-yt-player', {
-            videoId: 'ZiqnpZGTP4Q',
-            playerVars: {
-                autoplay: 1,
-                mute: 1,
-                controls: 0,
-                rel: 0,
-                playsinline: 1,
-                modestbranding: 1,
-                showinfo: 0,
-                iv_load_policy: 3,
-                start: START,
-                end: END
-            },
-            events: {
-                onReady: function (e) {
-                    e.target.playVideo();
-                    watchdog = setInterval(function () {
-                        if (player.getCurrentTime && player.getCurrentTime() >= END) {
-                            player.seekTo(START, true);
-                            player.playVideo();
-                        }
-                    }, 300);
-                },
-                onStateChange: function (e) {
-                    if (e.data === YT.PlayerState.ENDED || e.data === YT.PlayerState.PAUSED) {
-                        player.seekTo(START, true);
-                        player.playVideo();
-                    }
-                }
-            }
-        });
-    }
-
-    if (typeof YT !== 'undefined' && YT.Player) {
-        createPlayer();
-    } else {
-        window.onYouTubeIframeAPIReady = createPlayer;
-        var tag = document.createElement('script');
-        tag.src = 'https://www.youtube.com/iframe_api';
-        document.head.appendChild(tag);
-    }
-})();
-</script>
 
 <?php include dirname(__DIR__) . '/includes/footer.php'; ?>
