@@ -1504,12 +1504,20 @@
 }
 .flow-promo__video-frame:hover { transform: perspective(1400px) rotateY(0); }
 
+/* Iframe em cover dentro do frame 9:16 ── video 16:9 escala em altura
+   100% e largura auto via aspect-ratio (excede a largura do frame e
+   é cortado pelas laterais via overflow:hidden do parent) */
+.flow-promo__video-frame > div,
 .flow-promo__video-frame #flow-promo-yt-player,
 .flow-promo__video-frame iframe {
-    position: absolute;
-    inset: -10%;
-    width: 120%;
-    height: 120%;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    height: 100% !important;
+    width: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    min-width: 100% !important;
     border: 0;
     pointer-events: none;
 }
