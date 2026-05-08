@@ -13,6 +13,7 @@ include ROOT . '/site/sections/hero.php';
 include ROOT . '/site/sections/clients.php';
 include ROOT . '/site/sections/services.php';
 include ROOT . '/site/sections/como-funciona-bloco.php';
+include ROOT . '/site/sections/flow-promo.php';
 include ROOT . '/site/sections/localizacao.php';
 include ROOT . '/site/sections/instagram-feed.php';
 include ROOT . '/site/sections/about.php';

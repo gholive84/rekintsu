@@ -1428,3 +1428,143 @@
     box-shadow: 0 8px 28px rgba(220,39,67,0.40);
     filter: brightness(1.08);
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   FLOW PROMO — Bloco de divulgação do Rekintsu Flow na homepage
+   Full-width, fundo escuro com imagem kintsugi sobreposta.
+   ═══════════════════════════════════════════════════════════════ */
+.flow-promo {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 140px 0;
+    color: var(--color-white);
+    isolation: isolate;
+}
+
+.flow-promo__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+.flow-promo__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+    filter: grayscale(0.15) contrast(1.05);
+    opacity: 0.55;
+}
+.flow-promo__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(20,18,15,0.92) 0%, rgba(20,18,15,0.78) 45%, rgba(20,18,15,0.35) 100%),
+        radial-gradient(ellipse 60% 70% at 0% 50%, rgba(219,161,89,0.10) 0%, transparent 60%);
+}
+
+.flow-promo__inner {
+    position: relative;
+    z-index: 1;
+}
+
+.flow-promo__content {
+    max-width: 640px;
+}
+
+.flow-promo__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 24px;
+}
+.flow-promo__eyebrow::before {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: var(--color-primary);
+}
+
+.flow-promo__title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.75rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--color-white);
+    margin: 0 0 24px;
+}
+.flow-promo__italic {
+    font-style: italic;
+    color: var(--color-primary);
+    font-weight: 400;
+}
+
+.flow-promo__lede {
+    font-size: 1.125rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.78);
+    max-width: 540px;
+    margin: 0 0 40px;
+}
+
+.flow-promo__stats {
+    display: flex;
+    gap: 48px;
+    margin: 0 0 48px;
+    padding: 28px 0;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+.flow-promo__stats li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.flow-promo__stat-num {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.875rem;
+    font-weight: 500;
+    color: var(--color-white);
+    letter-spacing: -0.01em;
+    line-height: 1;
+}
+.flow-promo__stat-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+}
+
+.flow-promo__actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.flow-promo__cta {
+    box-shadow: 0 8px 32px rgba(219,161,89,0.30);
+}
+.flow-promo__hint {
+    font-size: 0.8125rem;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+    .flow-promo { padding: 96px 0; }
+    .flow-promo__bg img { object-position: center; opacity: 0.4; }
+    .flow-promo__overlay {
+        background:
+            linear-gradient(180deg, rgba(20,18,15,0.92) 0%, rgba(20,18,15,0.85) 100%);
+    }
+    .flow-promo__stats { gap: 24px; flex-wrap: wrap; }
+    .flow-promo__stat-num { font-size: 1.5rem; }
+    .flow-promo__actions { flex-direction: column; align-items: flex-start; gap: 16px; }
+}
