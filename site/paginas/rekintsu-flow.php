@@ -71,7 +71,7 @@ $turmas = [
                 </div>
                 <div class="flow-stat__divider"></div>
                 <div class="flow-stat">
-                    <span class="flow-stat__num">18h–19h</span>
+                    <span class="flow-stat__num">18h e 19h</span>
                     <span class="flow-stat__label">Segunda a quinta</span>
                 </div>
             </div>
@@ -84,7 +84,7 @@ $turmas = [
     <section class="flow-concept">
         <div class="container">
             <span class="flow-eyebrow">O horário nobre do seu dia</span>
-            <p class="flow-concept__statement fade-up">Das 18h às 19h, o profissional do Centro Cívico tem uma escolha: ir direto para casa carregando o peso do dia — ou dedicar uma hora para destravar o corpo com <em>precisão clínica.</em></p>
+            <p class="flow-concept__statement fade-up">Às 18h e 19h, o profissional do Centro Cívico tem uma escolha: ir direto para casa carregando o peso do dia — ou dedicar uma hora para destravar o corpo com <em>precisão clínica.</em></p>
             <p class="flow-concept__sub fade-up">O Rekintsu Flow foi criado para esse momento. Não é academia. Não é aula genérica. É o método Rekintsu aplicado em grupo pequeno, no horário mais nobre da sua agenda.</p>
         </div>
     </section>
