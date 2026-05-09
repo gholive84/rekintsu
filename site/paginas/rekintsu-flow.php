@@ -28,12 +28,11 @@ $turmas = [
             <video
                 class="flow-hero__video-el"
                 src="/site/assets/video/video-flow-web.mp4"
-                poster="/site/assets/img/homem-kintsugi.jpg"
                 autoplay
                 muted
                 loop
                 playsinline
-                preload="metadata"
+                preload="auto"
                 aria-hidden="true"></video>
         </div>
         <div class="flow-hero__overlay"></div>
