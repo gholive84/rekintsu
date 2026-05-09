@@ -1748,20 +1748,6 @@
     z-index: 1;
 }
 
-.flow-hero__img-accent {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 90%;
-    width: auto;
-    object-fit: contain;
-    object-position: bottom right;
-    z-index: 2;
-    opacity: 0.15;
-    pointer-events: none;
-    display: block;
-}
-
 .flow-hero__inner {
     position: relative;
     z-index: 3;
@@ -2704,8 +2690,6 @@
 }
 
 @media (max-width: 768px) {
-    .flow-hero__img-accent { display: none; }
-
     .flow-hero__stats-inner {
         flex-direction: column;
         gap: 20px;
