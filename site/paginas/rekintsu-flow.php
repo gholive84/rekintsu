@@ -37,11 +37,6 @@ $turmas = [
                 aria-hidden="true"></video>
         </div>
         <div class="flow-hero__overlay"></div>
-        <img src="/site/assets/img/perna-mulher.jpeg"
-             alt=""
-             class="flow-hero__img-accent"
-             aria-hidden="true"
-             loading="eager">
 
         <div class="container flow-hero__inner">
             <div class="flow-hero__content">
