@@ -1646,7 +1646,7 @@
    Typography: Cormorant Garamond + Inter Tight
    ================================================================ */
 
-/* ── Variáveis da paleta Flow ──────────────────────────────────── */
+/* ── Variáveis da paleta Flow ──────────────────────────────── */
 .flow-page {
     --flow-cream:      #F2EDE4;
     --flow-cream-deep: #E8E0D2;
@@ -1660,7 +1660,7 @@
     font-family: 'Inter Tight', 'Inter', sans-serif;
 }
 
-/* ── Eyebrow ────────────────────────────────────────────────────── */
+/* ── Eyebrow ───────────────────────────────────────────────── */
 .flow-eyebrow {
     display: flex;
     align-items: center;
@@ -1683,7 +1683,7 @@
     flex-shrink: 0;
 }
 
-/* ── Section title ──────────────────────────────────────────────── */
+/* ── Section title ──────────────────────────────────────────── */
 .flow-section-title {
     font-family: 'Cormorant Garamond', 'Georgia', serif;
     font-size: clamp(2.25rem, 4vw, 3.5rem);
@@ -1699,14 +1699,14 @@
     color: var(--flow-copper);
 }
 
-/* ── Sections ────────────────────────────────────────────────────── */
+/* ── Sections ─────────────────────────────────────────────────── */
 .flow-section           { padding: 96px 0; }
 .flow-section--cream    { background: var(--flow-cream); }
 .flow-section--cream-deep { background: var(--flow-cream-deep); }
 
 .flow-section-header { margin-bottom: 56px; }
 
-/* ── HERO ────────────────────────────────────────────────────────── */
+/* ── HERO ────────────────────────────────────────────────────── */
 .flow-hero {
     position: relative;
     min-height: 100vh;
@@ -1849,7 +1849,7 @@
     flex-shrink: 0;
 }
 
-/* ── CONCEITO ────────────────────────────────────────────────────── */
+/* ── CONCEITO ──────────────────────────────────────────────── */
 .flow-concept {
     background: var(--flow-cream-deep);
     padding: 96px 0;
@@ -1879,7 +1879,7 @@
     max-width: 720px;
 }
 
-/* ── DARK STATEMENT ──────────────────────────────────────────────── */
+/* ── DARK STATEMENT ─────────────────────────────────────────── */
 .flow-dark-statement {
     background: var(--flow-ink);
     padding: 96px 0;
@@ -1903,7 +1903,7 @@
     color: var(--flow-copper);
 }
 
-/* ── INFO BLOCKS (Para Quem) ─────────────────────────────────────── */
+/* ── INFO BLOCKS (Para Quem) ─────────────────────────────────── */
 .flow-info-blocks {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1963,7 +1963,7 @@
     margin-top: 1px;
 }
 
-/* ── FEATURES GRID ──────────────────────────────────────────────── */
+/* ── FEATURES GRID ──────────────────────────────────────────── */
 .flow-features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2012,7 +2012,7 @@
 .flow-feature--accent h3 { color: var(--flow-cream); }
 .flow-feature--accent p  { color: rgba(242,237,228,0.75); }
 
-/* ── PRICING ─────────────────────────────────────────────────────── */
+/* ── PRICING ────────────────────────────────────────────────── */
 .flow-pricing {
     background: var(--flow-ink);
     padding: 96px 0;
@@ -2211,7 +2211,7 @@
     font-family: 'Inter Tight', sans-serif;
 }
 
-/* ── COMPARATIVO ────────────────────────────────────────────────── */
+/* ── COMPARATIVO ────────────────────────────────────────────── */
 .flow-comparison-wrap {
     overflow-x: auto;
     border: 1px solid var(--flow-line);
@@ -2305,7 +2305,7 @@
     margin: 0 auto;
 }
 
-/* ── VAGAS (tabela editorial) ────────────────────────────────────── */
+/* ── VAGAS (tabela editorial) ────────────────────────────────── */
 .flow-vagas {
     background: var(--flow-cream);
     padding: 96px 0;
@@ -2529,7 +2529,7 @@
 
 .flow-vagas__note svg { flex-shrink: 0; color: var(--flow-sage); }
 
-/* ── HAYLA ───────────────────────────────────────────────────────── */
+/* ── HAYLA ───────────────────────────────────────────────────── */
 .flow-hayla {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2593,7 +2593,7 @@
     color: var(--flow-copper);
 }
 
-/* ── FAQ ─────────────────────────────────────────────────────────── */
+/* ── FAQ ─────────────────────────────────────────────────────── */
 .flow-faq {
     max-width: 740px;
     margin: 0 auto;
@@ -2644,7 +2644,7 @@
     border-top: 1px solid var(--flow-line);
 }
 
-/* ── FINAL CTA ───────────────────────────────────────────────────── */
+/* ── FINAL CTA ──────────────────────────────────────────────── */
 .flow-final-cta {
     background: var(--flow-ink);
     padding: 80px 0;
@@ -2673,7 +2673,7 @@
     line-height: 1.65;
 }
 
-/* ── RESPONSIVE ──────────────────────────────────────────────────── */
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
 @media (max-width: 1024px) {
     .flow-hayla {
         grid-template-columns: 1fr;
