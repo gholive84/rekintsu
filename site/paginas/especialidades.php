@@ -58,6 +58,8 @@ include dirname(__DIR__) . '/includes/header.php';
         </div>
     </section>
 
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/site/sections/flow-promo.php'; ?>
+
     <!-- CTA -->
     <section class="page-cta">
         <div class="container page-cta__inner">

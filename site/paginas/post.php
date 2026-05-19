@@ -143,6 +143,75 @@ if ($pdo && $post['category_slug']) {
     </section>
 
 
+    <!-- ESPECIALIDADES — cross-links -->
+    <section class="post-specialties" aria-labelledby="post-specialties-title">
+        <div class="container">
+            <div class="post-specialties__header fade-up">
+                <span class="label">Nossas especialidades</span>
+                <h2 id="post-specialties-title" class="post-specialties__title">Tratamento <span class="text--accent">individualizado</span> para cada necessidade</h2>
+            </div>
+            <div class="post-specialties__grid">
+                <a href="/especialidades/pilates-gestantes" class="post-specialty-card fade-up">
+                    <div class="post-specialty-card__img">
+                        <img src="/site/assets/img/gravida2.jpeg" alt="Pilates para Gestantes" loading="lazy">
+                    </div>
+                    <div class="post-specialty-card__body">
+                        <span class="post-specialty-card__label">Gestação</span>
+                        <h3 class="post-specialty-card__title">Pilates para Gestantes</h3>
+                        <p class="post-specialty-card__text">Conforto, segurança e preparo para o parto</p>
+                        <span class="post-specialty-card__link">
+                            Saiba mais
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </a>
+                <a href="/especialidades/pilates-idosos" class="post-specialty-card fade-up">
+                    <div class="post-specialty-card__img">
+                        <img src="/site/assets/img/idoso.jpeg" alt="Pilates para Idosos" loading="lazy">
+                    </div>
+                    <div class="post-specialty-card__body">
+                        <span class="post-specialty-card__label">Longevidade</span>
+                        <h3 class="post-specialty-card__title">Pilates para Idosos</h3>
+                        <p class="post-specialty-card__text">Mobilidade, equilíbrio e independência</p>
+                        <span class="post-specialty-card__link">
+                            Saiba mais
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </a>
+                <a href="/especialidades/pilates-pos-cirurgico" class="post-specialty-card fade-up">
+                    <div class="post-specialty-card__img">
+                        <img src="/site/assets/img/pos-cirugico2.jpeg" alt="Pilates Pós-Cirúrgico" loading="lazy">
+                    </div>
+                    <div class="post-specialty-card__body">
+                        <span class="post-specialty-card__label">Reabilitação</span>
+                        <h3 class="post-specialty-card__title">Pós-Cirúrgico</h3>
+                        <p class="post-specialty-card__text">Recuperação segura e progressiva</p>
+                        <span class="post-specialty-card__link">
+                            Saiba mais
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </a>
+                <a href="/especialidades/pilates-hernias-lesoes" class="post-specialty-card fade-up">
+                    <div class="post-specialty-card__img">
+                        <img src="/site/assets/img/hernias-e-lesoes.jpeg" alt="Hérnias e Lesões" loading="lazy">
+                    </div>
+                    <div class="post-specialty-card__body">
+                        <span class="post-specialty-card__label">Tratamento Conservador</span>
+                        <h3 class="post-specialty-card__title">Hérnias e Lesões</h3>
+                        <p class="post-specialty-card__text">Tratamento sem cirurgia e dor crônica</p>
+                        <span class="post-specialty-card__link">
+                            Saiba mais
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
     <!-- CTA -->
     <section class="page-cta">
         <div class="container page-cta__inner">

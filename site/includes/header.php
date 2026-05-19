@@ -21,6 +21,10 @@
                                     </div>
                                     <h3 class="nav-mega__intro-title">Pilates Clínico Especializado</h3>
                                     <p class="nav-mega__intro-text">Abordagem terapêutica individualizada para diversas condições de saúde — com avaliação postural, plano personalizado e acompanhamento contínuo.</p>
+                                    <a href="/especialidades" class="nav-mega__intro-link">
+                                        Ver todas as especialidades
+                                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                    </a>
                                     <a href="/como-funciona" class="nav-mega__intro-link">
                                         Como funciona o tratamento
                                         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -84,7 +88,8 @@
                     </ul>
                 </li>
 
-                <li><a href="/como-funciona" class="nav__link">Processo de Atendimento</a></li>
+                <li><a href="/rekintsu-flow" class="nav__link">Rekintsu Flow</a></li>
+                <li><a href="/como-funciona" class="nav__link">Atendimento</a></li>
                 <li><a href="/sobre-a-clinica" class="nav__link">A Clínica</a></li>
                 <li><a href="/blog" class="nav__link">Blog</a></li>
                 <li><a href="/#contato" class="nav__link">Contato</a></li>

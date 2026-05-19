@@ -597,6 +597,131 @@
     color: var(--color-primary);
 }
 
+/* Post — bloco de especialidades (cross-link no fim de cada post) */
+.post-specialties {
+    background: var(--color-light);
+    padding: 80px 0;
+}
+
+.post-specialties__header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 48px;
+}
+
+.post-specialties__title {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 800;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    margin-top: 12px;
+    line-height: 1.2;
+}
+
+.post-specialties__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.post-specialty-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.post-specialty-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+    border-color: var(--color-primary);
+}
+
+.post-specialty-card__img {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-light);
+}
+
+.post-specialty-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.post-specialty-card:hover .post-specialty-card__img img {
+    transform: scale(1.05);
+}
+
+.post-specialty-card__body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.post-specialty-card__label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.post-specialty-card__title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.post-specialty-card__text {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+}
+
+.post-specialty-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: 8px;
+}
+
+.post-specialty-card:hover .post-specialty-card__link {
+    color: var(--color-primary-dark);
+}
+
+@media (max-width: 1024px) {
+    .post-specialties__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .post-specialties {
+        padding: 60px 0;
+    }
+    .post-specialties__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
 /* Page CTA */
 .page-cta {
     background: var(--gradient-accent);
