@@ -42,6 +42,7 @@
     <div class="footer__bottom">
         <div class="container">
             <p>&copy; <?php echo date('Y'); ?> Rekintsu Pilates Clínico. Todos os direitos reservados.</p>
+            <p class="footer__credit">Desenvolvido por <a href="https://inundaweb.com.br" target="_blank" rel="noopener">Inundaweb</a></p>
         </div>
     </div>
 </footer>
