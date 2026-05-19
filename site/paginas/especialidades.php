@@ -67,7 +67,7 @@ include dirname(__DIR__) . '/includes/header.php';
             <p class="page-cta__text">Agende uma avaliação. A fisioterapeuta Hayla Gomes analisa o seu caso e indica o tratamento mais adequado.</p>
             <a href="https://wa.me/5541991191501?text=Olá! Gostaria de agendar uma avaliação na Rekintsu."
                class="btn btn--gradient btn--lg" target="_blank" rel="noopener">
-                Agendar Avaliação Gratuita
+                Agendar Avaliação
             </a>
         </div>
     </section>
