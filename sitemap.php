@@ -18,6 +18,7 @@ try {
 // Páginas estáticas
 $static_pages = [
     ['loc' => '/',                                      'priority' => '1.0', 'changefreq' => 'weekly'],
+    ['loc' => '/rekintsu-flow',                         'priority' => '0.9', 'changefreq' => 'weekly'],
     ['loc' => '/blog',                                  'priority' => '0.8', 'changefreq' => 'weekly'],
     ['loc' => '/especialidades',                        'priority' => '0.9', 'changefreq' => 'monthly'],
     ['loc' => '/especialidades/pilates-gestantes',      'priority' => '0.8', 'changefreq' => 'monthly'],
